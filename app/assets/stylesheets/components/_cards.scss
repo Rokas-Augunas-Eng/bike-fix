@@ -1,0 +1,87 @@
+/* Index Page */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+    margin: 10px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 5px;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card_content {
+  padding: 1rem;
+  background: #33A8A1;
+}
+
+.card_content:hover {
+  background-color: #87DBDD;
+}
+
+.card_title {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+  margin-bottom: 1.25rem; 
+}
+
+.card_text {
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 0.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+/* ----------------------------- */
