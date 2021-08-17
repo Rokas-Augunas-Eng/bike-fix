@@ -1,2 +1,0 @@
-class Mechanic < ApplicationRecord
-end
