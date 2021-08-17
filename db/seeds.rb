@@ -4,15 +4,18 @@ require 'open-uri'
 Booking.destroy_all
 puts "Booking database deleted"
 
+Service.destroy_all
+puts "Service database deleted"
+
 User.destroy_all
 puts "User database deleted"
 
 # User creation
 
-user_1 = User.create!([
+user_1 = User.create!(
   email: "user1@test.com",
   password: "123456",
-  ])
+  )
 
 # User/Mechanic creation
 
@@ -43,4 +46,13 @@ user_4 = User.create!(
   insta_availability: false,
 )
 
+# Service creation
+
+service_1 = Service.create!(
+  repair_name: "Tyre change",
+  cost: 5, 
+  user: user_2,
+)
+
 puts "Created #{User.count} users"
+puts "Created #{Service.count} services"

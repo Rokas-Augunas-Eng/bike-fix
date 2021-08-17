@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   root to: 'pages#home'
    get 'profile', to: 'pages#profile'
 
-  resources :mechanics do
+  resources :users do
     resources :bookings, only:[:new, :create, :update, :edit, :index]
+    resources :reviews, only:[:new, :create, :update, :edit, :index]
   end
+  
+  resources :services, only:[:new, :create, :update, :edit, :index]
 end
