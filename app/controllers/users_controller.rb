@@ -1,13 +1,14 @@
 class UsersController < ApplicationController
 
   def index
-        @mechanics = Users.where('mechanic = true')
+    @mechanics = User.where('mechanic = true')
 
-        if params[:search_by_service].present?
-      @mechanics = @mechanics.services.where("repair_name ILIKE ?", "%#{params[:search_by_service]}%")
-    else
-      @mechanics
-    end
+    if params[:search_by_service].present?
+
+      @mechanics = @mechanics.joins(:services).where(services: {repair_name: params[:search_by_service]})
   end
   end
 end
+
+
+#  User.where(mechanic: true).joins(:services).where(services: {repair_name: 'Tyre Fitting (Per Wheel)'})

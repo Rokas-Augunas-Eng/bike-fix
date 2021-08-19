@@ -1,26 +1,15 @@
-
-<h1> Bike issue? </h1>
-<div class="searchbar">
-  <%= form_tag users_path, method: "GET" do %>
-  <%= text_field_tag :search_by_service, params[:search_by_service],
-  placeholder: "Tyre Puncture...",
-  class: "searchbox"%>
-  <%= submit_tag "Search",
-  class: "search_button" %>
-  <% end %>
-</div>
-
 <div class="main">
-<h1>Near me</h1>
+<h1>Mechanics that offer <%= params["search_by_service"] %></h1>
   <ul class="cards">
-    <% @mechanics[0..3].each do |mechanic| %>
+    <% @mechanics.each do |mechanic| %>
     <li class="cards_item">
       <div class="card">
-        <div class="card_image"><img src=""></div>
+        <div class="card_image"><img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png"></div>
         <div class="card_content">
           <h2 class="card_title"><%= mechanic.company_name %></h2>
           <p class="card_text"><i class="fas fa-map-marker-alt"></i> <%= mechanic.location %></p>
           <p class="card_text"><i class="fas fa-bicycle"></i>  </p>
+          <p class="card_text"><i class="fas fa-money-bill-wave"></i> </p>
         </div>
       </div>
     </li>
