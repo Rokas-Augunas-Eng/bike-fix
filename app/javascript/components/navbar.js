@@ -1,4 +1,5 @@
- let menuIcon = document.querySelector('.menuIcon');
+const navbar = () => {
+    let menuIcon = document.querySelector('.menuIcon');
         let nav = document.querySelector('.overlay-menu');
 
         menuIcon.addEventListener('click', () => {
@@ -10,8 +11,6 @@
                 nav.style.transition = 'transform 0.2s ease-out';
             }
         });
-
-
         // Toggle Menu Icon ========================================
         let toggleIcon = document.querySelector('.menuIcon');
 
@@ -22,3 +21,5 @@
                 toggleIcon.className = 'menuIcon';
             }
         });
+    };
+export {navbar};
