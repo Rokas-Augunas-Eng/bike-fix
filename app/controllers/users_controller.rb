@@ -1,14 +1,34 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @mechanics = User.where('mechanic = true')
-
+    @users = User.where(mechanic: true)
     if params[:search_by_service].present?
-
-      @mechanics = @mechanics.joins(:services).where(services: {repair_name: params[:search_by_service]})
+      @users = @users.joins(:services).where(services: {repair_name: params[:search_by_service]})
+    else
+      @users
+    end
+    # the `geocoded` scope filters only users with coordinates (latitude & longitude)
+    @markers = @users.geocoded.map do |user|
+      {
+        lat: user.latitude,
+        lng: user.longitude,
+        info_window: render_to_string(partial: "map_box", locals: { user: user })
+      }
+    end
   end
+
+    def show
+      @user = User.find(params[:id])
+    end
+
+    private
+
+    def set_user
+      @user = User.find(params[:id])
+    end
+
+    def user_params
+      params.require(:user).permit(:first_name)
+    end
   end
-end
-
-
-#  User.where(mechanic: true).joins(:services).where(services: {repair_name: 'Tyre Fitting (Per Wheel)'})
