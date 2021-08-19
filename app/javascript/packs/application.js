@@ -15,7 +15,8 @@ ActiveStorage.start()
 import "bootstrap";
 
 import { navbar } from '../components/navbar.js';
-
+import { initMapbox } from '../plugins/init_mapbox';
 document.addEventListener('turbolinks:load', () => {
   navbar();
+  initMapbox();
 });
