@@ -69,7 +69,7 @@ user_7 = User.create!(
   password: "123456",
   mechanic: true, 
   location: "296-298 Brixton Road, SW9 6AG",
-  company_name: "Bricton Cycles",
+  company_name: "Brixton Cycles",
   insta_availability: false,
 )
 
