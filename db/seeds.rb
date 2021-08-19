@@ -1,6 +1,9 @@
 require 'faker'
 require 'open-uri'
 
+Review.destroy_all
+puts "Reviews database deleted"
+
 Booking.destroy_all
 puts "Booking database deleted"
 
@@ -175,5 +178,35 @@ service_3_5 = Service.create!(
   user: user_3,
 )
 
+# Bookings creation
+
+booking_2_1 = Booking.create!(
+  user: user_1,
+  service: service_2_1,
+  booking_location: "138 Kingsland Rd, London E2 8DY",
+  comment: "Front tyre puncture" 
+)
+
+booking_2_2 = Booking.create!(
+  user: user_1,
+  service: service_2_1,
+  booking_location: "110 Kingsland Rd, London",
+  comment: "Rear tyre puncture" 
+)
+
+# Reviews creation
+
+review_2_1 = Review.create!(
+  booking: booking_2_1,
+  rating: 5,
+)
+
+review_2_2 = Review.create!(
+  booking: booking_2_2,
+  rating: 2,
+)
+
 puts "Created #{User.count} users"
 puts "Created #{Service.count} services"
+puts "Created #{Booking.count} bookings"
+puts "Created #{Review.count} reviews"
