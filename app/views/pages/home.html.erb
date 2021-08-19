@@ -9,17 +9,20 @@
   <% end %>
 </div>
 
-<div class="near_me">
-    <h4> Nearby Bike Shops </h4>
-  </div>
-  <div class="cards">
-    <% @users[0..3].each do |mechanic| %>
-    <div class="card rounded" style="width: 16rem;">
-      <div class="card-body">
-        <h5 class="card-title"><%= link_to mechanic.company_name, user_path(mechanic) %></h5>
-        <p> <%=  mechanic.insta_availability%> </p>
-
+<div class="main">
+<h1>Near me</h1>
+  <ul class="cards">
+    <% @mechanics[0..3].each do |mechanic| %>
+    <li class="cards_item">
+      <div class="card">
+        <div class="card_image"><img src=""></div>
+        <div class="card_content">
+          <h2 class="card_title"><%= mechanic.company_name %></h2>
+          <p class="card_text"><i class="fas fa-map-marker-alt"></i> <%= mechanic.location %></p>
+          <p class="card_text"><i class="fas fa-bicycle"></i>  </p>
+        </div>
       </div>
-    </div>
+    </li>
     <% end %>
-  </div>
+  </ul>
+</div>
