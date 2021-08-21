@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :find_service
+ # before_action :find_service
 
   def index
     @bookings = Booking.all
@@ -39,11 +39,15 @@ class BookingsController < ApplicationController
     redirect_to user_path(current_user)
   end
 
+  def confirmation
+     @booking = Booking.find(params[:id])
+  end
+
   private
 
-  def find_service
-    @service = Service.find(params[:service_id])
-  end
+  # def find_service
+  #   @service = Service.find(params[:service_id])
+  # end
 
   def booking_params
     params.require(:booking).permit(:user_id, :booking_location, :comment, :datetime) # potential bug in the future 
