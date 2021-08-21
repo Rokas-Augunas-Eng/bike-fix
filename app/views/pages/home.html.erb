@@ -1,4 +1,6 @@
-<h1> Bike issue? </h1>
+
+<h1 class="title"> Bike issue? </h1>
+
 <div class="searchbar">
   <%= form_tag users_path, method: "GET" do %>
   <%= text_field_tag :search_by_service, params[:search_by_service],
@@ -10,8 +12,9 @@
 </div>
 
 <div class="main">
-<h1>Near me</h1>
+ <h4 class="near_me">Near me</h4>
   <ul class="cards">
+
     <% @mechanics[0..3].each do |mechanic| %>
     <li class="cards_item">
       <div class="card">

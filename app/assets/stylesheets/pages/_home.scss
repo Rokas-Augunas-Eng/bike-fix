@@ -1,5 +1,35 @@
-// Specific CSS for your home-page
+.title {
+  padding-top: 70px;
+  text-align: left;
+
+}
 .searchbar {
   display: flex;
   justify-content: center;
+  width: 100vw;
+  margin: 0 auto;
+  width: 0px;
+  padding: 8px;
+}
+
+.searchbox {
+  margin: 0 auto;
+  width: 95vw;
+  height: 32px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+}
+
+.search_button {
+  width: 95vw;
+  text-align: center;
+  background-color: #33A8A1;
+  color: white;
+  height: 32px;
+  border-radius: 10px;
+}
+
+.near_me {
+  padding-left: 8px;
+  margin-bottom: -8px
 }

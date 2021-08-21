@@ -27,13 +27,13 @@ img {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: 5px;
+  margin: 8px;
   padding: 0;
 }
 
 .cards_item {
   display: flex;
-  padding: 1rem;
+  padding: 8px;
 }
 
 @media (min-width: 40rem) {
@@ -73,14 +73,14 @@ img {
   letter-spacing: 1px;
   text-transform: capitalize;
   margin: 0px;
-  margin-bottom: 1.25rem; 
+  margin-bottom: 1.25rem;
 }
 
 .card_text {
   color: #ffffff;
   font-size: 1.2rem;
   line-height: 0.5;
-  margin-bottom: 1.25rem;    
+  margin-bottom: 1.25rem;
   font-weight: 400;
 }
 /* ----------------------------- */
