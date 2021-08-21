@@ -14,5 +14,12 @@ Rails.application.routes.draw do
     end
   end
   
+  resources :bookings, only:[:confirmation] do
+    resources :services, only:[:show] do
+      member do 
+        get "confirmation"
+      end
+    end
+  end
   resources :services, only:[:new, :create, :update, :edit, :index]
 end

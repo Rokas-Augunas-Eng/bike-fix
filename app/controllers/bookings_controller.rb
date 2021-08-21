@@ -1,12 +1,12 @@
 class BookingsController < ApplicationController
- # before_action :find_service
+ before_action :find_booking, only: [:destroy, :show, :edit, :confirmation]
 
   def index
     @bookings = Booking.all
   end
-  
+
   def new
-    @booking = Booking.new 
+    @booking = Booking.new
   end
 
   def create
@@ -16,22 +16,19 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to profile_path
     else
-      render :new  
-    end 
+      render :new
+    end
   end
 
   def destroy
-    @booking = Booking.find(params[:id])
     @booking.destroy
     redirect_to user_path(current_user)
   end
 
   def show
-    @bookings = Booking.find(params[:id])
   end
 
   def edit
-    @booking = Booking.find(params[:id])
   end
 
   def update
@@ -40,14 +37,14 @@ class BookingsController < ApplicationController
   end
 
   def confirmation
-     @booking = Booking.find(params[:id])
+    @repair_name = @service.repair_name
   end
 
   private
 
-  # def find_service
-  #   @service = Service.find(params[:service_id])
-  # end
+  def find_booking
+    @booking = Booking.find(params[:id])
+  end
 
   def booking_params
     params.require(:booking).permit(:user_id, :booking_location, :comment, :datetime) # potential bug in the future 
