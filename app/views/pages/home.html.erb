@@ -12,14 +12,14 @@
 </div>
 
 <div class="main">
- <h4 class="near_me">Near me</h4>
+ <h5 class="near_me">Nearby Bike Shops</h5>
   <ul class="cards">
 
     <% @mechanics[0..3].each do |mechanic| %>
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src=""></div>
-        <div class="card_content">
+    <li class="cards_item-home">
+      <div class="card-home">
+        <div class="card_image"><img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png"></div>
+        <div class="card_content-home">
           <h2 class="card_title"><%= mechanic.company_name %></h2>
           <p class="card_text"><i class="fas fa-map-marker-alt"></i> <%= mechanic.location %></p>
           <p class="card_text"><i class="fas fa-bicycle"></i>  </p>

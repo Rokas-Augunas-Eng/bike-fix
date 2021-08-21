@@ -17,7 +17,7 @@
   width: 95vw;
   height: 32px;
   margin-bottom: 8px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .search_button {
@@ -26,10 +26,11 @@
   background-color: #33A8A1;
   color: white;
   height: 32px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .near_me {
+  margin-top: 16px;
   padding-left: 8px;
-  margin-bottom: -8px
+  margin-bottom: -16px
 }

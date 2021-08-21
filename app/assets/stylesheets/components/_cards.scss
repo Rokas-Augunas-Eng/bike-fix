@@ -79,7 +79,7 @@ img {
 .card_text {
   color: #ffffff;
   font-size: 1.2rem;
-  line-height: 0.5;
+  line-height: 1;
   margin-bottom: 1.25rem;
   font-weight: 400;
 }
@@ -96,6 +96,30 @@ img {
 }
 
 .card_content-show {
+  padding: 1rem;
+  background: #33A8A1;
+}
+
+/* ----------------------------- */
+
+/* Home Page */
+
+.cards_item-home {
+  display: flex;
+  padding-top: 16px;
+  width: 100%;
+
+}
+.card-home {
+  background-color: white;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+}
+.card_content-home {
+  min-width: 25rem;
   padding: 1rem;
   background: #33A8A1;
 }
