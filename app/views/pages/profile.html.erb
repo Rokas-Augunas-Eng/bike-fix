@@ -1,6 +1,6 @@
 
 <% if current_user.mechanic = 'true' %>
-<h2 class="title">Hi  <%= current_user.company_name %> </h2>
+<h2 class="title">Hi You're a mechanic <%= current_user.company_name %> </h2>
 <p>Here are your upcoming bookings</p>
 <%= bookings = current_user.bookings  %>
 <%= bookings.each do |booking| %>
@@ -11,7 +11,9 @@
 <%= booking.datetime %>
 <% end %>
 <% else %>
-<h2 class="title">Hi  <%= current_user.first_name %> </h2>
+<h2 class="title">Hi You're a biker <%= current_user.first_name %> </h2>
 <p>Here are your upcoming bookings</p>
 <%=  %>
 <% end %>
+
+<%= link_to 'edit your profile', edit_user_registration_path(current_user) %>
