@@ -21,6 +21,8 @@
                 hint: "we need your current password to confirm your changes",
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
+    Are you a mechanic? (Tick if true)
+    <%= f.check_box :mechanic, {}, "true", "false" %>
   </div>
 
   <div class="form-actions">
