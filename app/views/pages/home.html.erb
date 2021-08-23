@@ -16,6 +16,7 @@
   <ul class="cards">
 
     <% @mechanics[0..3].each do |mechanic| %>
+    <%= link_to user_path(mechanic) do %>
     <li class="cards_item-home">
       <div class="card-home">
         <div class="card_image"><img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png"></div>
@@ -26,6 +27,7 @@
         </div>
       </div>
     </li>
+    <% end %>
     <% end %>
   </ul>
 </div>

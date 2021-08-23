@@ -47,6 +47,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:user_id, :booking_location, :comment, :datetime) # potential bug in the future 
+    params.require(:booking).permit(:user_id, :booking_location, :comment, :datetime) # potential bug in the future
   end
 end
