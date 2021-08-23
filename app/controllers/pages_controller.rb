@@ -4,4 +4,6 @@ class PagesController < ApplicationController
   def home
     @mechanics = User.where(mechanic: true)
   end
-end
+
+  def confirmation
+  end

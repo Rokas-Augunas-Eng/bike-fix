@@ -2,6 +2,7 @@
 <h1>Mechanics that offer <%= params["search_by_service"] %></h1>
   <ul class="cards">
     <% @users.each do |mechanic| %>
+    <%= link_to user_path(mechanic) do %>
     <li class="cards_item">
       <div class="card">
         <div class="card_image"><img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png"></div>
@@ -14,28 +15,7 @@
       </div>
     </li>
     <% end %>
-  </ul>
-
-
-<!-- Mechanic cards -->
-<div class="main">
-<h1>Mechanics that offer <%= params["search_by_service"] %></h1>
-  <ul class="cards">
-    <% @users.each do |mechanic| %>
-      <li class="cards_item">
-      <%= link_to user_path(mechanic) do %>
-      <div class="card">
-        <div class="card_image"><img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png"></div>
-        <div class="card_content">
-          <h2 class="card_title"><%= mechanic.company_name %></h2>
-          <p class="card_text"><%= icon('fas', 'map-marker-alt') %></i> <%= mechanic.location %></p>
-          <p class="card_text"><%= icon('fas', 'bicycle') %> <%= mechanic.bookings.services.repair_name %> </p>
-          <p class="card_text"><%= icon('fas', 'money-bill-wave') %> £<%= mechanic.cost %></p> 
-          <%= icon('fas', 'star', style: 'color: white')  * mechanic.average_rating.to_i %><%= icon('far', 'star', style: 'color: white') * (5 - mechanic.average_rating.to_i) %>
-        </div>
-      </div>
-      <% end %>
-      </li>
     <% end %>
   </ul>
-</div>
+
+

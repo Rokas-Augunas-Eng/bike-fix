@@ -1,4 +1,6 @@
-<h1> Bike issue? </h1>
+
+<h1 class="title"> Bike issue? </h1>
+
 <div class="searchbar">
   <%= form_tag users_path, method: "GET" do %>
   <%= text_field_tag :search_by_service, params[:search_by_service],
@@ -10,19 +12,22 @@
 </div>
 
 <div class="main">
-<h1>Near me</h1>
+ <h5 class="near_me">Nearby Bike Shops</h5>
   <ul class="cards">
+
     <% @mechanics[0..3].each do |mechanic| %>
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src=""></div>
-        <div class="card_content">
+    <%= link_to user_path(mechanic) do %>
+    <li class="cards_item-home">
+      <div class="card-home">
+        <div class="card_image"><img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png"></div>
+        <div class="card_content-home">
           <h2 class="card_title"><%= mechanic.company_name %></h2>
           <p class="card_text"><i class="fas fa-map-marker-alt"></i> <%= mechanic.location %></p>
           <p class="card_text"><i class="fas fa-bicycle"></i>  </p>
         </div>
       </div>
     </li>
+    <% end %>
     <% end %>
   </ul>
 </div>
