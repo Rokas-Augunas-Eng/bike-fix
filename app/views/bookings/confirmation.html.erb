@@ -15,11 +15,31 @@
 </div>
 <%= @booking.user.email %>
 
+<%= simple_form_for(@booking) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+<div class="form-inputs">
+  <%= f.input :comment %>
+  <%= f.input :photo, as: :file %>
+</div>
+
+<div class="form-actions">
+  <%= f.button :submit %>
+</div>
+<% end %>
+
+
+
+
 <div id="map"
   style="width:100%; height: 400px;"
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
+
+<%# Image to Display %>
+<%= cl_image_tag("az9cictgbyryvdhvpaxj",
+      width: 400, height: 300, crop: :fill) %>
 
 <div class="flex">
   <h2>Total</h2>
