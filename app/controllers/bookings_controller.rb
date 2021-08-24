@@ -25,7 +25,7 @@ class BookingsController < ApplicationController
     redirect_to user_path(current_user)
   end
 
-  def show
+  def show 
   end
 
   def edit
@@ -36,8 +36,8 @@ class BookingsController < ApplicationController
     redirect_to user_path(current_user)
   end
 
+ # Confirmation page will find booking_id from previous page
   def confirmation
-    @repair_name = @service.repair_name
   end
 
   private

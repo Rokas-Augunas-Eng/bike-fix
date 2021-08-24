@@ -4,14 +4,14 @@
   <p>Service wil be in XX minutes</p>
 </div>
 
-
-<h2>Items</h2>
-
 <div class="order_summary">
-  <ul>
-  <li>@repair_name</li>
-  <li>Service 2</li>
-  </ul>
+  <h2>Items</h2>
+  <%= @booking.services.each do |service| %>
+    <ul class="flex">
+      <li><%= service.repair_name %></li>
+      <li><%= service.cost %></li>
+    </ul>
+  <% end %>
 </div>
 <%= @booking.user.email %>
 
@@ -21,3 +21,7 @@
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 
+<div class="flex">
+  <h2>Total</h2>
+  <p>"£Insert Total"</p>
+</div>
