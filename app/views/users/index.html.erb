@@ -1,21 +1,17 @@
 <div class="main">
-<h1>Mechanics that offer <%= params["search_by_service"] %></h1>
+<h3 class="title pl-3">Here are services <br> matching '<%= params["search_by_service"] %>'</h3>
   <ul class="cards">
-    <% @users.each do |mechanic| %>
-    <%= link_to user_path(mechanic) do %>
+      <%  @services.each do |service| %>
     <li class="cards_item">
       <div class="card">
         <div class="card_image"><img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png"></div>
         <div class="card_content">
-          <h2 class="card_title"><%= mechanic.company_name %></h2>
-          <p class="card_text"><i class="fas fa-map-marker-alt"></i> <%= mechanic.location %></p>
-          <p class="card_text"><i class="fas fa-bicycle"></i>  </p>
-          <p class="card_text"><i class="fas fa-money-bill-wave"></i> </p>
+          <h2 class="card_title"> <%= service.user.company_name %></h2>
+          <p class="card_text"><i class="fas fa-map-marker-alt"></i>  <%= service.user.location  %></p>
+          <p class="card_text"><i class="fas fa-bicycle"></i> <%= service.repair_name %>  </p>
+          <p class="card_text"><i class="fas fa-money-bill-wave"></i>  £<%= service.cost %> </p>
         </div>
       </div>
     </li>
     <% end %>
-    <% end %>
   </ul>
-
-
