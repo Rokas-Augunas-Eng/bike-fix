@@ -20,7 +20,7 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 <div class="form-inputs">
   <%= f.input :comment %>
-  <%= f.input :photo, as: :file %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true }  %>
 </div>
 
 <div class="form-actions">
@@ -28,6 +28,9 @@
 </div>
 <% end %>
 
+<%= @booking.photos.each do |photo %>
+  <%= cl_image_tag photo.key, height: 100, width: 150, crop: :fill %>
+<% end %>
 
 
 
