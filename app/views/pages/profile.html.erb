@@ -1,74 +1,30 @@
 
 <% if current_user.mechanic = 'true' %>
-  <h2 class="title"> Hi Robert <%= current_user.company_name %> </h2>
+  <h2 class="profile-title"> Hi Robert <%= current_user.company_name %> </h2>
 <% else %>
 <h2 class="title">Hi You're a biker <%= current_user.first_name %> </h2>
 <% end %>
-
   <div class="booking-title">
     Upcoming Bookings</div>
-
-
 <!-- cards for individual bookings -->
+<% bookings = current_user.bookings %>
+<% bookings.each do |booking| %>
   <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-primary shadow h-100 py-2">
-          <div class="card-body">
-              <div class="row no-gutters align-items-center">
-                  <div class="col mr-2">
-
-                      <div class="h5 mb-0 text-gray-800">
-                        Jane, Puncture Repair, SW14AP <br>
-                        "Hi, I have a puncture and need fixing before race next week" <br>
-                        14:30 Monday 3rd September '21
-                      </div>
-                      <% bookings = current_user.bookings %>
-                      <% bookings.each do |booking| %>
-                      <% end %>
-                  <div class="col-auto">
-                  </div>
-              </div>
-          </div>
-      </div>
+    <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <div class="mb-0">
+                     <h5><%= booking.service.repair_name %></h5>
+                      <p><%= booking.booking_location %></p>
+                      <p><%= booking.comment %></p>
+                      <p> <%= booking.service.user.email %></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
-</div>
-  <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-primary shadow h-100 py-2">
-          <div class="card-body">
-              <div class="row no-gutters align-items-center">
-                  <div class="col mr-2">
-
-                      <div class="h5 mb-0 text-gray-800">
-                        Jane, Puncture Repair, SW14AP <br>
-                        "Hi, I have a puncture and need fixing before race next week" <br>
-                        14:30 Monday 3rd September '21'
-                      </div>
-
-                  <div class="col-auto">
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-  <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-primary shadow h-100 py-2">
-          <div class="card-body">
-              <div class="row no-gutters align-items-center">
-                  <div class="col mr-2">
-
-                      <div class="h5 mb-0  text-gray-800">
-                        Jane, Puncture Repair, SW14AP <br>
-                        "Hi, I have a puncture and need fixing before race next week" <br>
-                        14:30 Monday 3rd September '21'
-                      </div>
-
-                  <div class="col-auto">
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-
+<% end %>
 
 <%= link_to 'edit your profile', edit_user_registration_path(current_user) %>
