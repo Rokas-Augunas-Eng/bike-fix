@@ -1,0 +1,101 @@
+//Variables
+$primary: #e75480;
+$secondary: #e9967a;
+$baseSpacing: 20px; 
+
+//Helpers
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+#modal {
+	position: relative;
+	background: linear-gradient(150deg, $secondary, $primary);
+	height: 100vh;
+	text-align: center;
+}
+
+svg {
+  max-width: 100%;
+  max-height: 100%;
+  fill: rgba(#000, 0.06%);
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+//Modal 
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+.feedback {
+	position: relative;
+	background-color: white;
+	border-radius: 10px;
+	padding: $baseSpacing $baseSpacing $baseSpacing*2;
+	margin: $baseSpacing auto;
+	max-width: 550px;
+	
+	&__content {
+		padding: 0 $baseSpacing*2 $baseSpacing;
+	}
+	
+	&__form {
+		padding: $baseSpacing/2 0;
+	}
+	
+	&__submit {
+		background-color: $primary;
+		padding: $baseSpacing/2 $baseSpacing*2;
+		border: 0;
+		color: #fff;
+		letter-spacing: 1px;
+		box-shadow: 0 2px 5px grey;
+		cursor: pointer;
+		transition: all .2s;
+		
+		&:hover {
+			background-color: darken($primary, 10%);
+		}
+	}
+}
+
+.rating {
+	margin-bottom: $baseSpacing;
+	border: none;
+	
+	input {
+		display: none;
+		&:checked ~ label svg {
+			fill: gold;
+		}
+
+		& + label:hover {
+			svg,
+			& ~ label svg {
+				fill: gold;
+			}
+		}
+	}
+	
+  label {
+    position: relative;
+		width: 2em;
+  	height: 2em;
+	}
+}
+
+#close {
+	border: none;
+	background: transparent;
+	outline: none;
+	position: absolute;
+	right: $baseSpacing/2;
+	top: $baseSpacing/2;
+}

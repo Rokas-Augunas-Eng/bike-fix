@@ -4,24 +4,23 @@ class UsersController < ApplicationController
   def index
     @users = User.where(mechanic: true)
     if params[:search_by_service].present?
-      @users = @users.joins(:services).where(services: {repair_name: params[:search_by_service]})
+      @services = Service.where("repair_name ILIKE ?", "%#{params[:search_by_service]}%")
     else
-      @users
-    end
-    # the `geocoded` scope filters only users with coordinates (latitude & longitude)
-    @markers = @users.geocoded.map do |user|
-      {
-        lat: user.latitude,
-        lng: user.longitude,
-        info_window: render_to_string(partial: "map_box", locals: { user: user }),
-        image_url: helpers.asset_url('mechanic_logo.jpg')
-      }
+      @services = Service.all
     end
   end
 
     def show
       @user = User.find(params[:id])
+
+      @marker = {
+        lat: @user.latitude,
+        lng: @user.longitude,
+        info_window: render_to_string(partial: "map_box", locals: { user: @user }),
+        image_url: helpers.asset_url('mechanic_logo.jpg')
+      }
     end
+
     def edit
 
     end

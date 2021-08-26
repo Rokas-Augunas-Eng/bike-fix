@@ -11,5 +11,4 @@ class Service < ApplicationRecord
     end
     (sum.to_f / counter) if counter > 0
   end
-
 end

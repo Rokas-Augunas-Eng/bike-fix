@@ -1,6 +1,5 @@
-// app/javascript/plugins/init_mapbox.js
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
+// import mapboxgl from 'mapbox-gl'; 
+// import 'mapbox-gl/dist/mapbox-gl.css';
 
 const initMapbox = () => {
   const mapElement = document.getElementById('map');
@@ -17,9 +16,9 @@ const initMapbox = () => {
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v10'
     });
-    const markers = JSON.parse(mapElement.dataset.markers);
+    const marker = JSON.parse(mapElement.dataset.marker);
  
-    markers.forEach((marker) => {
+    // markers.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window);
 
       // Create a HTML element for your custom marker
@@ -35,9 +34,9 @@ const initMapbox = () => {
         .setLngLat([marker.lng, marker.lat])
         .setPopup(popup)
         .addTo(map);
-    });
+    // });
     
-    fitMapToMarkers(map, markers);
+    fitMapToMarkers(map, [marker]);
   }
   
 };
