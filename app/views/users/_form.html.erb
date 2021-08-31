@@ -1,0 +1,32 @@
+
+<%= simple_form_for @service do |f| %>
+  <%= f.input :booking_start, as: :datetime, html5: true %>
+  <%= f.input :booking_end, as: :datetime, html5: true %>
+  <%= f.submit "Book Now", class: "btn-search btn-search-index" %>
+<% end %>
+
+
+			<label class="container"><%= icon('fas', 'bicycle') %> <%= service.repair_name %> <%= icon('fas', 'money-bill-wave') %> £<%= service.cost %>
+				<input type="checkbox">
+				<span class="checkmark"></span>
+			</label>
+
+
+   <p class="card_text"><%= icon('fas', 'bicycle') %> <%= service.repair_name %> <%= icon('fas', 'money-bill-wave') %> £<%= service.cost %></p>
+
+   <% @user.services.each do |service| %>
+      <ul>
+
+      <%= form_for @user do |f| %>
+      <%= f.collection_check_boxes :services, [[true, 'Yes'], [false, 'No']], :first, :last %>
+      <% end %>
+
+      </ul>
+      <% end %>
+
+
+            <%= simple_form_for (@user, @bookings) do |f|  %>
+        <%= f.association :services, :as => :radio_buttons, :label_method => :repair_name %>  
+          <%= f.label service.repair_name %>
+        <%= f.submit %>
+      <% end %>

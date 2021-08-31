@@ -1,2 +1,7 @@
-<h1>booking</h1>
-<h1>booking</h1>
+<h1>Booking</h1>
+<h1>Booking</h1>
+
+  <%= simple_form_for [@mechanic, @booking] do |f| %>
+  <%= f.association :service, collection: Service.where(user: @mechanic), label_method: :repair_name, value_method: :id, include_blank: false %>
+  <%= f.submit class: "btn" %>      
+  <% end %>
