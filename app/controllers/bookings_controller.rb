@@ -7,14 +7,15 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @mechanic = User.find(params[:user_id])
   end
 
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.service = @service
+
     if @booking.save
-      redirect_to profile_path
+      redirect_to confirmation_booking_path(@booking)
     else
       render :new
     end
@@ -26,9 +27,11 @@ class BookingsController < ApplicationController
   end
 
   def show
+    @bookings = Booking.find(params[:id])
   end
 
   def edit
+    @booking = Booking.find(params[:id])
   end
 
   def update
@@ -37,7 +40,7 @@ class BookingsController < ApplicationController
   end
 
   def confirmation
-    @repair_name = @service.repair_name
+    @repair_name = @booking.service.repair_name
   end
 
   private
@@ -47,6 +50,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:user_id, :booking_location, :comment, :datetime) # potential bug in the future
+    params.require(:booking).permit(:service_id)
   end
 end
