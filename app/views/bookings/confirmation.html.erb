@@ -1,13 +1,14 @@
 <div class="confirmation-page">
-<h2 class="payment-margin">Payment</h2>
+
 <div class="container">
+  <h2 class="payment-margin">Order Confirmation</h2>
     <div class="booking-timer" style="background-color: white">
       <div class="d-flex justify-content-between" >
         <p><strong>Estimated Arrival</strong></p>
-        <p>13:30</p>
+        <%= @time.strftime("%H:%M") %>
       </div>
 
-      <div class="progress">
+      <div class="progress mx-auto ">
         <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25 minutes</div>
       </div>
       <p><i>Your order has been confirmed</i></p>
