@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
    get 'profile', to: 'pages#profile'
-   # get 'confirmation', to: 'pages#confirmation'
+   get 'confirmation', to: 'pages#confirmation'
 
   resources :users do
     resources :bookings, only:[:new, :create, :update, :edit, :index]

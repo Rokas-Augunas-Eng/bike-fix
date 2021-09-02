@@ -50,6 +50,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:service_id) # potential bug in the future
+    params.require(:booking).permit(:service_id)
   end
 end

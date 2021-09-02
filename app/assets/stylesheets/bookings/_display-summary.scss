@@ -1,0 +1,19 @@
+.display-summary {
+  display: flex;
+  justify-content: space-between;
+
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+  margin: 0 8px;
+}
+
+.order_summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  margin-left: 16px;
+  
+}
+
+.fas {
+  color: blue;
+}

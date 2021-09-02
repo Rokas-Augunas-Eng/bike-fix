@@ -1,0 +1,37 @@
+
+<div>
+  <h1>Booking Summary</h1> 
+  <div class="booking-timer">
+    <p>Your order has been confirmed</p>
+    <p>Estimated arrival time</p>
+  </div>
+</div>
+
+
+<div class="order_summary">
+  <h2>Items</h2>
+  <p>Your<%= @booking %></p>
+  <p>Your<%= @booking %></p>
+</div>
+
+<%# <div>
+  <%= @booking.photos.each do |photo %>
+    <%# <%= cl_image_tag photo.key, height: 100, width: 150, crop: :fill %>
+  <%# <% end %>
+<%# </div> %> 
+
+<%= cl_image_tag("crdfluj0bi6d4yrryofe",
+      width: 75, height: 75, crop: :fill) %>
+
+<div>
+  <h2>Mechanic Location</h2>
+  <div class="map_confirmation", class="flex-container" id="map"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>
+
+<div class="flex">
+  <h2>Total</h2>
+  <p>"£Insert Total"</p>
+</div>
