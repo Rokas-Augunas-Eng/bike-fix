@@ -13,14 +13,34 @@ puts "Service database deleted"
 User.destroy_all
 puts "User database deleted"
 
-# User creation
+# Users (who are not mechanics) creation
 
 user_1 = User.create!(
   email: "user1@test.com",
   password: "123456",
   )
+user_1b = User.create!(
+  email: "user1b@test.com",
+  password: "123456",
+  )
+user_1c = User.create!(
+  email: "user1c@test.com",
+  password: "123456",
+  )
+user_1d = User.create!(
+  email: "user1d@test.com",
+  password: "123456",
+  )
+user_1e = User.create!(
+  email: "user1e@test.com",
+  password: "123456",
+  )
+user_1f = User.create!(
+  email: "user1f@test.com",
+  password: "123456",
+  )
 
-# User/Mechanic creation
+# Users (who are mechanics) creation
 
 user_2 = User.create!(
   email: "user2@test.com",
@@ -107,8 +127,32 @@ user_11 = User.create!(
   email: "user11@test.com",
   password: "123456",
   mechanic: true,
-  location: "28 Whitmore Road, N1 5QA",
-  company_name: "London Bike Kitchen",
+  location: "69 The Cut, London SE1 8LL",
+  company_name: "Big Bad Bikes",
+  insta_availability: false,
+)
+user_12 = User.create!(
+  email: "user12@test.com",
+  password: "123456",
+  mechanic: true,
+  location: "97-99 Clerkenwell Rd, London EC1R 5BX",
+  company_name: "Raleigh Bikes",
+  insta_availability: false,
+)
+user_13 = User.create!(
+  email: "user13@test.com",
+  password: "123456",
+  mechanic: true,
+  location: "41 Cropley St, London N1 7HT",
+  company_name: "CycleCrazy",
+  insta_availability: false,
+)
+user_14 = User.create!(
+  email: "user14@test.com",
+  password: "123456",
+  mechanic: true,
+  location: "125 St John's Hill, London SW1 1SZ",
+  company_name: "London Race Bikes",
   insta_availability: false,
 )
 
@@ -141,7 +185,7 @@ service_2_4 = Service.create!(
 )
 
 service_2_5 = Service.create!(
-  repair_name: "Wheel tunning",
+  repair_name: "Wheel tuning",
   cost: 40,
   user: user_2,
 )
@@ -173,9 +217,58 @@ service_3_4 = Service.create!(
 )
 
 service_3_5 = Service.create!(
-  repair_name: "Wheel tunning",
+  repair_name: "Wheel tuning",
   cost: 45,
   user: user_3,
+)
+
+# user 4
+
+service_4_1 = Service.create!(
+  repair_name: "Total Tyre Refit",
+  cost: 30,
+  user: user_4,
+)
+service_4_2 = Service.create!(
+  repair_name: "Inner Tube Fix",
+  cost: 10,
+  user: user_4,
+)
+
+# user 5
+
+service_5_1 = Service.create!(
+  repair_name: "Inner Tube",
+  cost: 10,
+  user: user_5,
+)
+service_5_2 = Service.create!(
+  repair_name: "Handlebar Replacement",
+  cost: 30,
+  user: user_5,
+)
+
+# user 6
+
+service_6_1 = Service.create!(
+  repair_name: "Inner Tube Replacement",
+  cost: 30,
+  user: user_6,
+)
+service_6_2 = Service.create!(
+  repair_name: "Inner tube Refit",
+  cost: 30,
+  user: user_6,
+)
+service_6_3 = Service.create!(
+  repair_name: "Pedal Work",
+  cost: 30,
+  user: user_6,
+)
+service_6_4 = Service.create!(
+  repair_name: "Frame Replacement",
+  cost: 30,
+  user: user_6,
 )
 
 # Bookings creation
@@ -193,6 +286,53 @@ booking_2_2 = Booking.create!(
   booking_location: "110 Kingsland Rd, London",
   comment: "Rear tyre puncture"
 )
+booking_3_1 = Booking.create!(
+  user: user_1,
+  service: service_3_1,
+  booking_location: "12 High Street, Kensington",
+  comment: "Help! Not entirely sure what's wrong but bike is now not working"
+)
+
+booking_3_2 = Booking.create!(
+  user: user_1,
+  service: service_3_2,
+  booking_location: "135 Creek Rd, London SE8 3BU",
+  comment: "Brake is absolutely shot"
+)
+
+booking_4_1 = Booking.create!(
+  user: user_1b,
+  service: service_4_1,
+  booking_location: "241 Eversholt St, London NW1 1BE",
+  comment: "Tyre damaged, can't seem to fix"
+)
+
+booking_4_2 = Booking.create!(
+  user: user_1c,
+  service: service_4_2,
+  booking_location: "King Street, Southwark, London",
+  comment: "Tyre Popped!"
+)
+booking_5_1 = Booking.create!(
+  user: user_1c,
+  service: service_5_1,
+  booking_location: "118 Bethnal Green Rd, London E2 6DG",
+  comment: "Inner Tube gone"
+)
+
+booking_5_2 = Booking.create!(
+  user: user_1d,
+  service: service_5_2,
+  booking_location: "49-53 Grays Inn Rd, London WC1X 8PP",
+  comment: "Handlebars are out of alignment but have been having a problem for a while getting worse, full replacement please!"
+)
+booking_6_1 = Booking.create!(
+  user: user_1e,
+  service: service_6_1,
+  booking_location: "6 Tooley St, London SE1 2SY",
+  comment: "Tyre has gone, think it's the inner tube!!!"
+)
+
 
 
 # Reviews creation
@@ -200,12 +340,64 @@ booking_2_2 = Booking.create!(
 review_2_1 = Review.create!(
   booking: booking_2_1,
   rating: 5,
+  content: 'Voytek was great, had fabulous knowledge about a range of different bikes and how they drove. Always gave me correct and accurate information'
 )
 
 review_2_2 = Review.create!(
   booking: booking_2_2,
   rating: 2,
+  content: 'Excellent service, quicker than expected delivery.'
 )
+review_3_1 = Review.create!(
+  booking: booking_3_1,
+  rating: 3,
+  content: 'Overall a good service that I would recommend'
+)
+
+review_3_2 = Review.create!(
+  booking: booking_3_2,
+  rating: 2,
+  content: 'Great product and fast delivery'
+)
+review_4_1 = Review.create!(
+  booking: booking_4_1,
+  rating: 5,
+  content: "genuinely impressed"
+)
+
+review_4_2 = Review.create!(
+  booking: booking_4_2,
+  rating: 5,
+  content: '10/10 loved'
+)
+review_5_1 = Review.create!(
+  booking: booking_5_1,
+  rating: 2,
+  content: 'Very fast, recomend Trusted 100%'
+)
+review_5_2 = Review.create!(
+  booking: booking_5_2,
+  rating: 5,
+  content: 'such a fantastic service I was blown away'
+)
+
+review_6_1 = Review.create!(
+  booking: booking_6_1,
+  rating: 5,
+  content: 'Excelent value for money faster deliverys'
+)
+
+
+
+
+
+
+
+
+
+'A good price and easy to purchase online.'
+'Easy has a lot in stock to choose from!'
+'After messing up my booking I had to phone up to speak to a person. The lady I spoke to was a fabulous help and sorted everything out in a few minutes.'
 
 puts "Created #{User.count} users"
 puts "Created #{Service.count} services"
