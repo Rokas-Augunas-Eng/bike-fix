@@ -1,30 +1,28 @@
 
-<% if current_user.mechanic = 'true' %>
-  <h2 class="profile-title"> Hi Robert <%= current_user.company_name %> </h2>
+<% if current_user.mechanic %>
+<h2 class="profile-title"> Hi <%= current_user.company_name %> </h2>
 <% else %>
 <h2 class="title">Hi You're a biker <%= current_user.first_name %> </h2>
 <% end %>
-  <div class="booking-title">
-    Upcoming Bookings</div>
+<div class="booking-title">
+Upcoming Bookings</div>
 <!-- cards for individual bookings -->
-<% bookings = current_user.bookings %>
-<% bookings.each do |booking| %>
-  <div class="col-xl-3 col-md-6 mb-4">
-    <div class="card border-left-primary shadow h-100 py-2">
+<% current_user.services.each do |service| %>
+  <% service.bookings.each do |booking| %>
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-left-primary shadow h-100 py-2">
         <div class="card-body">
-            <div class="row no-gutters align-items-center">
-                <div class="col mr-2">
-                    <div class="mb-0">
-                     <h5><%= booking.service.repair_name %></h5>
-                      <p><%= booking.booking_location %></p>
-                      <p><%= booking.comment %></p>
-                      <p> <%= booking.service.user.email %></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="mb-0">
+               <h5><%= booking.comment %></h5> <br>
+               <p><%= booking.booking_location %> </p>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
     </div>
-  </div>
+  <% end %>
 <% end %>
-
 <%= link_to 'edit your profile', edit_user_registration_path(current_user) %>
