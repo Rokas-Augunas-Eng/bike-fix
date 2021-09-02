@@ -1,6 +1,4 @@
-
 <h1 class="title"> Bike issue? </h1>
-
 <div class="searchbar">
   <%= form_tag users_path, method: "GET" do %>
   <%= text_field_tag :search_by_service, params[:search_by_service],
@@ -23,7 +21,6 @@
         <div class="card_content-home">
           <h2 class="card_title"><%= mechanic.company_name %></h2>
           <p class="card_text"><i class="fas fa-map-marker-alt"></i> <%= mechanic.location %></p>
-          <p class="card_text"><i class="fas fa-bicycle"></i>  </p>
         </div>
       </div>
     </li>
