@@ -1,5 +1,6 @@
 .display-summary {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 
   text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
@@ -11,5 +12,45 @@
   justify-content: space-between;
   margin-bottom: 8px;
   margin-left: 8px;
-  
+}
+
+.heading-wrapper {
+  display: flex;
+}
+
+.toggle-heading {
+  flex-grow: 1;
+}
+
+.toggle-content {
+  height: 0;
+  opacity: 0;
+
+    &.toggle-on {
+      animation: toggle-on 2s;
+      height: 100%;
+      opacity: 1;
+  }
+}
+
+.toggle-content-mechanic {
+  height: 0;
+  opacity: 0;
+
+    &.toggle-on {
+      animation: toggle-on 2s;
+      height: 100%;
+      opacity: 1;
+  }
+}
+
+.toggle-heading-mechanic {
+  flex-grow: 1;
+}
+
+@keyframes toggle-on {
+  from {opacity: 0;
+  height: 0;}
+  to {opacity: 1;
+  height: 100%;}
 }

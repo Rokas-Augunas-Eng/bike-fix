@@ -6,6 +6,7 @@ import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { navbar } from '../components/navbar.js';
 import { review } from '../components/review.js';
+import { confirmation } from '../components/confirmation.js';
 
 Rails.start()
 Turbolinks.start()
@@ -15,4 +16,5 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   navbar();
   // review()
+  confirmation();
 });

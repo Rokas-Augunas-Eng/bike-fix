@@ -18,7 +18,7 @@ class UsersController < ApplicationController
       lat: @user.latitude,
       lng: @user.longitude,
       info_window: render_to_string(partial: "map_box", locals: { user: @user }),
-      image_url: helpers.asset_url('mechanic_logo.jpg')
+      image_url: cl_image_path("yr7vbtkxxfrlwjbceesz.jpg")
     }
   end
 
