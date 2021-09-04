@@ -9,11 +9,11 @@ Rails.application.routes.draw do
     resources :reviews, only:[:new, :create, :update, :edit, :index]
   end
   resources :bookings, except: [:new, :create] do
-    member do 
+    member do
       get "confirmation"
     end
   end
-  
+
   resources :bookings, only:[:confirmation] do
     resources :services, only:[:index, :show] do
       member do 
