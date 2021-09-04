@@ -1,20 +1,14 @@
 class ServicesController < ApplicationController
 
   def index
-    @services = Service.all # finish search params
+    @services = Service.all
   end
 
   def new
     @service = Service.new
   end
 
-  # def show
-  #   @services = Service.find(params[:id])
-  # end
-
-  # private 
-
-  # def find_service
-  #   @service = Service.find(params[:service_id])
-  # end
+  def show
+  @service = Service.find(params[:id])
+  end
 end

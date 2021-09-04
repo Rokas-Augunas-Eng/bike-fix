@@ -11,7 +11,7 @@
           <h2 class="card_title"><%= service.user.company_name %></h2>
           <p class="card_text"><%= icon('fas', 'map-marker-alt') %></i> <%= service.user.location  %></p>
           <p class="card_text"><%= icon('fas', 'bicycle') %> <%= service.repair_name %> </p>
-          <p class="card_text"><%= icon('fas', 'money-bill-wave') %> £<%= service.cost %></p> 
+          <p class="card_text"><%= icon('fas', 'money-bill-wave') %> <%= humanized_money_with_symbol(service.price) %></p> 
           <%= icon('fas', 'star', style: 'color: white')  * service.average_rating.to_i %><%= icon('far', 'star', style: 'color: white') * (5 - service.average_rating.to_i) %>
         </div>
       </div>
