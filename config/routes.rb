@@ -15,11 +15,16 @@ Rails.application.routes.draw do
   end
 
   resources :bookings, only:[:confirmation] do
-    resources :services, only:[:show] do
-      member do
+    resources :services, only:[:index, :show] do
+      member do 
         get "confirmation"
       end
     end
   end
   resources :services, only:[:new, :create, :update, :edit, :index]
+  resources :orders, only: [:show, :create] do
+  resources :payments, only: :new
+  end
+  mount StripeEvent::Engine, at: '/stripe-webhooks'
+
 end

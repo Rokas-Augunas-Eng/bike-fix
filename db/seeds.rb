@@ -162,31 +162,36 @@ user_14 = User.create!(
 
 service_2_1 = Service.create!(
   repair_name: "Tyre Fitting (Per Wheel)",
-  cost: 15,
+  sku: "Tyre Fitting (Per Wheel)",
+  price: 15,
   user: user_2,
 )
 
 service_2_2 = Service.create!(
   repair_name: "New Brake Cable (Single)",
-  cost: 12,
+  sku: "New Brake Cable (Single)",
+  price: 12,
   user: user_2,
 )
 
 service_2_3 = Service.create!(
   repair_name: "Brake and Gear Adjustments",
-  cost: 14.5,
+  sku: "Brake and Gear Adjustments",
+  price: 14.5,
   user: user_2,
 )
 
 service_2_4 = Service.create!(
   repair_name: "Chain Repair",
-  cost: 10,
+  sku: "Tyre Fitting (Per Wheel)",
+  price: 10,
   user: user_2,
 )
 
 service_2_5 = Service.create!(
   repair_name: "Wheel tuning",
-  cost: 40,
+  sku: "Tyre Fitting (Per Wheel)",
+  price: 40,
   user: user_2,
 )
 
@@ -194,31 +199,31 @@ service_2_5 = Service.create!(
 
 service_3_1 = Service.create!(
   repair_name: "Tyre Fitting (Per Wheel)",
-  cost: 22.5,
+  price: 22.5,
   user: user_3,
 )
 
 service_3_2 = Service.create!(
   repair_name: "New Brake Cable (Single)",
-  cost: 18,
+  price: 18,
   user: user_3,
 )
 
 service_3_3 = Service.create!(
   repair_name: "Brake and Gear Adjustments",
-  cost: 20,
+  price: 20,
   user: user_3,
 )
 
 service_3_4 = Service.create!(
   repair_name: "Chain Repair",
-  cost: 22,
+  price: 22,
   user: user_3,
 )
 
 service_3_5 = Service.create!(
   repair_name: "Wheel tuning",
-  cost: 45,
+  price: 45,
   user: user_3,
 )
 
@@ -226,12 +231,12 @@ service_3_5 = Service.create!(
 
 service_4_1 = Service.create!(
   repair_name: "Total Tyre Refit",
-  cost: 30,
+  price: 30,
   user: user_4,
 )
 service_4_2 = Service.create!(
   repair_name: "Inner Tube Fix",
-  cost: 10,
+  price: 10,
   user: user_4,
 )
 
@@ -239,12 +244,12 @@ service_4_2 = Service.create!(
 
 service_5_1 = Service.create!(
   repair_name: "Inner Tube",
-  cost: 10,
+  price: 10,
   user: user_5,
 )
 service_5_2 = Service.create!(
   repair_name: "Handlebar Replacement",
-  cost: 30,
+  price: 30,
   user: user_5,
 )
 
@@ -252,22 +257,22 @@ service_5_2 = Service.create!(
 
 service_6_1 = Service.create!(
   repair_name: "Inner Tube Replacement",
-  cost: 30,
+  price: 30,
   user: user_6,
 )
 service_6_2 = Service.create!(
   repair_name: "Inner tube Refit",
-  cost: 30,
+  price: 30,
   user: user_6,
 )
 service_6_3 = Service.create!(
   repair_name: "Pedal Work",
-  cost: 30,
+  price: 30,
   user: user_6,
 )
 service_6_4 = Service.create!(
   repair_name: "Frame Replacement",
-  cost: 30,
+  price: 30,
   user: user_6,
 )
 
