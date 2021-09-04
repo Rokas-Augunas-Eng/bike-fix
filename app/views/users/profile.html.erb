@@ -16,4 +16,8 @@
 <%=  %>
 <% end %>
 
+<li class="list-group-item">
 <%= link_to 'edit your profile', edit_user_registration_path(current_user) %>
+
+<%=  link_to 'HELLLLOOOO', booking_path_(booking), method: :delete, data: { confirm: "Are you sure?" } %>
+</li>
