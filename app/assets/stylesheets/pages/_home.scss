@@ -14,18 +14,29 @@
 .searchbox {
   margin: 0 auto;
   width: 95vw;
-  height: 32px;
+  height: 50px;
   margin-bottom: 8px;
   border-radius: 5px;
 }
 
 .search_button {
-  width: 95vw;
-  text-align: center;
-  background-color: #33A8A1;
-  color: white;
-  height: 32px;
-  border-radius: 5px;
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #33A8A1;;
+  border-radius: 0.5rem;
+  margin: 10px 0px
+}
+
+.search_button:hover {
+  background-color: rgba(255, 255, 255, 0.12);
 }
 
 .near_me {
