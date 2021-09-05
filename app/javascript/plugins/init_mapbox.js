@@ -16,6 +16,10 @@ const initMapbox = () => {
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v10'
     });
+    const markerElement = mapElement.dataset.marker
+      if (markerElement) {
+
+     
     const marker = JSON.parse(mapElement.dataset.marker);
  
     // markers.forEach((marker) => {
@@ -38,7 +42,7 @@ const initMapbox = () => {
     
     fitMapToMarkers(map, [marker]);
   }
-  
+  }
 };
 
 export { initMapbox };

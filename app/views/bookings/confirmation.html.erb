@@ -14,30 +14,35 @@
       <p><i>Your order has been confirmed</i></p>
     </div>
 
-    <div class="display-summary">
-      <p><strong>Your Order</strong></p>
-      <i class="fas fa-check-circle"></i>
+    <div class="display-summary toggle-container">
+      <div class="heading-wrapper"><p class="toggle-heading"><strong>Your Order</strong></p>
+        <i class="fas fa-check-circle toggle-trigger"></i>
+      </div>
+      
+      <div class="order_summary toggle-content">
+        <%= @booking.service.repair_name %>
+        <strong>£<%= @booking.service.cost %></strong>
+      </div>
     </div>
 
-    <div class="order_summary">
-      <%= @booking.service.repair_name %>
-      <strong>£<%= @booking.service.cost %></strong>
-     </div>
 
-    <div class="display-summary">
-        <p><strong>Your Mechanic</strong></p>
-        <i class="fas fa-wrench"></i>
+    <div class="display-summary toggle-container">
+      <div class="heading-wrapper"><p class="toggle-heading-mechanic"><strong>Your Mechanic</strong></p>
+        <i class="fas fa-wrench toggle-trigger-mechanic"></i>
+      </div>
+        
+      <div class="order_summary toggle-content">
+        <p><%= @mechanic.company_name %></p>
+      </div>
     </div>
 
-    <div class="order_summary">
-      <p>Joe Bloggs </p>
-    </div>
+
 
     <div>
       <p><strong>Mechanic Location</strong></p>
     
-    <div class="map_confirmation", class="flex-container" id="map"
-        data-markers="<%= @markers.to_json %>"
+     <div class="map_confirmation", class="flex-container" id="map"
+        data-marker="<%= @marker.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
   </div>

@@ -1,5 +1,7 @@
 class BookingsController < ApplicationController
- before_action :find_booking, only: [:destroy, :show, :edit, :confirmation]
+  include CloudinaryHelper
+
+  before_action :find_booking, only: [:destroy, :show, :edit, :confirmation]
 
   def index
     @bookings = Booking.all
@@ -13,7 +15,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-
+  
     if @booking.save
       redirect_to orders_path
     else
@@ -43,6 +45,14 @@ class BookingsController < ApplicationController
   def confirmation
     @repair_name = @booking.service.repair_name
     @time = Time.now+30*60
+    
+    @mechanic = User.find(70)
+        @marker = {
+      lat: @mechanic.latitude,
+      lng: @mechanic.longitude,
+      info_window: render_to_string(partial: "map_box", locals: { user: @mechanic }),
+      image_url: cl_image_path("yr7vbtkxxfrlwjbceesz.jpg")
+    }
   end
 
   private
