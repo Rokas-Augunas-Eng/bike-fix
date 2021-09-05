@@ -51,11 +51,15 @@ user_2 = User.create!(
   insta_availability: true,
 )
 
+file = File.open(Rails.root.join("app/assets/images/bike-shop1.jpg"))
+user_2.photo.attach(io: file, filename: 'bike-shop1.jpg', content_type: 'image/jpg')
+user_2.save!
+
 user_3 = User.create!(
   email: "user3@test.com",
   password: "123456",
   mechanic: true,
-  location: "334 Walworth Rd, London",
+  location: "13 Stean St, London E8 4ED",
   company_name: "Bikes for days",
   insta_availability: true,
 )
@@ -183,14 +187,14 @@ service_2_3 = Service.create!(
 
 service_2_4 = Service.create!(
   repair_name: "Chain Repair",
-  sku: "Tyre Fitting (Per Wheel)",
+  sku: "Chain Repair",
   price: 10,
   user: user_2,
 )
 
 service_2_5 = Service.create!(
   repair_name: "Wheel tuning",
-  sku: "Tyre Fitting (Per Wheel)",
+  sku: "Wheel tuning",
   price: 40,
   user: user_2,
 )
@@ -199,30 +203,35 @@ service_2_5 = Service.create!(
 
 service_3_1 = Service.create!(
   repair_name: "Tyre Fitting (Per Wheel)",
+  sku: "Tyre Fitting (Per Wheel)",
   price: 22.5,
   user: user_3,
 )
 
 service_3_2 = Service.create!(
   repair_name: "New Brake Cable (Single)",
+  sku: "New Brake Cable (Single)",
   price: 18,
   user: user_3,
 )
 
 service_3_3 = Service.create!(
   repair_name: "Brake and Gear Adjustments",
+  sku: "Brake and Gear Adjustments",
   price: 20,
   user: user_3,
 )
 
 service_3_4 = Service.create!(
   repair_name: "Chain Repair",
+  sku: "Chain Repair",
   price: 22,
   user: user_3,
 )
 
 service_3_5 = Service.create!(
   repair_name: "Wheel tuning",
+  sku: "Wheel tuning",
   price: 45,
   user: user_3,
 )
@@ -231,11 +240,13 @@ service_3_5 = Service.create!(
 
 service_4_1 = Service.create!(
   repair_name: "Total Tyre Refit",
+  sku: "Total Tyre Refit",
   price: 30,
   user: user_4,
 )
 service_4_2 = Service.create!(
   repair_name: "Inner Tube Fix",
+  sku: "Inner Tube Fix",
   price: 10,
   user: user_4,
 )
@@ -244,11 +255,13 @@ service_4_2 = Service.create!(
 
 service_5_1 = Service.create!(
   repair_name: "Inner Tube",
+  sku: "Inner Tube",
   price: 10,
   user: user_5,
 )
 service_5_2 = Service.create!(
   repair_name: "Handlebar Replacement",
+  sku: "Handlebar Replacement",
   price: 30,
   user: user_5,
 )
@@ -257,21 +270,25 @@ service_5_2 = Service.create!(
 
 service_6_1 = Service.create!(
   repair_name: "Inner Tube Replacement",
+  sku: "Inner Tube Replacement",
   price: 30,
   user: user_6,
 )
 service_6_2 = Service.create!(
   repair_name: "Inner tube Refit",
+  sku: "Inner tube Refit",
   price: 30,
   user: user_6,
 )
 service_6_3 = Service.create!(
   repair_name: "Pedal Work",
+  sku: "Pedal Work",
   price: 30,
   user: user_6,
 )
 service_6_4 = Service.create!(
   repair_name: "Frame Replacement",
+  sku: "Frame Replacement",
   price: 30,
   user: user_6,
 )
@@ -285,60 +302,12 @@ booking_2_1 = Booking.create!(
   comment: "Front tyre puncture"
 )
 
-booking_2_2 = Booking.create!(
-  user: user_1,
-  service: service_2_1,
-  booking_location: "110 Kingsland Rd, London",
-  comment: "Rear tyre puncture"
-)
 booking_3_1 = Booking.create!(
   user: user_1,
-  service: service_3_1,
-  booking_location: "12 High Street, Kensington",
-  comment: "Help! Not entirely sure what's wrong but bike is now not working"
+  service: service_2_1,
+  booking_location: "138 Kingsland Rd, London E2 8DY",
+  comment: "Front tyre puncture"
 )
-
-booking_3_2 = Booking.create!(
-  user: user_1,
-  service: service_3_2,
-  booking_location: "135 Creek Rd, London SE8 3BU",
-  comment: "Brake is absolutely shot"
-)
-
-booking_4_1 = Booking.create!(
-  user: user_1b,
-  service: service_4_1,
-  booking_location: "241 Eversholt St, London NW1 1BE",
-  comment: "Tyre damaged, can't seem to fix"
-)
-
-booking_4_2 = Booking.create!(
-  user: user_1c,
-  service: service_4_2,
-  booking_location: "King Street, Southwark, London",
-  comment: "Tyre Popped!"
-)
-booking_5_1 = Booking.create!(
-  user: user_1c,
-  service: service_5_1,
-  booking_location: "118 Bethnal Green Rd, London E2 6DG",
-  comment: "Inner Tube gone"
-)
-
-booking_5_2 = Booking.create!(
-  user: user_1d,
-  service: service_5_2,
-  booking_location: "49-53 Grays Inn Rd, London WC1X 8PP",
-  comment: "Handlebars are out of alignment but have been having a problem for a while getting worse, full replacement please!"
-)
-booking_6_1 = Booking.create!(
-  user: user_1e,
-  service: service_6_1,
-  booking_location: "6 Tooley St, London SE1 2SY",
-  comment: "Tyre has gone, think it's the inner tube!!!"
-)
-
-
 
 # Reviews creation
 
@@ -349,60 +318,48 @@ review_2_1 = Review.create!(
 )
 
 review_2_2 = Review.create!(
-  booking: booking_2_2,
+  booking: booking_2_1,
   rating: 2,
   content: 'Excellent service, quicker than expected delivery.'
 )
 review_3_1 = Review.create!(
-  booking: booking_3_1,
+  booking: booking_2_1,
   rating: 3,
   content: 'Overall a good service that I would recommend'
 )
 
 review_3_2 = Review.create!(
-  booking: booking_3_2,
+  booking: booking_2_1,
   rating: 2,
   content: 'Great product and fast delivery'
 )
 review_4_1 = Review.create!(
-  booking: booking_4_1,
+  booking: booking_2_1,
   rating: 5,
   content: "genuinely impressed"
 )
 
 review_4_2 = Review.create!(
-  booking: booking_4_2,
+  booking: booking_3_1,
   rating: 5,
   content: '10/10 loved'
 )
 review_5_1 = Review.create!(
-  booking: booking_5_1,
+  booking: booking_3_1,
   rating: 2,
   content: 'Very fast, recomend Trusted 100%'
 )
 review_5_2 = Review.create!(
-  booking: booking_5_2,
+  booking: booking_3_1,
   rating: 5,
   content: 'such a fantastic service I was blown away'
 )
 
 review_6_1 = Review.create!(
-  booking: booking_6_1,
+  booking: booking_3_1,
   rating: 5,
   content: 'Excelent value for money faster deliverys'
 )
-
-
-
-
-
-
-
-
-
-'A good price and easy to purchase online.'
-'Easy has a lot in stock to choose from!'
-'After messing up my booking I had to phone up to speak to a person. The lady I spoke to was a fabulous help and sorted everything out in a few minutes.'
 
 puts "Created #{User.count} users"
 puts "Created #{Service.count} services"
