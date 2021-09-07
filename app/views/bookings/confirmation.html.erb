@@ -3,7 +3,7 @@
 <div class="container">
   <h2 class="payment-margin">Order Confirmation</h2>
     <div class="booking-timer" style="background-color: white">
-      <div class="d-flex justify-content-between" >
+      <div class="d-flex justify-content-between" style="padding: 4px;" >
         <p><strong>Estimated Arrival</strong></p>
         <%= @time.strftime("%H:%M") %>
       </div>
@@ -34,12 +34,23 @@
       <div class="order_summary toggle-content">
         <p><%= @mechanic.company_name %></p>
       </div>
+ </div>
+
+    <div class="display-summary toggle-container">
+      <div class="heading-wrapper"><p class="toggle-heading-map"><strong>Your Location</strong></p>
+        <i class="fas fa-map-marked-alt toggle-trigger-map"></i>
+      </div>
+      
+      <div class="order_summary toggle-content">
+        <p><%= @booking_location %></p>
+      </div>
     </div>
 
 
 
     <div>
       <p><strong>Mechanic Location</strong></p>
+      <%=   %>
     
      <div class="map_confirmation", class="flex-container" id="map"
         data-marker="<%= @marker.to_json %>"
