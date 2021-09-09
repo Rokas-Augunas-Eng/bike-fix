@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  include CloudinaryHelper 
 
   def index
     @users = User.where(mechanic: true)

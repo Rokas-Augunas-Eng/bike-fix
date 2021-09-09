@@ -1,14 +1,14 @@
 <h1 class="title"> Bike issue? </h1>
-<div class="main">
-<div class="searchbar">
-  <%= form_tag users_path, method: "GET" do %>
-  <%= text_field_tag :search_by_service, params[:search_by_service],
-  placeholder: "Tyre Puncture...",
-  class: "searchbox"%>
-  <%= submit_tag "Search",
-  class: "search_button" %>
-  <% end %>
-</div>
+  <div class="main">
+    <div class="searchbar">
+      <%= form_tag users_path, method: "GET" do %>
+      <%= text_field_tag :search_by_service, params[:search_by_service],
+      placeholder: "Tyre Puncture...",
+      class: "searchbox"%>
+      <%= submit_tag "Search",
+      class: "search_button" %>
+      <% end %>
+  </div>
 
   <h5 class="near_me">Nearby Bike Shops</h5>
     <ul class="cards">
