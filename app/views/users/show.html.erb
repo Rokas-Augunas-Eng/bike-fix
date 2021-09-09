@@ -2,20 +2,17 @@
   <div class="card-show">
     <div class="card_image"><img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png"></div>
     <div class="card_content-show">
-      <h2 class="card_title"><%= @user.company_name %> </h2> 
+      <h2 class="card_title"> <%= @user.company_name %> </h2>
       <p class="card_text"><i class="fas fa-map-marker-alt"></i> <%= @user.location %></p>
-      
       <% @user.services.each do |service| %>
-      
         <p class="card_text"><%= icon('fas', 'bicycle') %> <%= service.repair_name %> <%= icon('fas', 'money-bill-wave') %> <%= humanized_money_with_symbol(service.price) %></p>
       <% end %>
-
     </div>
     <div class="card_image">
       <div id="map"
         style="width:100%; height: 400px;"
         data-marker="<%= @marker.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        data-mapbox-api-key="<%= ENV'MAPBOX_API_KEY'] %>">
       </div>
     </div>
   </div>

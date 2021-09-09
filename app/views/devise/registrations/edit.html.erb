@@ -21,7 +21,16 @@
                 hint: "we need your current password to confirm your changes",
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
-    Are you a mechanic? (Tick if true)
+    <%= f.input :first_name,
+                required: false,
+                input_html: { autocomplete: "first_name" }%>
+    <%= f.input :last_name,
+                required: false,
+                input_html: { autocomplete: "first_name" }%>
+        <%= f.input :city,
+                required: false,
+                input_html: { autocomplete: "city" }%>
+        Are you a mechanic? (Tick if true)
     <%= f.check_box :mechanic, {}, "true", "false" %>
   </div>
 
