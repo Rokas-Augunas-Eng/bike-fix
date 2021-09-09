@@ -1,10 +1,19 @@
 .map_confirmation {
   border-radius: 16px;
   height: 300px;
-  margin-bottom: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .flex-container {
   display: flex;
   align-items: center;
+}
+
+.confirmation-map {
+  margin: 5% 0;
+  margin-top: 70px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 4px;
+  border-radius: 4px;
+  background-color: white;
 }

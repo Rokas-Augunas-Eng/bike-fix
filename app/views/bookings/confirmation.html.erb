@@ -1,18 +1,25 @@
 <div class="confirmation-page">
 
-<div class="container">
-  <h2 class="payment-margin">Order Confirmation</h2>
-    <div class="booking-timer" style="background-color: white">
-      <div class="d-flex justify-content-between" style="padding: 4px;" >
-        <p><strong>Estimated Arrival</strong></p>
-        <%= @time.strftime("%H:%M") %>
-      </div>
 
-      <div class="progress mx-auto ">
-        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25 minutes</div>
-      </div>
-      <p><i>Your order has been confirmed</i></p>
+
+<div class="container">
+  <div class="confirmation-map">
+    <div class="map_confirmation", class="flex-container" id="map"
+      data-marker="<%= @marker.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
+
+    <div class="booking-timer">
+      <div class="d-flex justify-content-between" style="padding: 4px;" >
+        <div class="mechanic-arrival"><strong><%= @mechanic.company_name %></strong> will be with you at <strong><%= @time.strftime("%H:%M") %></strong></p></div><p>
+      </div>
+    <div class="progress mx-auto ">
+      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25 minutes</div>
+    </div>
+  </div>
+  </div>
+  
+  
 
     <div class="display-summary toggle-container">
       <div class="heading-wrapper"><p class="toggle-heading"><strong>Your Order</strong></p>
@@ -45,18 +52,6 @@
         <p><%= @booking_location %></p>
       </div>
     </div>
-
-
-
-    <div>
-      <p><strong>Mechanic Location</strong></p>
-      <%=   %>
-    
-     <div class="map_confirmation", class="flex-container" id="map"
-        data-marker="<%= @marker.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
-  </div>
 </div>
 
 

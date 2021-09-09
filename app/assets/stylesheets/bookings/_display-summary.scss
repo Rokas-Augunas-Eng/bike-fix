@@ -4,17 +4,29 @@
   justify-content: space-between;
 
   text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
-  margin: -8 0px;
+  margin-bottom: 8px;
+  background-color: white;
+  padding: 1em;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  
 }
 
 .order_summary {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
-  margin-left: 8px;
+  margin-bottom: -16px;
+  
 }
 
+.fa-check-circle {
+  color: green;
+}
 
+.fa-wrench {
+  color: gray;
+  border-radius: black;
+}
 .heading-wrapper {
   display: flex;
 }
