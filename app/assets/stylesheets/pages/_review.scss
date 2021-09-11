@@ -1,9 +1,15 @@
 //Variables
-$primary: #e75480;
-$secondary: #e9967a;
-$baseSpacing: 20px; 
+$primary: #87DBDD;
+$secondary: #35A9A1;
+$baseSpacing: 20px;
 
-//Helpers
+#review_content {
+  padding-left: 15px;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 20vh;
+}
+
 html { box-sizing: border-box; }
 *, *:before, *:after { box-sizing: inherit; }
 
@@ -27,7 +33,7 @@ svg {
 	justify-content: center;
 }
 
-//Modal 
+//Modal
 .overlay {
 	position: fixed;
 	width: 100%;
@@ -41,15 +47,15 @@ svg {
 	padding: $baseSpacing $baseSpacing $baseSpacing*2;
 	margin: $baseSpacing auto;
 	max-width: 550px;
-	
+
 	&__content {
 		padding: 0 $baseSpacing*2 $baseSpacing;
 	}
-	
+
 	&__form {
 		padding: $baseSpacing/2 0;
 	}
-	
+
 	&__submit {
 		background-color: $primary;
 		padding: $baseSpacing/2 $baseSpacing*2;
@@ -59,7 +65,7 @@ svg {
 		box-shadow: 0 2px 5px grey;
 		cursor: pointer;
 		transition: all .2s;
-		
+
 		&:hover {
 			background-color: darken($primary, 10%);
 		}
@@ -69,7 +75,7 @@ svg {
 .rating {
 	margin-bottom: $baseSpacing;
 	border: none;
-	
+
 	input {
 		display: none;
 		&:checked ~ label svg {
@@ -83,7 +89,7 @@ svg {
 			}
 		}
 	}
-	
+
   label {
     position: relative;
 		width: 2em;

@@ -4,21 +4,25 @@ class ReviewsController < ApplicationController
   def index
     @reviews = Review.all
   end
-  
+
   def new
+    @booking = Booking.find(params[:booking_id])
     @review = Review.new
+    @user = User.find(params[:user_id])
+
   end
 
   def create
     @booking = Booking.find(params[:booking_id])
-    @review = @review.reviews.build(params[:review])
-
+    @user = User.find(params[:user_id])
+    @review = Review.new(review_params)
+    @review.booking = @booking
     if @review.save
       flash[:notice] = 'Review was successfully created.'
-      redirect_to @booking
+      redirect_to @booking.service.user
     else
       flash[:notice] = "Error creating review: #{@review.errors}"
-      redirect_to @booking
+      redirect_to @booking.service.user
     end
   end
 
@@ -40,6 +44,6 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:rating)
+    params.require(:review).permit(:rating, :content)
   end
 end
