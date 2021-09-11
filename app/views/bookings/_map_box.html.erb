@@ -1,4 +1,9 @@
 <h1><%#= user.name %></h1>
-<p><%= user.location %></p>
-<p><%= user.mechanic? %></p>
 
+
+
+<% if user %>
+  <p><%= user.location %></p>
+  <p><%= user.mechanic? %></p>
+<% else %>
+<% end %>

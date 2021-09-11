@@ -47,13 +47,21 @@ class BookingsController < ApplicationController
     @repair_name = @booking.service.repair_name
     @time = Time.now+30*60
     
-    @mechanic = User.find(70)
-        @marker = {
+    @mechanic = @booking.service.user
+        @marker = [{
       lat: @mechanic.latitude,
       lng: @mechanic.longitude,
       info_window: render_to_string(partial: "map_box", locals: { user: @mechanic }),
       image_url: cl_image_path("yr7vbtkxxfrlwjbceesz.jpg")
-    }
+    },
+   {
+      lat: @booking.latitude,
+      lng: @booking.longitude,
+      info_window: render_to_string(partial: "map_box", locals: { user: @user }),
+      image_url: cl_image_path("yr7vbtkxxfrlwjbceesz.jpg")
+    }]
+
+    @booking_location = @booking.booking_location
   end
 
   private
