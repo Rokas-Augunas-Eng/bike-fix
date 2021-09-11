@@ -15,30 +15,12 @@ puts "User database deleted"
 
 # Users (who are not mechanics) creation
 
-user_1 = User.create!(
-  email: "user1@test.com",
-  password: "123456",
-  )
-user_1b = User.create!(
-  email: "user1b@test.com",
-  password: "123456",
-  )
-user_1c = User.create!(
-  email: "user1c@test.com",
-  password: "123456",
-  )
-user_1d = User.create!(
-  email: "user1d@test.com",
-  password: "123456",
-  )
-user_1e = User.create!(
-  email: "user1e@test.com",
-  password: "123456",
-  )
-user_1f = User.create!(
-  email: "user1f@test.com",
-  password: "123456",
-  )
+user_1 = User.create!(email: "user1@test.com", password: "123456")
+user_1b = User.create!(email: "user1b@test.com", password: "123456")
+user_1c = User.create!(email: "user1c@test.com", password: "123456")
+user_1d = User.create!(email: "user1d@test.com", password: "123456")
+user_1e = User.create!(email: "user1e@test.com", password: "123456")
+user_1f = User.create!(email: "user1f@test.com", password: "123456")
 
 # Users (who are mechanics) creation
 
@@ -51,7 +33,8 @@ user_2 = User.create!(
   insta_availability: true,
 )
 
-file = File.open(Rails.root.join("app/assets/images/bike-shop1.jpg"))
+# file = File.open(Rails.root.join("app/assets/images/bike-shop1.jpg" cl_image_path))
+file = URI.open("https://res.cloudinary.com/dblr5mh56/image/upload/v1631358226/zudpjotx24bnnbyiz8e3.jpg")
 user_2.photo.attach(io: file, filename: 'bike-shop1.jpg', content_type: 'image/jpg')
 user_2.save!
 

@@ -3,7 +3,11 @@
     <div class="cards_item">
       <div class="card_show">
         <div class="card_image">
-          <img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png">
+          <% if @user.photo.attached? %>
+            <%= cl_image_tag @user.photo.key %>
+          <% else %>
+            <img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png">
+          <% end %>
         </div>
         <div class="card_content_show">
             
@@ -15,7 +19,7 @@
 
             <% end %>
 
-             <%= icon('fas', 'star', style: 'color: white')  * @user.services.first.average_rating.to_i %><%= icon('far', 'star', style: 'color: white') * (5 - @user.services.first.average_rating.to_i) %>
+             <%#= icon('fas', 'star', style: 'color: white')  * @user.services.first.average_rating.to_i %><%#= icon('far', 'star', style: 'color: white') * (5 - @user.services.first.average_rating.to_i) %>
 
         </div>
       </div>
@@ -27,7 +31,7 @@
       <div id="map"
         style="width:100%; height: 400px;"
         data-marker="<%= @marker.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        data-mapbox-api-key="<%= ENV["MAPBOX_API_KEY"] %>">
       </div>
     </div>
 </div>
