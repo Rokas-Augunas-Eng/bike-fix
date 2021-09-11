@@ -293,22 +293,24 @@ service_6_4 = Service.create!(
   user: user_6,
 )
 
-# Bookings creation
+# Bookings & Chatroom creation
 
 booking_2_1 = Booking.create!(
   user: user_1,
   service: service_2_1,
   booking_location: "138 Kingsland Rd, London E2 8DY",
   comment: "Front tyre puncture",
-  datetime: '2021-04-04 14:10:10 +0100'
+  datetime: '2021-04-04 14:10:10 +0100',
 )
+Chatroom.create!(booking: booking_2_1)
 
 booking_3_1 = Booking.create!(
   user: user_1,
   service: service_2_1,
   booking_location: "138 Kingsland Rd, London E2 8DY",
-  comment: "Front tyre puncture"
+  comment: "Front tyre puncture",
 )
+Chatroom.create!(booking: booking_3_1)
 
 # Reviews creation
 
@@ -362,7 +364,9 @@ review_6_1 = Review.create!(
   content: 'Excelent value for money faster deliverys'
 )
 
+
 puts "Created #{User.count} users"
 puts "Created #{Service.count} services"
 puts "Created #{Booking.count} bookings"
 puts "Created #{Review.count} reviews"
+puts "Created #{Chatroom.count} chatrooms"

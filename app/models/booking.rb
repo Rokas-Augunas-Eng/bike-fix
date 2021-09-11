@@ -5,4 +5,5 @@ class Booking < ApplicationRecord
   has_many_attached :photos, dependent: :destroy
   geocoded_by :booking_location
   after_validation :geocode, if: :will_save_change_to_booking_location?
+  has_one :chatroom
 end
