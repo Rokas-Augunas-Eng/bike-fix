@@ -29,7 +29,6 @@ Upcoming Bookings</div>
 <!-- cards for individual bookings -->
 
 <% current_user.bookings.each do |booking| %>
-<%= link_to booking_path(booking) do %>
     <div class="col-xl-3 col-md-6 mb-4">
       <div class="card border-left-primary shadow h-100 py-2">
         <div class="card-body">
@@ -39,6 +38,7 @@ Upcoming Bookings</div>
                <h5><%= booking.service.user.company_name %></h5> <br>
                <p><%= booking.booking_location %> </p>
                <p><%= booking.comment %></p>
+
               <%= link_to 'Chat to your mechanic', chatroom_path(booking.chatroom) %>
              </div>
            </div>
@@ -46,7 +46,6 @@ Upcoming Bookings</div>
        </div>
      </div>
     </div>
-    <% end %>
 <% end %>
 <% end %>
 

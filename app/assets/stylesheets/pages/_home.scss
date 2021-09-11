@@ -1,6 +1,6 @@
 .title {
-  padding-top: 70px;
   text-align: left;
+  padding-top: 70px;
 }
 .searchbar {
   display: flex;
@@ -20,6 +20,7 @@
 }
 
 .search_button {
+  z-index: 2;
   color: #ffffff;
   padding: 0.8rem;
   font-size: 14px;
@@ -43,4 +44,69 @@
   margin-top: 16px;
   padding-left: 8px;
   margin-bottom: -16px
+}
+
+.title-2 {
+  z-index:2;
+  font-size: 54px;
+  text-align: left;
+  padding-top: 10px;
+  position: absolute;
+}
+.new_footer_top_homepage {
+  margin-top: 60px;
+  opacity:0.4;
+  z-index:1;
+  bottom: 0;
+  background: url("http://droitthemes.com/html/saasland/img/seo/footer_bg.png") no-repeat scroll center 0;
+  width: 100%;
+  height: 266px;
+  position:relative;
+}
+.new_footer_top_homepage .footer_bg_homepage .footer_bg_one {
+  background: url("https://c.tenor.com/bRRZqY6NOpcAAAAi/lets-go-outside-saying-hello.gif") no-repeat center center;
+  width: 88px;
+  height: 100px;
+  background-size:100%;
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  -webkit-animation: myfirst 30s linear infinite;
+  animation: myfirst 30s linear infinite;
+}
+
+.new_footer_top_homepage .footer_bg_homepage .footer_bg_two {
+  background: url("https://1.bp.blogspot.com/-hjgfxUW1o1g/Xck--XOdlxI/AAAAAAAAT_4/JWYFJl83usgRFMvRfoKkSDGd--_Sv04UQCLcBGAsYHQ/s1600/cyclist.gif") no-repeat center center;
+  width: 88px;
+  height: 100px;
+  background-size:100%;
+  bottom: 0;
+  left: 38%;
+  position: absolute;
+  -webkit-animation: myfirst 35s linear infinite;
+  animation: myfirst 35s linear infinite;
+}
+
+.new_footer_top_homepage .footer_bg_homepage .footer_bg_three {
+  background: url("https://c.tenor.com/eAWUMLOkGigAAAAi/bike-biking.gif") no-repeat center center;
+  width: 88px;
+  height: 100px;
+  background-size:100%;
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  -webkit-animation: myfirst 22s linear infinite;
+  animation: myfirst 22s linear infinite;
+}
+
+.new_footer_top_homepage .footer_bg_homepage .footer_bg_four {
+  background: url("https://c.tenor.com/vOtcZhD5vhkAAAAi/bike-bicycle.gif") no-repeat center center;
+  width: 88px;
+  height: 100px;
+  background-size:100%;
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  -webkit-animation: myfirst 27s linear infinite;
+  animation: myfirst 27s linear infinite;
 }
