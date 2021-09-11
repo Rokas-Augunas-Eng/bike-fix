@@ -5,8 +5,9 @@ Rails.application.routes.draw do
    get 'confirmation', to: 'pages#confirmation'
 
   resources :users do
-    resources :bookings, only:[:new, :create, :update, :edit, :index]
-    resources :reviews, only:[:new, :create, :update, :edit, :index]
+    resources :bookings, only:[:new, :create, :update, :edit, :index] do
+        resources :reviews, only:[:new, :create, :update, :edit, :index]
+      end
   end
   
   resources :bookings, except: [:new, :create] do

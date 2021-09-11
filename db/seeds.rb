@@ -299,7 +299,8 @@ booking_2_1 = Booking.create!(
   user: user_1,
   service: service_2_1,
   booking_location: "138 Kingsland Rd, London E2 8DY",
-  comment: "Front tyre puncture"
+  comment: "Front tyre puncture",
+  datetime: '2021-04-04 14:10:10 +0100'
 )
 
 booking_3_1 = Booking.create!(

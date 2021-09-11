@@ -1,110 +1,65 @@
+<div class="title">
+  <h3 class="pl-3"> Leave your review for <%= @user.company_name %> </h3>
+  <div class="container">
+    <p></p>
+    <%= console %>
+    <%= simple_form_for [current_user, @booking, @review] do |f| %>
+    <%= f.input :rating, label: "How would you rate your repair?", as: :radio_buttons, :item_wrapper_class => 'form-check form-check-inline', collection: (1..5).each %>
+    <p>Any comments?</p>
+    <%= f.text_field :content%>
+    <%= f.submit class: "btn" %>
+    <% end %>
+    </div>
+</div>
+
+<!-- <main class="title">
 <svg style="display: none">
 	<symbol id="star" viewBox="0 0 1024 1024">
 		<polygon points="512 0 627 354 999 354 698 572 813 926 512 708 211 926 326 572 25 354 397 354 512 0" />
 	</symbol>
-</svg>
-
+</svg> -->
+<!--
 <div id="modal">
 	<div class="overlay">
 		<div class="feedback container--small align--center">
 			<button id="close">Close</button>
 			<h1 class="feedback__title">How did we do?</h1>
-			<p class="feedback__description">Please let us know how your food delivery was. It will really help us to keep improving our service!</p>
+			<p class="feedback__description">Please let us know how your bike repair was.</p>
 			<form class="feedback__form">
 				<fieldset class="rating rating__food">
-					<legend>How would you rate your food?</legend>
+					<legend>How would you rate your overall experience?</legend>
 					<div class="flex-container">
-						<input type="radio" id="food-5" name="rating__food" value="5">
+						<input type="radio" id="food-5" name="rating" value="5">
 						<label for="food-5"><svg>
 								<title>Five Stars</title>
 								<use xlink:href="#star"></use>
 							</svg></label>
-						<input type="radio" id="food-4" name="rating__food" value="4">
+						<input type="radio" id="food-4" name="rating" value="4">
 						<label for="food-4"><svg>
 								<title>Four Stars</title>
 								<use xlink:href="#star"></use>
 							</svg></label>
-						<input type="radio" id="food-3" name="rating__food" value="3">
+						<input type="radio" id="food-3" name="rating" value="3">
 						<label for="food-3"><svg>
 								<title>Three Stars</title>
 								<use xlink:href="#star"></use>
 							</svg></label>
-						<input type="radio" id="food-2" name="rating__food" value="2">
+						<input type="radio" id="food-2" name="rating" value="2">
 						<label for="food-2"><svg>
 								<title>Two Stars</title>
 								<use xlink:href="#star"></use>
 							</svg></label>
-						<input type="radio" id="food-1" name="rating__food" value="1">
+						<input type="radio" id="food-1" name="rating" value="1">
 						<label for="food-1"><svg>
 								<title>One Star</title>
 								<use xlink:href="#star"></use>
 							</svg></label>
 					</div>
-				</fieldset>
 
-				<fieldset class="rating rating__driver">
-					<legend>How would you rate your delivery driver?</legend>
-					<div class="flex-container">
-						<input type="radio" id="driver-5" name="rating__driver" value="5">
-						<label for="driver-5"><svg>
-								<title>Five Stars</title>
-								<use xlink:href="#star"></use>
-							</svg></label>
-						<input type="radio" id="driver-4" name="rating__driver" value="4">
-						<label for="driver-4"><svg>
-								<title>Four Stars</title>
-								<use xlink:href="#star"></use>
-							</svg></label>
-						<input type="radio" id="driver-3" name="rating__driver" value="3">
-						<label for="driver-3"><svg>
-								<title>Three Stars</title>
-								<use xlink:href="#star"></use>
-							</svg></label>
-						<input type="radio" id="driver-2" name="rating__driver" value="2">
-						<label for="driver-2"><svg>
-								<title>Two Stars</title>
-								<use xlink:href="#star"></use>
-							</svg></label>
-						<input type="radio" id="driver-1" name="rating__driver" value="1">
-						<label for="driver-1"><svg>
-								<title>One Star</title>
-								<use xlink:href="#star"></use>
-							</svg></label>
-					</div>
-				</fieldset>
-
-				<fieldset class="rating rating__experience">
-					<legend>How would you rate your overall experience?</legend>
-					<div class="flex-container">
-						<input type="radio" id="experience-5" name="rating__experience" value="5">
-						<label for="experience-5"><svg>
-								<title>Five Stars</title>
-								<use xlink:href="#star"></use>
-							</svg></label>
-						<input type="radio" id="experience-4" name="rating__experience" value="4">
-						<label for="experience-4"><svg>
-								<title>Four Stars</title>
-								<use xlink:href="#star"></use>
-							</svg></label>
-						<input type="radio" id="experience-3" name="rating__experience" value="3">
-						<label for="experience-3"><svg>
-								<title>Three Stars</title>
-								<use xlink:href="#star"></use>
-							</svg></label>
-						<input type="radio" id="experience-2" name="rating__experience" value="2">
-						<label for="experience-2"><svg>
-								<title>Two Stars</title>
-								<use xlink:href="#star"></use>
-							</svg></label>
-						<input type="radio" id="experience-1" name="rating__experience" value="1">
-						<label for="experience-1"><svg>
-								<title>One Stars</title>
-								<use xlink:href="#star"></use>
-							</svg></label>
-					</div>
 				</fieldset>
 			</form>
 			<button type="submit" class="feedback__submit">Submit feedback</button>
-		</div>
+		</div> -->
 	</div>
 </div>
+</main>

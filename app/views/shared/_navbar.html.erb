@@ -6,7 +6,17 @@
     <div class="logo">
 
       <!-- Logo Placeholder for Inlustration -->
-      <i class="fas fa-bicycle"></i> Bike Fix</a>
+      <% if user_signed_in? %>
+        <% if current_user.mechanic == true %>
+          <i id='bikeimage' class="fa-solid fa-wrench"></i> Bike Fix</a>
+        <% elsif current_user.mechanic == false %>
+          <i id='bikeimage' class="fa-solid fa-person-biking"></i> Bike Fix</a>
+        <% else %>
+        <i class="fas fa-bicycle"></i> Bike Fix</a>
+        <% end %>
+      <% else %>
+        <i id='bikeimage_out' class="fas fa-bicycle"></i> Bike Fix</a>
+      <% end %>
     </div>
     <% end %>
 
@@ -15,9 +25,9 @@
       <li><a href="#home">Home</a></li><!--
    --><li><a href="#services">Profile</a></li><!--
    --><li><a href="#about">Mechanics</a></li><!--
-   --><li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
+ --><li><a href="#contact">Contact</a></li>
+</ul>
+</div>
 </nav>
 
 
@@ -29,9 +39,9 @@
 
 <div class="overlay-menu">
   <ul id="menu">
-      <li><%= link_to "Home", root_path  %></li>
-      <li><%= link_to "Profile", profile_path %></li>
-      <li><a href="">Mechanics</a></li>
-      <li><a href="">Contact</a></li>
-    </ul>
+    <li><%= link_to "Home", root_path  %></li>
+    <li><%= link_to "Profile", profile_path %></li>
+    <li><a href="">Mechanics</a></li>
+    <li><a href="">Contact</a></li>
+  </ul>
 </div>

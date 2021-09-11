@@ -15,6 +15,13 @@ a {
 /*======================================================
                           Navbar
   ======================================================*/
+#bikeimage {
+  color: #33A8A1;
+}
+#bikeimage_out {
+
+}
+
 #navbar {
   background: white;
   color: rgb(13, 26, 38);
@@ -38,7 +45,7 @@ a {
       .nav-wrapper {
         width: 100%;
       }
-    } 
+    }
 
 .logo {
   float: left;
@@ -156,7 +163,7 @@ a {
     width: 20px;
     -webkit-transition: 0.4s;
     transition: 0.4s;
-  } 
+  }
 
   .icon-bars::before {
     background: rgb(13, 26, 38);
@@ -267,7 +274,7 @@ a {
 }
 
 /*======================================================
-                   Responsive Mobile Menu 
+                   Responsive Mobile Menu
   ======================================================*/
 .overlay-menu {
   background: #33A8A1;

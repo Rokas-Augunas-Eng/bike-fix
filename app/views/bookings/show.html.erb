@@ -5,7 +5,7 @@
     <div class="card_image"><img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png"></div>
     <div class="card_content-show">
       <h2 class="card_title"><%=  @booking.service.repair_name %> </h2>
-      <p class="card_text"><i class="fas fa-map-marker-alt"></i> <%= @booking.booking_location%></p>      <p class="card_text"><%= icon('fas', 'bicycle') %> <%= @booking.comment %> <%= icon('fas', 'money-bill-wave') %> £<%= @booking.service.cost %></p>
+      <p class="card_text"><i class="fas fa-map-marker-alt"></i> <%= @booking.booking_location%> <%= @booking.datetime %></p>      <p class="card_text"><%= icon('fas', 'bicycle') %> <%= @booking.comment %> <%= icon('fas', 'money-bill-wave') %> £<%= @booking.service.cost %></p>
     </div>
     <div>
       <%= @booking.photos.each do |photo| %>
@@ -19,4 +19,7 @@
     </div>
   </div>
   <h4><%=  link_to 'Edit your booking', edit_booking_path(@booking)%> </h4>
+  <% if @booking.datetime.utc < Time.now.utc %>
+  <h4><%= link_to "Add review", new_user_booking_review_path(current_user, @booking) %> </h4>
+    <% end %>
 </div>
