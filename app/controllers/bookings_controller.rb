@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-  
+    
     if @booking.save
       redirect_to orders_path
     else
@@ -45,8 +45,9 @@ class BookingsController < ApplicationController
 
   def confirmation
     @repair_name = @booking.service.repair_name
-    @time = Time.now+30*60
+    # @time = Time.now+30*60
     
+
     @mechanic = @booking.service.user
         @marker = [{
       lat: @mechanic.latitude,

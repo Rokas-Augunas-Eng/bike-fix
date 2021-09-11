@@ -9,6 +9,7 @@ Rails.application.routes.draw do
         resources :reviews, only:[:new, :create, :update, :edit, :index]
       end
   end
+  
   resources :bookings, except: [:new, :create] do
     member do
       get "confirmation"
@@ -16,16 +17,26 @@ Rails.application.routes.draw do
   end
 
   resources :bookings, only:[:confirmation] do
+    # resources :chatrooms, only: :show do
+    #   resources :messages, only: :create
+    # end
     resources :services, only:[:index, :show] do
       member do 
         get "confirmation"
       end
     end
   end
-  resources :services, only:[:new, :create, :update, :edit, :index]
+  
   resources :orders, only: [:show, :create] do
-  resources :payments, only: :new
+    resources :payments, only: :new
   end
+  
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
+  
+  resources :services, only:[:new, :create, :update, :edit, :index]
+  
   mount StripeEvent::Engine, at: '/stripe-webhooks'
-
+  
 end
