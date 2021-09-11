@@ -38,7 +38,8 @@ Upcoming Bookings</div>
                <h5><%= booking.service.user.company_name %></h5> <br>
                <p><%= booking.booking_location %> </p>
                <p><%= booking.comment %></p>
-              <%= link_to chatroom_path(@chatroom) %>
+
+              <%= link_to 'Chat to your mechanic', chatroom_path(booking.chatroom) %>
              </div>
            </div>
          </div>

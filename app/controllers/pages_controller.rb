@@ -8,6 +8,7 @@ class PagesController < ApplicationController
   def confirmation
   end
 
-    def profile
+  def profile
+    
   end
 end
