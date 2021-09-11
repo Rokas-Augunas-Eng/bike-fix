@@ -30,6 +30,7 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    
     @user = @booking.service.user
   end
 
