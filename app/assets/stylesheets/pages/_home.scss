@@ -13,10 +13,10 @@
 
 .searchbox {
   margin: 0 auto;
-  width: 95vw;
+  width: 90vw;
   height: 50px;
-  margin-bottom: 8px;
-  border-radius: 5px;
+  border-radius: 0.5rem;
+  padding:10px;
 }
 
 .search_button {
@@ -33,7 +33,7 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: #33A8A1;;
   border-radius: 0.5rem;
-  margin: 10px 0px
+  margin-top: 10px;
 }
 
 .search_button:hover {
@@ -41,9 +41,7 @@
 }
 
 .near_me {
-  margin-top: 16px;
-  padding-left: 8px;
-  margin-bottom: -16px
+  padding-left: 15px;
 }
 
 .title-2 {
@@ -52,6 +50,7 @@
   text-align: left;
   padding-top: 10px;
   position: absolute;
+  padding: 8px;
 }
 .new_footer_top_homepage {
   margin-top: 60px;

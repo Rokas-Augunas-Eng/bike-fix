@@ -1,44 +1,41 @@
-
-  <div class="top_home">
-  <h1 class="title-2"> What's wrong with your bike? </h1>
-<div class="new_footer_top_homepage">
-  <div class="footer_bg_homepage">
-      <div class="footer_bg_one"></div>
-      <div class="footer_bg_two"></div>
-      <div class="footer_bg_three"></div>
-      <div class="footer_bg_four"></div>
-      </div>
+<div class="top_home">
+  <h1 class="title-2"> Bike problems? </h1>
+  <div class="new_footer_top_homepage">
+    <div class="footer_bg_homepage">
+        <%# <div class="footer_bg_one"></div>
+        <div class="footer_bg_two"></div>
+        <div class="footer_bg_three"></div>
+        <div class="footer_bg_four"></div> %>
+    </div>
   </div>
-  </div>
-
+</div>
 
   <div class="main">
     <div class="searchbar">
       <%= form_tag users_path, method: "GET" do %>
+      <%# <span i class="fas fa-search"></span> Looking to insert an icon in the search bar %>
       <%= text_field_tag :search_by_service, params[:search_by_service],
       placeholder: "Tyre Puncture...",
-      class: "searchbox"%>
+      class: "searchbox" %> 
       <%= submit_tag "Search",
       class: "search_button" %>
       <% end %>
+    </div>
+      <ul class="cards">
+      <h5 class="near_me">Nearby Bike Shops</h5>
+        <% @mechanics[0..5].each do |mechanic| %>
+        <%= link_to user_path(mechanic) do %>
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image"><img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png"></div>
+            <div class="card_content">
+              <h2 class="card_title"><%= mechanic.company_name %></h2>
+              <p class="card_text"><i class="fas fa-map-marker-alt"></i> <%= mechanic.location %></p>
+            </div>
+          </div>
+        <% end %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
-  </div>
-
-
-  <h5 class="near_me">Nearby Bike Shops</h5>
-    <ul class="cards">
-    <% @mechanics[0..5].each do |mechanic| %>
-    <%= link_to user_path(mechanic) do %>
-    <li class="cards_item-home">
-      <div class="card-home">
-        <div class="card_image"><img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png"></div>
-        <div class="card_content-home">
-          <h2 class="card_title"><%= mechanic.company_name %></h2>
-          <p class="card_text"><i class="fas fa-map-marker-alt"></i> <%= mechanic.location %></p>
-        </div>
-      </div>
-    </li>
-    <% end %>
-    <% end %>
-  </ul>
-</div>

@@ -66,6 +66,14 @@ img {
   background-color: #87DBDD;
 }
 
+.title_index {
+  z-index:2;
+  font-size: 30px;
+  text-align: left;
+  padding: 8px;
+  margin-top: 70px;
+}
+
 .card_title {
   color: #ffffff;
   font-size: 2rem;
@@ -87,15 +95,60 @@ img {
 
 // Booking Show Page
 
-.card-show_booking {
-  background-color: white;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+.cards_booking {
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 8px;
+  padding: 0;
+}
+
+.title_booking {
+  z-index:2;
+  font-size: 30px;
+  text-align: left;
+  padding: 8px;
+  margin-top: 70px;
+}
+
+.booking_form {
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 8px;
+  padding: 0;
+  border-radius: 0.5rem;
+}
+
+// Payments new Page
+
+.title_payment {
+  z-index:2;
+  font-size: 30px;
+  text-align: center;
+  padding: 15px;
+  margin-top: 70px;
+}
+
+.payment_text {
+  padding: 15px;
+  font-size: 1.1rem;
+  text-align: center;
+
 }
 
 /* Show Page */
+
+.cards_show {
+  // display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 8px;
+  padding: 0;
+}
+
+.cards_item_show {
+  // display: flex;
+  padding: 8px;
+}
 
 .card_show {
   margin-top: 70px;
@@ -125,8 +178,13 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: #33A8A1;;
   border-radius: 0.5rem;
-  margin: 10px 8px;
+  margin: 20px 0px;
   text-align: center;
+}
+
+.btn_show:hover {
+  background: #276965;
+  color:#fff;
 }
 
 /* ----------------------------- */
@@ -167,10 +225,23 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: #33A8A1;;
   border-radius: 0.5rem;
-  margin: 20px 0px
+  margin: 20px 0px;
 }
 
 .btn:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+  background: #276965;
+  color:#fff;
 }
 
+/* Profile Page */
+
+.cards_profile {
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 8px;
+  padding: 0;
+}
+
+.cards_item_profile {
+  padding: 8px;
+}

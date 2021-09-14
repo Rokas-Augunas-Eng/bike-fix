@@ -1,6 +1,6 @@
 <div class="main">
-  <div class="cards">
-    <div class="cards_item">
+  <div class="cards_show">
+    <div class="cards_item_show">
       <div class="card_show">
         <div class="card_image">
           <% if @user.photo.attached? %>
@@ -9,32 +9,101 @@
             <img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png">
           <% end %>
         </div>
-        <div class="card_content_show">
-            
-            <h2 class="card_title"><%= @user.company_name %> </h2> 
-            <p class="card_text"><i class="fas fa-map-marker-alt"></i> <%= @user.location %></p>
-            
-            <% @user.services.each do |service| %>
-              <p class="card_text"><%= icon('fas', 'bicycle') %> <%= service.repair_name %> <%= icon('fas', 'money-bill-wave') %> <%= humanized_money_with_symbol(service.price) %></p>
-
-            <% end %>
-
-             <%#= icon('fas', 'star', style: 'color: white')  * @user.services.first.average_rating.to_i %><%#= icon('far', 'star', style: 'color: white') * (5 - @user.services.first.average_rating.to_i) %>
+        <div class="card_content_show">  
+          <h2 class="card_title"><%= @user.company_name %> </h2> 
+          <p class="card_text"><i class="fas fa-map-marker-alt"></i> <%= @user.location %></p>
+          <% @user.services.each do |service| %>
+            <p class="card_text"><%= icon('fas', 'bicycle') %> <%= service.repair_name %> <%= icon('fas', 'money-bill-wave') %> <%= humanized_money_with_symbol(service.price) %></p>
+          <% end %>
+          <%= icon('fas', 'star', style: 'color: white')  * @user.services.first.average_rating.to_i %><%= icon('far', 'star', style: 'color: white') * (5 - @user.services.first.average_rating.to_i) %>
 
         </div>
       </div>
+      <%= link_to "Book Now", new_user_booking_path(@user), class: "btn" %>
     </div>
-    <%= link_to "Book Now", new_user_booking_path(@user), class: "btn_show" %>
   </div>
 
     <div class="card_image">
-      <div id="map"
+      <div id="map2"
         style="width:100%; height: 400px;"
-        data-marker="<%= @marker.to_json %>"
-        data-mapbox-api-key="<%= ENV["MAPBOX_API_KEY"] %>">
+        data-marker="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+
+    <div class="review-container">
+      <h2>Reviews</h2>
+      <label for="search" class="input-field">
+        <i class="fas fa-search"></i>
+        <input id="search" placeholder="Search for reviews ..." type="text">
+      </label>
+      <div class="suggest">
+        <span>expriance</span>
+        <span>quality</span>
+        <span>design</span>
+        <span>size</span>
+        <span>features</span>
+        <span>values</span>
+        <span>replacement</span>
+      </div>
+      
+      <div class="cards_review">
+        <div class="card_review">
+          <div class="card-top">
+            <div class="name">
+              <div class="img one" alt="">NF</div>
+                <p>Full Name</p>
+            </div>
+            <div class="rate">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+            </div>
+          </div>
+          
+          <div class="card-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consequuntur, impedit ullam provident deserunt repellendus fuga totam exercitationem minima molestias?</p>
+          </div>
+          
+          <div class="card-action">
+            <span>13 Feb, 2021</span>
+            <button class="btn">
+              <i class="fas fa-external-link-alt"></i>
+              Share
+            </button>
+          </div>
+          
+        </div>
+        <div class="card_review">
+          <div class="card-top">
+            <div class="name">
+              <div class="img">FN</div>
+              <p>Full Name</p>
+            </div>
+            <div class="rate">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+            </div>
+          </div>
+          
+          <div class="card-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem consequuntur, impedit ullam provident deserunt repellendus fuga totam exercitationem minima molestias?</p>
+          </div>
+          
+          <div class="card-action">
+            <span>13 Feb, 2021</span>
+            <button class="btn">
+              <i class="fas fa-external-link-alt"></i>
+              Share
+            </button>
+          </div>
+          
+        </div>
       </div>
     </div>
 </div>
-
-
-

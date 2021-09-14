@@ -18,11 +18,7 @@ const initMapbox = () => {
     });
     const markerElement = mapElement.dataset.marker
       if (markerElement) {
-     
         const markers = JSON.parse(mapElement.dataset.marker);
- 
-    // markers.forEach((marker) => {
-
 
       // Pass the element as an argument to the new marker
         markers.forEach((marker) => {
@@ -40,8 +36,6 @@ const initMapbox = () => {
             .setPopup(popup)
             .addTo(map);
         });
-
-    // });
     
     fitMapToMarkers(map, markers);
       }
@@ -49,3 +43,4 @@ const initMapbox = () => {
 };
 
 export { initMapbox };
+

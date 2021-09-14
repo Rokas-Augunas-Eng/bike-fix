@@ -45,10 +45,11 @@ user_3 = User.create!(
   location: "13 Stean St, London E8 4ED",
   company_name: "Bikes for days",
   insta_availability: true,
+  )
+
   file = URI.open("https://res.cloudinary.com/dblr5mh56/image/upload/v1631370518/dn2gvq4f3y9urbl2xk10.jpg")
   user_3.photo.attach(io: file, filename: 'bike-shop3.jpg', content_type: 'image/jpg')
   user_3.save!
-)
 
 user_4 = User.create!(
   email: "user4@test.com",
@@ -57,10 +58,11 @@ user_4 = User.create!(
   location: "66 Gedling Pl, London",
   company_name: "Get fix",
   insta_availability: true,
+  )
+  
   file = URI.open("https://res.cloudinary.com/dblr5mh56/image/upload/v1631370655/uusv50f4q92qhxzmexpc.jpg")
   user_4.photo.attach(io: file, filename: 'bike-shop4.jpg', content_type: 'image/jpg')
   user_4.save!
-)
 
 user_5 = User.create!(
   email: "user5@test.com",
@@ -69,10 +71,11 @@ user_5 = User.create!(
   location: "12 Crossthwaite Avenue, Herne Hill, SE5 8ET",
   company_name: "The Bike Project",
   insta_availability: true,
+  )
+  
   file = URI.open("https://res.cloudinary.com/dblr5mh56/image/upload/v1631370832/nxvonk6znnb6oh3ivrf3.jpg")
   user_5.photo.attach(io: file, filename: 'bike-shop5.jpg', content_type: 'image/jpg')
   user_5.save!
-)
 
 user_6 = User.create!(
   email: "user6@test.com",
@@ -81,10 +84,11 @@ user_6 = User.create!(
   location: "Bethnal Green Road, London, E2 6DG",
   company_name: "Brick Lane Bikes",
   insta_availability: false,
+  )
+  
   file = URI.open("https://res.cloudinary.com/dblr5mh56/image/upload/v1631371220/nlzyemfuv22ddq5zvbii.jpg")
   user_6.photo.attach(io: file, filename: 'bike-shop6.jpg', content_type: 'image/jpg')
   user_6.save!
-)
 
 user_7 = User.create!(
   email: "user7@test.com",
@@ -93,10 +97,11 @@ user_7 = User.create!(
   location: "296-298 Brixton Road, SW9 6AG",
   company_name: "Brixton Cycles",
   insta_availability: false,
+  )
+  
   file = URI.open("https://res.cloudinary.com/dblr5mh56/image/upload/v1631371335/v74zeg9mjncppjsdrez1.jpg")
   user_7.photo.attach(io: file, filename: 'bike-shop7.jpg', content_type: 'image/jpg')
   user_7.save!
-)
 
 user_8 = User.create!(
   email: "user8@test.com",
@@ -105,10 +110,11 @@ user_8 = User.create!(
   location: "49-53 Gray's Inn Road, London, WC1X 8PP",
   company_name: "Condor Cycles",
   insta_availability: false,
+  )
+  
   file = URI.open("https://res.cloudinary.com/dblr5mh56/image/upload/v1631371485/bfwjucy6yzujwt9ig8af.jpg")
   user_8.photo.attach(io: file, filename: 'bike-shop8.jpg', content_type: 'image/jpg')
   user_8.save!
-)
 
 user_9 = User.create!(
   email: "user9@test.com",
@@ -117,10 +123,11 @@ user_9 = User.create!(
   location: "54 Earl’s Court Road, W8 6EJ",
   company_name: "Cyclecare Kensington",
   insta_availability: false,
+  )
+  
   file = URI.open("https://res.cloudinary.com/dblr5mh56/image/upload/v1631371692/oyn9gbl3nuqffy8bnrpb.jpg")
   user_9.photo.attach(io: file, filename: 'bike-shop9.jpg', content_type: 'image/jpg')
   user_9.save!
-)
 
 user_10 = User.create!(
   email: "user10@test.com",
@@ -129,10 +136,11 @@ user_10 = User.create!(
   location: "37 Bermondsey St, Bermondsey, SE1 3JW",
   company_name: "Fully Charged",
   insta_availability: false,
+  )
+  
   file = URI.open("https://res.cloudinary.com/dblr5mh56/image/upload/v1631371972/umg89fffdxbfs38updqn.jpg")
   user_10.photo.attach(io: file, filename: 'bike-shop10.jpg', content_type: 'image/jpg')
   user_10.save!
-)
 
 user_11 = User.create!(
   email: "user11@test.com",
@@ -141,10 +149,12 @@ user_11 = User.create!(
   location: "69 The Cut, London SE1 8LL",
   company_name: "Big Bad Bikes",
   insta_availability: false,
+  )
+  
   file = URI.open("https://res.cloudinary.com/dblr5mh56/image/upload/v1631372101/vfua5iyyexegf3s0zht6.png")
   user_11.photo.attach(io: file, filename: 'bike-shop11.png', content_type: 'image/jpg')
   user_11.save!
-)
+
 user_12 = User.create!(
   email: "user12@test.com",
   password: "123456",
@@ -152,10 +162,11 @@ user_12 = User.create!(
   location: "97-99 Clerkenwell Rd, London EC1R 5BX",
   company_name: "Raleigh Bikes",
   insta_availability: false,
+  )
   file = URI.open("https://res.cloudinary.com/dblr5mh56/image/upload/v1631372209/fio4t2nydych8f5dkj2w.png")
   user_12.photo.attach(io: file, filename: 'bike-shop12.png', content_type: 'image/jpg')
   user_12.save!
-)
+
 user_13 = User.create!(
   email: "user13@test.com",
   password: "123456",
@@ -163,21 +174,23 @@ user_13 = User.create!(
   location: "41 Cropley St, London N1 7HT",
   company_name: "CycleCrazy",
   insta_availability: false,
+  )
   file = URI.open("https://res.cloudinary.com/dblr5mh56/image/upload/v1631372395/mshbxlafysad4tynk7r1.jpg")
   user_13.photo.attach(io: file, filename: 'bike-shop13.jpg', content_type: 'image/jpg')
   user_13.save!
-)
-user_14 = User.create!(
+
+  user_14 = User.create!(
   email: "user14@test.com",
   password: "123456",
   mechanic: true,
   location: "125 St John's Hill, London SW1 1SZ",
   company_name: "London Race Bikes",
   insta_availability: false,
+  )
+  
   file = URI.open("https://res.cloudinary.com/dblr5mh56/image/upload/v1631372701/dr4cmfaz9mdaqghhaghd.jpg")
   user_14.photo.attach(io: file, filename: 'bike-shop14.jpg', content_type: 'image/jpg')
   user_14.save!
-)
 
 # Service creation
 
@@ -314,74 +327,74 @@ service_6_4 = Service.create!(
 
 # Bookings & Chatroom creation
 
-booking_2_1 = Booking.create!(
-  user: user_1,
-  service: service_2_1,
-  booking_location: "138 Kingsland Rd, London E2 8DY",
-  comment: "Front tyre puncture",
-  datetime: '2021-04-04 14:10:10 +0100',
-)
-Chatroom.create!(booking: booking_2_1)
+# booking_2_1 = Booking.create!(
+#   user: user_1,
+#   service: service_2_1,
+#   booking_location: "138 Kingsland Rd, London E2 8DY",
+#   comment: "Front tyre puncture",
+#   datetime: '2021-04-04 14:10:10 +0100',
+# )
+# Chatroom.create!(booking: booking_2_1)
 
-booking_3_1 = Booking.create!(
-  user: user_1,
-  service: service_2_1,
-  booking_location: "138 Kingsland Rd, London E2 8DY",
-  comment: "Front tyre puncture",
-)
-Chatroom.create!(booking: booking_3_1)
+# booking_3_1 = Booking.create!(
+#   user: user_1,
+#   service: service_2_1,
+#   booking_location: "138 Kingsland Rd, London E2 8DY",
+#   comment: "Front tyre puncture",
+# )
+# Chatroom.create!(booking: booking_3_1)
 
-# Reviews creation
+# # Reviews creation
 
-review_2_1 = Review.create!(
-  booking: booking_2_1,
-  rating: 5,
-  content: 'Voytek was great, had fabulous knowledge about a range of different bikes and how they drove. Always gave me correct and accurate information'
-)
+# review_2_1 = Review.create!(
+#   booking: booking_2_1,
+#   rating: 5,
+#   content: 'Voytek was great, had fabulous knowledge about a range of different bikes and how they drove. Always gave me correct and accurate information'
+# )
 
-review_2_2 = Review.create!(
-  booking: booking_2_1,
-  rating: 2,
-  content: 'Excellent service, quicker than expected delivery.'
-)
-review_3_1 = Review.create!(
-  booking: booking_2_1,
-  rating: 3,
-  content: 'Overall a good service that I would recommend'
-)
+# review_2_2 = Review.create!(
+#   booking: booking_2_1,
+#   rating: 2,
+#   content: 'Excellent service, quicker than expected delivery.'
+# )
+# review_3_1 = Review.create!(
+#   booking: booking_2_1,
+#   rating: 3,
+#   content: 'Overall a good service that I would recommend'
+# )
 
-review_3_2 = Review.create!(
-  booking: booking_2_1,
-  rating: 2,
-  content: 'Great product and fast delivery'
-)
-review_4_1 = Review.create!(
-  booking: booking_2_1,
-  rating: 5,
-  content: "genuinely impressed"
-)
+# review_3_2 = Review.create!(
+#   booking: booking_2_1,
+#   rating: 2,
+#   content: 'Great product and fast delivery'
+# )
+# review_4_1 = Review.create!(
+#   booking: booking_2_1,
+#   rating: 5,
+#   content: "genuinely impressed"
+# )
 
-review_4_2 = Review.create!(
-  booking: booking_3_1,
-  rating: 5,
-  content: '10/10 loved'
-)
-review_5_1 = Review.create!(
-  booking: booking_3_1,
-  rating: 2,
-  content: 'Very fast, recomend Trusted 100%'
-)
-review_5_2 = Review.create!(
-  booking: booking_3_1,
-  rating: 5,
-  content: 'such a fantastic service I was blown away'
-)
+# review_4_2 = Review.create!(
+#   booking: booking_3_1,
+#   rating: 5,
+#   content: '10/10 loved'
+# )
+# review_5_1 = Review.create!(
+#   booking: booking_3_1,
+#   rating: 2,
+#   content: 'Very fast, recomend Trusted 100%'
+# )
+# review_5_2 = Review.create!(
+#   booking: booking_3_1,
+#   rating: 5,
+#   content: 'such a fantastic service I was blown away'
+# )
 
-review_6_1 = Review.create!(
-  booking: booking_3_1,
-  rating: 5,
-  content: 'Excelent value for money faster deliverys'
-)
+# review_6_1 = Review.create!(
+#   booking: booking_3_1,
+#   rating: 5,
+#   content: 'Excelent value for money faster deliverys'
+# )
 
 
 puts "Created #{User.count} users"
