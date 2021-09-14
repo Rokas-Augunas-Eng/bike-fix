@@ -47,7 +47,6 @@ class BookingsController < ApplicationController
   def confirmation
     @repair_name = @booking.service.repair_name
     # @time = Time.now+30*60
-    
 
     @mechanic = @booking.service.user
         @marker = [{
@@ -56,7 +55,7 @@ class BookingsController < ApplicationController
       info_window: render_to_string(partial: "map_box", locals: { user: @mechanic }),
       image_url: cl_image_path("yr7vbtkxxfrlwjbceesz.jpg")
     },
-   {
+      {
       lat: @booking.latitude,
       lng: @booking.longitude,
       info_window: render_to_string(partial: "map_box", locals: { user: @user }),

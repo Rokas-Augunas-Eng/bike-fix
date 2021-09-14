@@ -1,13 +1,13 @@
 <div class="main">
-  <div class="card-show">
-    <h1>Booking</h1>
-
-    <%= simple_form_for [@mechanic, @booking], url: "/orders", method:"post" do |f| %>
-    <%= f.association :service, collection: Service.where(user: @mechanic), label_method: :repair_name, value_method: :id, include_blank: false %>
+  <h1 class="title_booking">Your booking</h1>
+  <div class="cards_booking">
+    <%= simple_form_for [@mechanic, @booking], :html => { :class => 'booking_form' }, url: "/orders", method:"post" do |f| %>
+    <%= f.association :service, label: "Service",
+    collection: Service.where(user: @mechanic), label_method: :repair_name, value_method: :id, include_blank: false, prompt: "Choose your service" %>
     <%= f.input :datetime, as: :datetime, html5: true %>
-    <%= f.text_field :comment %>
-    <%= f.submit class: "btn" %>
+    <%= f.input :booking_location, html5: true %>
+    <%= f.input :comment, html5: true %>
+    <%= f.submit class: "btn_show" %>
     <% end %>
-  </div>
+    </div>
 </div>
-

@@ -1,53 +1,57 @@
+<div class="main">
+  <% if current_user.mechanic %>
 
-<% if current_user.mechanic %>
-<h2 class="profile-title"> Hi <%= current_user.company_name %> </h2>
-<div class="booking-title">
-Upcoming Bookings</div>
-<!-- cards for individual bookings -->
-<% current_user.services.each do |service| %>
-  <% service.bookings.each do |booking| %>
-    <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-primary shadow h-100 py-2">
-        <div class="card-body">
-          <div class="row no-gutters align-items-center">
-            <div class="col mr-2">
-              <div class="mb-0">
-               <h5><%= booking.comment %></h5> <br>
-               <p><%= booking.booking_location %> </p>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-    </div>
-  <% end %>
-<% end %>
-<% else %>
-<h2 class="title">Hi <%= current_user.first_name %> </h2>
-<div class="booking-title">
-Upcoming Bookings</div>
-<!-- cards for individual bookings -->
+  <h1 class="title_index"> Hi <%= current_user.company_name %> </h1>
+    <div class="booking-title">
+    Upcoming Bookings</div>
+    <!-- mechanics-->
+      <ul class="cards_profile">
+      <% current_user.services.each do |service| %>
+      <% service.bookings.each do |booking| %>
+      <%#= link_to order_path(@order) do %>
+        <li class="cards_item_profile">
+        <div class="card">
+          <div class="card_content">
+            <p class="card_text"><%= booking.comment %></p>
+            <p class="card_text"><%= booking.booking_location %></p>
+            <p class="card_text"><%= link_to 'Chat to the cyclist', chatroom_path(booking.chatroom) %> <% order = Order.find_by(service: booking.service_id) %>  </p>
+          </div>
+        </div>
+        </li>
+      <%# end %>
+      <% end %>
+      <% end %>
+      </ul>
 
-<% current_user.bookings.each do |booking| %>
-    <div class="col-xl-3 col-md-6 mb-4">
-      <div class="card border-left-primary shadow h-100 py-2">
-        <div class="card-body">
-          <div class="row no-gutters align-items-center">
-            <div class="col mr-2">
-              <div class="mb-0">
-               <h5><%= booking.service.user.company_name %></h5> <br>
-               <p><%= booking.booking_location %> </p>
-               <p><%= booking.comment %></p>
+    <% else %>
+      <h1 class="title_index">Hi <%= current_user.first_name %> </h1>
+        <div class="booking-title">Your Bookings</div>
+        <!-- cyclists -->
 
-              <%= link_to 'Chat to your mechanic', chatroom_path(booking.chatroom) %>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-    </div>
-<% end %>
-<% end %>
+          <ul class="cards_profile">
+          <% current_user.bookings.each do |booking| %>
+            <li class="cards_item_profile">
+            <%#= link_to order_path(order) do %>
+            <div class="card">
+              <div class="card_content">
+                <h2 class="card_title"><%= booking.service.user.company_name %></h2>
+                
+                <p class="card_text"><%= booking.booking_location %></p>
 
-<%= link_to 'edit your profile', edit_user_registration_path(current_user) %>
+                <p class="card_text"><%= booking.service.repair_name %></p>
+
+                <p class="card_text"><%= link_to 'Chat to your mechanic', chatroom_path(booking.chatroom) %> <% order = Order.find_by(service: booking.service_id) %>  </p>
+                <p class="card_text"><%= link_to "View your order", order_path(order) %></p>
+              </div>
+            </div>
+            <%# end %>
+            </li>
+          <% end %>
+        </ul>
+
+    <% end %> 
+      <%= link_to 'edit your profile', edit_user_registration_path(current_user) %>
+</div>
+
+
 
