@@ -37,11 +37,13 @@
                 <h2 class="card_title"><%= booking.service.user.company_name %></h2>
                 
                 <p class="card_text"><%= booking.booking_location %></p>
-
-                <p class="card_text"><%= booking.service.repair_name %></p>
-
-                <p class="card_text"><%= link_to 'Chat to your mechanic', chatroom_path(booking.chatroom) %> <% order = Order.find_by(service: booking.service_id) %>  </p>
-                <p class="card_text"><%= link_to "View your order", order_path(order) %></p>
+                <p class="card_text"><i class="fas fa-wrench"></i> Your service is for: <%= booking.service.repair_name %></p>
+                <p class="card_text"><i class="far fa-comments"></i> <%= link_to 'Chat to your mechanic', chatroom_path(booking.chatroom) %> <% order = Order.find_by(service: booking.service_id) %>  </p>
+                <p class="card_text"><i class="fas fa-biking"></i> <%= link_to "View your order", order_path(order) %></p>
+                <p class="card_text"><i class="far fa-edit"></i> <%=  link_to 'Edit your booking', edit_booking_path(booking)%></p>
+                <%# if booking.datetime.utc < Time.now.utc %>
+                <p class="card_text"><i class="far fa-star"></i> <%= link_to "Leave a review", new_user_booking_review_path(current_user, booking) %></p>
+                <%# end  %>
               </div>
             </div>
             <%# end %>
