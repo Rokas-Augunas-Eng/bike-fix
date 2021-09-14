@@ -11,17 +11,17 @@ class UsersController < ApplicationController
     end
   end
 
-def show
-  @user = User.find(params[:id])
-  @booking = Booking.new
+  def show
+    @user = User.find(params[:id])
+    @booking = Booking.new
 
-  @markers = [{
-    lat: @user.to_coordinates.first,
-    lng: @user.to_coordinates.last,
-    info_window: render_to_string(partial: "map_box", locals: { user: @user }),
-    image_url: cl_image_path("yr7vbtkxxfrlwjbceesz.jpg")
-  }]
-end
+    @markers = [{
+      lat: @user.to_coordinates.first,
+      lng: @user.to_coordinates.last,
+      info_window: render_to_string(partial: "map_box", locals: { user: @user }),
+      image_url: cl_image_path("yr7vbtkxxfrlwjbceesz.jpg")
+    }]
+  end
 
   def edit
   end
