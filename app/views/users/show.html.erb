@@ -4,7 +4,7 @@
       <div class="card_show">
         <div class="card_image">
           <% if @user.photo.attached? %>
-            <%= cl_image_tag @user.photo.key %>
+            <%= cl_image_tag @user.photo.key, height: 240, width: 360, crop: :fill %>
           <% else %>
             <img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png">
           <% end %>
@@ -15,7 +15,7 @@
           <% @user.services.each do |service| %>
             <p class="card_text"><%= icon('fas', 'bicycle') %> <%= service.repair_name %> <%= icon('fas', 'money-bill-wave') %> <%= humanized_money_with_symbol(service.price) %></p>
           <% end %>
-          <%#= icon('fas', 'star', style: 'color: white')  * @user.services.first.average_rating.to_i %><%#= icon('far', 'star', style: 'color: white') * (5 - @user.services.first.average_rating.to_i) %>
+          <%= icon('fas', 'star', style: 'color: white')  * @user.services.first.average_rating.to_i %><%= icon('far', 'star', style: 'color: white') * (5 - @user.services.first.average_rating.to_i) %>
 
         </div>
       </div>
