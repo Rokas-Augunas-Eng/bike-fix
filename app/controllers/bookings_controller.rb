@@ -46,7 +46,6 @@ class BookingsController < ApplicationController
 
   def confirmation
     @repair_name = @booking.service.repair_name
-    # @time = Time.now+30*60
 
     @mechanic = @booking.service.user
         @marker = [{

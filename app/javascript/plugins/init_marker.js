@@ -1,5 +1,5 @@
-// import mapboxgl from 'mapbox-gl';
-// import 'mapbox-gl/dist/mapbox-gl.css';
+import mapboxgl from 'mapbox-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 const initMarker = () => {
   const mapElement = document.getElementById('map2');

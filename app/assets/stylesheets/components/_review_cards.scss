@@ -23,7 +23,7 @@ h2{
   margin-bottom:1.5rem;
 }
 .input-field{
-  background: #33A8A1;
+  background: $primary-colour;
   width:100%;
   padding:.85rem;
   border-radius:5px;
@@ -46,7 +46,7 @@ h2{
   gap:.5rem;
 }
 .suggest span{
-  background: #33A8A1;
+  background: $primary-colour;
   padding:.65rem 1.3rem;
   border-radius:5px;
   font-size:.65rem;
@@ -66,7 +66,7 @@ h2{
 .cards_review .card_review{
   width:100%;
   margin-bottom:.7rem;
-  background: #33A8A1;
+  background: $primary-colour;
   border-radius:5px;
 }
 .card_review > *{
