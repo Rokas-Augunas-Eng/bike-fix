@@ -21,7 +21,19 @@ class UsersController < ApplicationController
       info_window: render_to_string(partial: "map_box", locals: { user: @user }),
       image_url: cl_image_path("yr7vbtkxxfrlwjbceesz.jpg")
     }]
+
+    sum = 0 
+    counter = 0 
+    mechanic_bookings = Booking.select {|booking| booking.service.user == @user}
+    mechanic_bookings.each do |booking|
+      if booking.reviews.present?
+        sum += booking.reviews.first.rating
+        counter += 1
+      end
+    end
+    @average_rating = (sum.to_f / counter) if counter > 0
   end
+
   def edit
   end
 

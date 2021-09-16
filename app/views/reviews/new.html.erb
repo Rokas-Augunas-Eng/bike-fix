@@ -81,8 +81,8 @@
 	</div>
 </div>
 
-    <%#= simple_form_for [current_user, @booking, @review] do |f| %>
-    <%#= f.input :rating %>
-    <%#= f.text_field :content%>
-    <%#= f.submit class: "btn" %>
-    <%# end %>
+    <%= simple_form_for [current_user, @booking, @review] do |f| %>
+    <%= f.input :rating %>
+    <%= f.text_field :content%>
+    <%= f.submit class: "btn" %>
+    <% end %>
