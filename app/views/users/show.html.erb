@@ -16,7 +16,6 @@
             <p class="card_text"><%= icon('fas', 'bicycle') %> <%= service.repair_name %> <%= icon('fas', 'money-bill-wave') %> <%= humanized_money_with_symbol(service.price) %></p>
           <% end %>
           <%= icon('fas', 'star', style: 'color: white')  * @average_rating.to_i %><%= icon('far', 'star', style: 'color: white') * (5 - @average_rating.to_i) %>
-            <%= console  %>
         </div>
       </div>
       <%= link_to "Book Now", new_user_booking_path(@user), class: "btn" %>
