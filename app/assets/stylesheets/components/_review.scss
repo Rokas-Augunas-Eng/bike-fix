@@ -1,12 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-body {
-  color: #545454;
-  font-family: "Open Sans", sans-serif;
 }
 
 .wrapper {
@@ -80,11 +74,11 @@ h2 {
 }
 
 .rating-component .stars-box .star.hover {
-  color: #ff5a49;
+  color: #33A8A1;;
 }
 
 .rating-component .stars-box .star.selected {
-  color: #ff5a49;
+  color: #33A8A1;;
 }
 
 .feedback-tags {
@@ -142,7 +136,7 @@ h2 {
   .make-compliment
   .compliment-container
   .fa-smile-wink {
-  color: #ff5a49;
+  color: #33A8A1;;
   cursor: pointer;
   font-size: 40px;
   margin-top: 15px;
@@ -164,9 +158,9 @@ h2 {
 }
 
 .feedback-tags .tag {
-  border: 1px solid #ff5a49;
+  border: 1px solid #33A8A1;;
   border-radius: 5px;
-  color: #ff5a49;
+  color: #33A8A1;;
   cursor: pointer;
   margin-bottom: 10px;
   margin-left: 10px;
@@ -174,7 +168,7 @@ h2 {
 }
 
 .feedback-tags .tag.choosed {
-  background-color: #ff5a49;
+  background-color: #33A8A1;;
   color: #fff;
 }
 
@@ -221,7 +215,7 @@ h2 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 2px solid #ff5a49;
+  border: 2px solid #33A8A1;;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -243,14 +237,14 @@ h2 {
 }
 
 .list-of-compliment ul li .icon-compliment i {
-  color: #ff5a49;
+  color: #33A8A1;;
   font-size: 30px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .list-of-compliment ul li.actived .icon-compliment {
-  background-color: #ff5a49;
+  background-color: #33A8A1;;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -262,8 +256,8 @@ h2 {
 }
 
 .button-box .done {
-  background-color: #ff5a49;
-  border: 1px solid #ff5a49;
+  background-color: #33A8A1;;
+  border: 1px solid #33A8A1;
   border-radius: 3px;
   color: #fff;
   cursor: pointer;
@@ -274,8 +268,8 @@ h2 {
 
 .button-box .done:disabled,
 .button-box .done[disabled] {
-  border: 1px solid #ff9b95;
-  background-color: #ff9b95;
+  border: 1px solid #33A8A1;;
+  background-color: #33A8A1;;
   color: #fff;
   cursor: initial;
 }
@@ -292,8 +286,8 @@ h2 {
 
 .submited-box .loader {
   border: 5px solid transparent;
-  border-top: 5px solid #4dc7b7;
-  border-bottom: 5px solid #ff5a49;
+  border-top: 5px solid #33A8A1;;
+  border-bottom: 5px solid #33A8A1;;
   border-radius: 50%;
   width: 60px;
   height: 60px;
