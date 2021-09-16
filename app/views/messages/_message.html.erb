@@ -1,4 +1,4 @@
-<% if current_user.mechanic %>
+<% if message.user.mechanic? %>
 
   <div class="container_message" id="message-<%= message.id %>">
     <i class="author">
@@ -19,6 +19,3 @@
   </div>
 
 <% end %>
-
-
-<%#= link_to "Remove gym", gym_path(@gym), method: :delete, data: { confirm: "Are you sure you want to delete your home gym?" } %>

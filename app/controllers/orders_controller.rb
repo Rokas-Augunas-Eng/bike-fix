@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
 include CloudinaryHelper
 
   def create
-    booking = Booking.create(service_id: (params[:booking][:service_id]), datetime: (params[:booking][:datetime]), user: current_user)
+    booking = Booking.create(service_id: (params[:booking][:service_id]), datetime: (params[:booking][:datetime]), user: current_user, booking_location: (params[:booking][:booking_location]))
     service = Service.find(params[:booking][:service_id])
     order  = Order.create!(service: service, service_sku: service.sku, amount: service.price, state: 'pending', user: current_user)
     chatroom = Chatroom.create(booking: booking)
