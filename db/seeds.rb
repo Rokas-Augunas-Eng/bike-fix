@@ -1,11 +1,17 @@
 require 'faker'
 require 'open-uri'
 
+Chatroom.destroy_all
+puts "Chatroom database deleted"
+
 Review.destroy_all
 puts "Reviews database deleted"
 
 Booking.destroy_all
 puts "Booking database deleted"
+
+Order.destroy_all
+puts "Order database deleted"
 
 Service.destroy_all
 puts "Service database deleted"
@@ -34,7 +40,7 @@ user_2 = User.create!(
 )
 
 # file = File.open(Rails.root.join("app/assets/images/bike-shop1.jpg" cl_image_path))
-file = URI.open("https://res.cloudinary.com/dblr5mh56/image/upload/v1631358226/zudpjotx24bnnbyiz8e3.jpg")
+file = URI.open("https://scontent-lcy1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p640x640/219836278_188275006517188_8238607941948797610_n.jpg?_nc_ht=scontent-lcy1-1.cdninstagram.com&_nc_cat=104&_nc_ohc=dEZ-I5BYUXMAX_wWN6L&edm=AP_V10EBAAAA&ccb=7-4&oh=3aa111fa046a366470552555034e017a&oe=6149B5B0&_nc_sid=4f375e%20640w,")
 user_2.photo.attach(io: file, filename: 'bike-shop2.jpg', content_type: 'image/jpg')
 user_2.save!
 
@@ -42,12 +48,12 @@ user_3 = User.create!(
   email: "user3@test.com",
   password: "123456",
   mechanic: true,
-  location: "13 Stean St, London E8 4ED",
-  company_name: "Bikes for days",
+  location: "35C Newington Green, London N16 9PR",
+  company_name: "Push Cycles",
   insta_availability: true,
 )
 
-file = URI.open("https://res.cloudinary.com/dblr5mh56/image/upload/v1631370518/dn2gvq4f3y9urbl2xk10.jpg")
+file = URI.open("https://scontent-lcy1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/100576064_253220322437022_2196281691155403860_n.jpg?_nc_ht=scontent-lcy1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=IWx9QwycDHUAX9Ew9QQ&tn=g9MwsTxsR7GZb5Be&edm=AP_V10EBAAAA&ccb=7-4&oh=d20e4f041f2046083c551f199a840054&oe=614A411D&_nc_sid=4f375e")
 user_3.photo.attach(io: file, filename: 'bike-shop3.jpg', content_type: 'image/jpg')
 user_3.save!
 
@@ -55,12 +61,12 @@ user_4 = User.create!(
   email: "user4@test.com",
   password: "123456",
   mechanic: true,
-  location: "66 Gedling Pl, London",
-  company_name: "Get fix",
+  location: "49 Old St EC1V 9HX",
+  company_name: "Look Mum No Hands!",
   insta_availability: true,
 )
   
-file = URI.open("https://res.cloudinary.com/dblr5mh56/image/upload/v1631370655/uusv50f4q92qhxzmexpc.jpg")
+file = URI.open("https://scontent-lcy1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/235046342_194975949320910_5658984783879966587_n.jpg?_nc_ht=scontent-lcy1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=okVu0t1YjPIAX9l5DtU&edm=AP_V10EBAAAA&ccb=7-4&oh=d37a247d32626e01fbe4eb3b3e015ce7&oe=614A71AD&_nc_sid=4f375e%20640w")
 user_4.photo.attach(io: file, filename: 'bike-shop4.jpg', content_type: 'image/jpg')
 user_4.save!
 
@@ -73,7 +79,7 @@ user_5 = User.create!(
   insta_availability: true,
 )
   
-file = URI.open("https://res.cloudinary.com/dblr5mh56/image/upload/v1631370832/nxvonk6znnb6oh3ivrf3.jpg")
+file = URI.open("https://scontent-lcy1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p640x640/212091556_988791718589966_1210441633639865853_n.jpg?_nc_ht=scontent-lcy1-1.cdninstagram.com&_nc_cat=102&_nc_ohc=f0sepvyaoBYAX8NNyBm&edm=AP_V10EBAAAA&ccb=7-4&oh=e631394228213302a8808bc3292787e4&oe=614A240E&_nc_sid=4f375e%20640w")
 user_5.photo.attach(io: file, filename: 'bike-shop5.jpg', content_type: 'image/jpg')
 user_5.save!
 
@@ -86,7 +92,7 @@ user_6 = User.create!(
   insta_availability: false,
 )
   
-file = URI.open("https://res.cloudinary.com/dblr5mh56/image/upload/v1631371220/nlzyemfuv22ddq5zvbii.jpg")
+file = URI.open("https://scontent-lcy1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/154848317_502208430941492_9204043895975537111_n.jpg?_nc_ht=scontent-lcy1-1.cdninstagram.com&_nc_cat=108&_nc_ohc=ocKpKK7PGpsAX-knL9h&edm=AP_V10EBAAAA&ccb=7-4&oh=67ac758b5810c5b3ff6a0509d36b01ad&oe=614B097E&_nc_sid=4f375e%20640w,")
 user_6.photo.attach(io: file, filename: 'bike-shop6.jpg', content_type: 'image/jpg')
 user_6.save!
 
