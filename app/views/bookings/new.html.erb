@@ -4,7 +4,7 @@
     <%= simple_form_for [@mechanic, @booking], :html => { :class => 'booking_form' }, url: "/orders", method:"post" do |f| %>
     <%= f.association :service, label: "Service",
     collection: Service.where(user: @mechanic), label_method: :repair_name, value_method: :id, include_blank: false, prompt: "Choose your service" %>
-    <%= f.input :datetime, as: :datetime, html5: true %>
+    <%= f.input :datetime, as: :datetime, html5: true, input_html: { :class => "mx-0"} %>
     <%= f.input :booking_location, html5: true %>
     <%= f.input :comment, html5: true %>
     <%= f.submit class: "btn_show" %>
