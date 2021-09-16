@@ -59,7 +59,7 @@ img {
 
 .card_content {
   padding: 1rem;
-  background: #33A8A1;
+  background: $primary-colour;
 }
 
 .card_content:hover {
@@ -86,7 +86,7 @@ img {
 
 .card_text {
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1;
   margin-bottom: 1.25rem;
   font-weight: 400;
@@ -162,7 +162,7 @@ img {
 
 .card_content_show {
   padding: 1rem;
-  background: #33A8A1;
+  background: $primary-colour;
 }
 
 .btn_show {
@@ -176,7 +176,7 @@ img {
   width: 100%;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  background: #33A8A1;;
+  background: #33A8A1;
   border-radius: 0.5rem;
   margin: 20px 0px;
   text-align: center;
@@ -209,7 +209,7 @@ img {
 .card_content-home {
   min-width: 25rem;
   padding: 1rem;
-  background: #33A8A1;
+  background: $primary-colour;
 }
 
 .btn {

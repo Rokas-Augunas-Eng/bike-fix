@@ -1,65 +1,88 @@
-<div class="title">
-  <h3 class="pl-3"> Leave your review for <%= @user.company_name %> </h3>
-  <div class="container">
-    <p></p>
-    <%= console %>
-    <%= simple_form_for [current_user, @booking, @review] do |f| %>
-    <%= f.input :rating, label: "How would you rate your repair?", as: :radio_buttons, :item_wrapper_class => 'form-check form-check-inline', collection: (1..5).each %>
-    <p>Any comments?</p>
-    <%= f.text_field :content%>
-    <%= f.submit class: "btn" %>
-    <% end %>
-    </div>
-</div>
-
-<%# <!-- <main class="title">
-<svg style="display: none">
-	<symbol id="star" viewBox="0 0 1024 1024">
-		<polygon points="512 0 627 354 999 354 698 572 813 926 512 708 211 926 326 572 25 354 397 354 512 0" />
-	</symbol>
-</svg> -->
-<!--
-<div id="modal">
-	<div class="overlay">
-		<div class="feedback container--small align--center">
-			<button id="close">Close</button>
-			<h1 class="feedback__title">How did we do?</h1>
-			<p class="feedback__description">Please let us know how your bike repair was.</p>
-			<form class="feedback__form">
-				<fieldset class="rating rating__food">
-					<legend>How would you rate your overall experience?</legend>
-					<div class="flex-container">
-						<input type="radio" id="food-5" name="rating" value="5">
-						<label for="food-5"><svg>
-								<title>Five Stars</title>
-								<use xlink:href="#star"></use>
-							</svg></label>
-						<input type="radio" id="food-4" name="rating" value="4">
-						<label for="food-4"><svg>
-								<title>Four Stars</title>
-								<use xlink:href="#star"></use>
-							</svg></label>
-						<input type="radio" id="food-3" name="rating" value="3">
-						<label for="food-3"><svg>
-								<title>Three Stars</title>
-								<use xlink:href="#star"></use>
-							</svg></label>
-						<input type="radio" id="food-2" name="rating" value="2">
-						<label for="food-2"><svg>
-								<title>Two Stars</title>
-								<use xlink:href="#star"></use>
-							</svg></label>
-						<input type="radio" id="food-1" name="rating" value="1">
-						<label for="food-1"><svg>
-								<title>One Star</title>
-								<use xlink:href="#star"></use>
-							</svg></label>
+<div class="main">
+  <div class="cards_show">
+		<div class="cards_item_show">
+			<div class="wrapper">
+				<div class="master">
+					<h2>How was your experience with <%= @booking.user.company_name %></h2>
+			
+					<div class="rating-component">
+						<div class="status-msg">
+							<label>
+							<input  class="rating_msg" type="hidden" name="rating_msg" value=""/>
+							</label>
+						</div>
+						<div class="stars-box">
+							<i class="star fa fa-star" title="1 star" data-message="Poor" data-value="1"></i>
+							<i class="star fa fa-star" title="2 stars" data-message="Too bad" data-value="2"></i>
+							<i class="star fa fa-star" title="3 stars" data-message="Average quality" data-value="3"></i>
+							<i class="star fa fa-star" title="4 stars" data-message="Nice" data-value="4"></i>
+							<i class="star fa fa-star" title="5 stars" data-message="very good qality" data-value="5"></i>
+						</div>
+						<div class="starrate">
+							<label>
+							<input  class="ratevalue" type="hidden" name="rate_value" value=""/>
+							</label>
+						</div>
 					</div>
 
-				</fieldset>
-			</form>
-			<button type="submit" class="feedback__submit">Submit feedback</button>
-		</div> --> %>
+					<div class="feedback-tags">
+						<div class="tags-container" data-tag-set="1">
+							<div class="question-tag">
+								Why was your experience so bad?
+							</div>
+						</div>
+						<div class="tags-container" data-tag-set="2">
+							<div class="question-tag">
+								Why was your experience so bad?
+							</div>
+
+						</div>
+
+						<div class="tags-container" data-tag-set="3">
+							<div class="question-tag">
+								Why was your average rating experience ?
+							</div>
+						</div>
+						<div class="tags-container" data-tag-set="4">
+							<div class="question-tag">
+								Why was your experience good?
+							</div>
+						</div>
+
+						<div class="tags-container" data-tag-set="5">
+							<div class="make-compliment">
+								<div class="compliment-container">
+									Give a compliment
+									<i class="far fa-smile-wink"></i>
+								</div>
+							</div>
+						</div>
+						
+						<div class="tags-box">
+							<input type="text" class="tag form-control" name="comment" id="inlineFormInputName" placeholder="please enter your review">
+							<input type="hidden" name="product_id" value="{{ $products->id }}" />
+						</div>
+						
+					</div>
+
+					<div class="button-box">
+						<input type="submit" class=" done btn btn-warning" disabled="disabled" value="Add review" />
+					</div>
+
+					<div class="submited-box">
+						<div class="loader"></div>
+						<div class="success-message">
+							Thank you!
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
-</main>
+
+    <%#= simple_form_for [current_user, @booking, @review] do |f| %>
+    <%#= f.input :rating %>
+    <%#= f.text_field :content%>
+    <%#= f.submit class: "btn" %>
+    <%# end %>

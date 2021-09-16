@@ -1,22 +1,19 @@
-<div class="top_home">
-  <h1 class="title-2"> Bike problems? </h1>
+<h1 class="title-2"> Bike problems? </h1>
   <div class="new_footer_top_homepage">
     <div class="footer_bg_homepage">
-        <%# <div class="footer_bg_one"></div>
-        <div class="footer_bg_two"></div>
-        <div class="footer_bg_three"></div>
-        <div class="footer_bg_four"></div> %>
+      <div class="footer_bg_one"></div>
+      <div class="footer_bg_two"></div>
+      <div class="footer_bg_three"></div>
+      <div class="footer_bg_four"></div>
     </div>
   </div>
-</div>
 
   <div class="main">
     <div class="searchbar">
-      <%= form_tag users_path, method: "GET" do %>
-      <%# <span i class="fas fa-search"></span> Looking to insert an icon in the search bar %>
+      <%= form_tag users_path, method: "GET" do %>  
       <%= text_field_tag :search_by_service, params[:search_by_service],
       placeholder: "Tyre Puncture...",
-      class: "searchbox" %> 
+      class: "searchbox" %>
       <%= submit_tag "Search",
       class: "search_button" %>
       <% end %>
@@ -27,10 +24,19 @@
         <%= link_to user_path(mechanic) do %>
         <li class="cards_item">
           <div class="card">
-            <div class="card_image"><img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png"></div>
+            <div class="card_image">
+              <% if mechanic.photo.attached? %>
+                <%= cl_image_tag mechanic.photo.key, height: 240, width: 360, crop: :fill %>
+              <% else %>
+                <img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png">
+              <% end %>
+            </div>
             <div class="card_content">
               <h2 class="card_title"><%= mechanic.company_name %></h2>
               <p class="card_text"><i class="fas fa-map-marker-alt"></i> <%= mechanic.location %></p>
+
+              <%= icon('fas', 'star', style: 'color: white')  * mechanic.services.first.average_rating.to_i %><%= icon('far', 'star', style: 'color: white') * (5 - mechanic.services.first.average_rating.to_i) %>
+
             </div>
           </div>
         <% end %>

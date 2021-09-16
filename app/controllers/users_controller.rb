@@ -22,7 +22,6 @@ class UsersController < ApplicationController
       image_url: cl_image_path("yr7vbtkxxfrlwjbceesz.jpg")
     }]
   end
-
   def edit
   end
 

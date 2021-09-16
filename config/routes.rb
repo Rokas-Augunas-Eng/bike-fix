@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-   get 'profile', to: 'pages#profile'
-   get 'confirmation', to: 'pages#confirmation'
+  get 'profile', to: 'pages#profile'
+  get 'bookings', to: 'pages#bookings'
+  get 'confirmation', to: 'pages#confirmation'
 
   resources :users do
     resources :bookings, only:[:new, :create, :update, :edit, :index] do
@@ -17,9 +18,6 @@ Rails.application.routes.draw do
   end
 
   resources :bookings, only:[:confirmation] do
-    # resources :chatrooms, only: :show do
-    #   resources :messages, only: :create
-    # end
     resources :services, only:[:index, :show] do
       member do 
         get "confirmation"

@@ -48,4 +48,10 @@ include CloudinaryHelper
 
     @booking_location = @booking.booking_location
   end
+
+  def destroy
+    @order.destroy
+    redirect_to user_path(current_user)
+  end
+
 end
