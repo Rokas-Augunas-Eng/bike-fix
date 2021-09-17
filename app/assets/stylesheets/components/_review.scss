@@ -26,11 +26,6 @@
   padding-top: 40px;
 }
 
-// h1 {
-//   font-size: 20px;
-//   margin-bottom: 20px;
-// }
-
 .review-h2 {
   line-height: 160%;
   margin-bottom: 20px;
@@ -75,11 +70,11 @@
 }
 
 .rating-component .stars-box .star.hover {
-  color: #33A8A1;;
+  color: $primary-colour;
 }
 
 .rating-component .stars-box .star.selected {
-  color: #33A8A1;;
+  color: $primary-colour;
 }
 
 .feedback-tags {
@@ -161,15 +156,13 @@
 .feedback-tags .tag {
   border: 1px solid #33A8A1;;
   border-radius: 5px;
-  // color: #33A8A1;;
   cursor: pointer;
   margin-bottom: 10px;
-  // margin-left: 10px;
   padding: 10px;
 }
 
 .feedback-tags .tag.choosed {
-  background-color: #33A8A1;;
+  background-color: $primary-colour;
   color: #fff;
 }
 
@@ -238,14 +231,14 @@
 }
 
 .list-of-compliment ul li .icon-compliment i {
-  color: #33A8A1;;
+  color: $primary-colour;
   font-size: 30px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .list-of-compliment ul li.actived .icon-compliment {
-  background-color: #33A8A1;;
+  background-color: $primary-colour;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }

@@ -26,7 +26,6 @@ include CloudinaryHelper
   def show
     @order = current_user.orders.find(params[:id])
     @booking = Booking.find_by service_id: @order.service_id
-    # @mechanic = @booking.service.user
 
     @repair_name = @booking.service.repair_name
     @time = Time.now+30*60
