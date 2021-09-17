@@ -52,7 +52,7 @@ user_3 = User.create!(
   location: "35C Newington Green, London N16 9PR",
   company_name: "Push Cycles",
   mechanic_name: "Joris bohnson",
-  insta_availability: true,
+  insta_availability: false,
 )
 
 file = URI.open("https://scontent-lcy1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/100576064_253220322437022_2196281691155403860_n.jpg?_nc_ht=scontent-lcy1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=IWx9QwycDHUAX9Ew9QQ&tn=g9MwsTxsR7GZb5Be&edm=AP_V10EBAAAA&ccb=7-4&oh=d20e4f041f2046083c551f199a840054&oe=614A411D&_nc_sid=4f375e")
