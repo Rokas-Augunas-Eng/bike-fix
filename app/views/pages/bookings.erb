@@ -31,21 +31,19 @@
           <ul class="cards_profile">
           <% current_user.bookings.each do |booking| %>
             <li class="cards_item_profile">
-            <%#= link_to order_path(order) do %>
+            <%= link_to order_path(booking) do %>
             <div class="card">
               <div class="card_content">
                 <h2 class="card_title"><%= booking.service.user.company_name %></h2>
                 
-                <p class="card_text"><%= booking.booking_location %></p>
-                <p class="card_text"><%= icon('fas', 'wrench', style: 'color: white') %></i> Your service is for: <%= booking.service.repair_name %></p>
+                <p class="card_text"><%= icon('fas', 'wrench', style: 'color: white') %> <%= booking.service.repair_name %></p>
                 <p class="card_text"><i class="far fa-comments"></i> <%= link_to 'Chat to your mechanic', chatroom_path(booking.chatroom) %> <% order = Order.find_by(service: booking.service_id) %>  </p>
-                <p class="card_text"><i class="fas fa-biking"></i> <%= link_to "View your booking", order_path(order) %></p>
                 <p class="card_text"><i class="far fa-edit"></i> <%=  link_to 'Edit your booking', edit_booking_path(booking)%></p>
                 <%# if booking.datetime.utc < Time.now.utc %>
                 <p class="card_text"><i class="far fa-star"></i> <%= link_to "Leave a review", new_user_booking_review_path(current_user, booking) %></p>
                 <p class="card_text"><i class="far fa-trash-alt"></i>
                 <%= link_to "Cancel your booking", booking_path(booking), method: :delete, data: { confirm: "Are you sure you want to cancel your booking?" } %></p>
-                <%# end  %>
+                <% end  %>
               </div>
             </div>
             <%# end %>

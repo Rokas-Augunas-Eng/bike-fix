@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 2021_09_11_120204) do
     t.string "checkout_session_id"
     t.bigint "user_id", null: false
     t.bigint "service_id", null: false
-    t.datetime "created_at", precision: 6, null: false
+    t.datetime "c@reated_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["service_id"], name: "index_orders_on_service_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
