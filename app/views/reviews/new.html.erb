@@ -59,7 +59,6 @@
 						
 						<div class="tags-box">
 							<textarea type="textarea"  rows="2" cols="50" class="tag form-control" name="comment" id="inlineFormInputName" placeholder="please enter your review..."></textarea>
-							<%# <textarea name="textarea" rows="10" cols="50">Write something here</textarea> %>
 							<input type="hidden" name="product_id" value="{{ $products->id }}" />
 						</div>
 						
@@ -81,10 +80,9 @@
 	</div>
 </div>
 
-    <%= simple_form_for [current_user, @booking, @review] do |f| %>
-    <%= f.input :rating %>
-    <%= f.input :content, as: :text %>
-    <%= f.submit class: "btn" %>
-    <% end %>
+    <%#= simple_form_for [current_user, @booking, @review] do |f| %>
+    <%#= f.input :rating %>
+    <%#= f.submit class: "btn" %>
+    <%# end %>
 		
 

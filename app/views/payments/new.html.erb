@@ -4,7 +4,7 @@
     <div class="row py-2">
       <div class="col">
         <div class="payment_text">
-          <p>Service for <strong><%= @order.service.sku %></strong> for <strong><%= humanized_money_with_symbol @order.amount %></strong></p></div>
+          <p >Service for <strong><%= @order.service.sku %></strong> for <strong><%= humanized_money_with_symbol @order.amount %></strong></p></div>
             <button id="pay" class="btn btn-primary">Pay</button>
             <script src="https://js.stripe.com/v3/"></script>
             <script>

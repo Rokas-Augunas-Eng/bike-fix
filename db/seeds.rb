@@ -338,52 +338,77 @@ service_6_4 = Service.create!(
 
 # Bookings & Chatroom creation
 
-# booking_2_1 = Booking.create!(
-#   user: user_1,
-#   service: service_2_1,
-#   booking_location: "138 Kingsland Rd, London E2 8DY",
-#   comment: "Front tyre puncture",
-#   datetime: '2021-04-04 14:10:10 +0100',
-# )
-# Chatroom.create!(booking: booking_2_1)
+booking_2_1 = Booking.create!(
+  user: user_1,
+  service: service_2_1,
+  booking_location: "138 Kingsland Rd, London E2 8DY",
+  comment: "Front tyre puncture",
+)
+Chatroom.create!(booking: booking_2_1)
 
-# booking_3_1 = Booking.create!(
-#   user: user_1,
-#   service: service_2_1,
-#   booking_location: "138 Kingsland Rd, London E2 8DY",
-#   comment: "Front tyre puncture",
-# )
-# Chatroom.create!(booking: booking_3_1)
+booking_3_1 = Booking.create!(
+  user: user_1,
+  service: service_3_1,
+  booking_location: "138 Kingsland Rd, London E2 8DY",
+  comment: "Front tyre puncture",
+)
+Chatroom.create!(booking: booking_3_1)
 
-# # Reviews creation
+booking_4_1 = Booking.create!(
+  user: user_1,
+  service: service_4_1,
+  booking_location: "138 Kingsland Rd, London E2 8DY",
+  comment: "Front tyre puncture",
+)
+Chatroom.create!(booking: booking_4_1)
 
-# review_2_1 = Review.create!(
-#   booking: booking_2_1,
-#   rating: 5,
-#   content: 'Voytek was great, had fabulous knowledge about a range of different bikes and how they drove. Always gave me correct and accurate information'
-# )
+booking_5_1 = Booking.create!(
+  user: user_1,
+  service: service_5_1,
+  booking_location: "138 Kingsland Rd, London E2 8DY",
+  comment: "Front tyre puncture",
+)
+Chatroom.create!(booking: booking_5_1)
 
-# review_2_2 = Review.create!(
-#   booking: booking_2_1,
-#   rating: 2,
-#   content: 'Excellent service, quicker than expected delivery.'
-# )
-# review_3_1 = Review.create!(
-#   booking: booking_2_1,
-#   rating: 3,
-#   content: 'Overall a good service that I would recommend'
-# )
+booking_6_1 = Booking.create!(
+  user: user_1,
+  service: service_6_1,
+  booking_location: "138 Kingsland Rd, London E2 8DY",
+  comment: "Front tyre puncture",
+)
+Chatroom.create!(booking: booking_6_1)
 
-# review_3_2 = Review.create!(
-#   booking: booking_2_1,
-#   rating: 2,
-#   content: 'Great product and fast delivery'
-# )
-# review_4_1 = Review.create!(
-#   booking: booking_2_1,
-#   rating: 5,
-#   content: "genuinely impressed"
-# )
+# Reviews creation
+
+review_2_1 = Review.create!(
+  booking: booking_2_1,
+  rating: 4,
+  content: 'Voytek was great, had fabulous knowledge about a range of different bikes and how they drove. Always gave me correct and accurate information'
+)
+
+review_3_1 = Review.create!(
+  booking: booking_3_1,
+  rating: 2,
+  content: 'Excellent service, quicker than expected delivery.'
+)
+
+review_4_1 = Review.create!(
+  booking: booking_4_1,
+  rating: 3,
+  content: 'Overall a good service that I would recommend'
+)
+
+review_5_2 = Review.create!(
+  booking: booking_5_1,
+  rating: 2,
+  content: 'Great product and fast delivery'
+)
+
+review_6_1 = Review.create!(
+  booking: booking_6_1,
+  rating: 5,
+  content: "genuinely impressed"
+)
 
 # review_4_2 = Review.create!(
 #   booking: booking_3_1,
