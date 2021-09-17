@@ -36,6 +36,7 @@ user_2 = User.create!(
   mechanic: true,
   location: "334 Walworth Rd, London",
   company_name: "Bike Bros",
+  mechanic_name: "Ervis Lapi",
   insta_availability: true,
 )
 
@@ -50,6 +51,7 @@ user_3 = User.create!(
   mechanic: true,
   location: "35C Newington Green, London N16 9PR",
   company_name: "Push Cycles",
+  mechanic_name: "Joris bohnson",
   insta_availability: true,
 )
 
@@ -63,6 +65,7 @@ user_4 = User.create!(
   mechanic: true,
   location: "49 Old St EC1V 9HX",
   company_name: "Look Mum No Hands!",
+  mechanic_name: "Anne de Joly",
   insta_availability: true,
 )
   

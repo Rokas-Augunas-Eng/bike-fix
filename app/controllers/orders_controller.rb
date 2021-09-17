@@ -29,7 +29,7 @@ include CloudinaryHelper
     # @mechanic = @booking.service.user
 
     @repair_name = @booking.service.repair_name
-    # @time = Time.now+30*60
+    @time = Time.now+30*60
     
 
     @mechanic = @booking.service.user

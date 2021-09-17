@@ -39,7 +39,7 @@ class ReviewsController < ApplicationController
 
   private
 
-  def find_booking
+  def find_review
     @review = Review.find(params[:id])
   end
 

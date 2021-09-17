@@ -11,6 +11,8 @@ import { confirmation } from '../components/confirmation.js';
 import { initChatroomCable } from '../channels/chatroom_channel.js';
 import { initFlatpickr } from "../plugins/init_flatpickr";
 import { review } from '../components/review.js';
+import { progressbar } from '../components/progressbar.js';
+
 
 Rails.start()
 Turbolinks.start()
@@ -25,5 +27,6 @@ document.addEventListener('turbolinks:load', () => {
   initChatroomCable();
   initFlatpickr();
   review()
+  progressbar()
 });
 
