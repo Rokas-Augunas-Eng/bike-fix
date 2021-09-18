@@ -31,7 +31,8 @@
           <ul class="cards_profile">
           <% current_user.bookings.each do |booking| %>
             <li class="cards_item_profile">
-            <%= link_to order_path(booking) do %>
+            <% order = Order.find_by(service: booking.service_id) %>
+            <%= link_to order_path(order) do %>
             <div class="card">
               <div class="card_content">
                 <h2 class="card_title"><%= booking.service.user.company_name %></h2>

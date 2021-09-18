@@ -345,6 +345,7 @@ booking_2_1 = Booking.create!(
   comment: "Front tyre puncture",
 )
 Chatroom.create!(booking: booking_2_1)
+Order.create!(user: user_1, service: service_2_1)
 
 booking_3_1 = Booking.create!(
   user: user_1,
@@ -353,6 +354,7 @@ booking_3_1 = Booking.create!(
   comment: "Front tyre puncture",
 )
 Chatroom.create!(booking: booking_3_1)
+Order.create!(user: user_1, service: service_3_1)
 
 booking_4_1 = Booking.create!(
   user: user_1,
@@ -361,6 +363,7 @@ booking_4_1 = Booking.create!(
   comment: "Front tyre puncture",
 )
 Chatroom.create!(booking: booking_4_1)
+Order.create!(user: user_1, service: service_4_1)
 
 booking_5_1 = Booking.create!(
   user: user_1,
@@ -369,6 +372,8 @@ booking_5_1 = Booking.create!(
   comment: "Front tyre puncture",
 )
 Chatroom.create!(booking: booking_5_1)
+Order.create!(user: user_1, service: service_5_1)
+
 
 booking_6_1 = Booking.create!(
   user: user_1,
@@ -377,6 +382,7 @@ booking_6_1 = Booking.create!(
   comment: "Front tyre puncture",
 )
 Chatroom.create!(booking: booking_6_1)
+Order.create!(user: user_1, service: service_6_1)
 
 # Reviews creation
 

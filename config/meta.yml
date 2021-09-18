@@ -1,0 +1,5 @@
+meta_product_name: "Bike fix"
+meta_title: "Bike fix - Revolutionising bike maintenance"
+meta_description: "We offer on delivery bike maintainance service"
+meta_image: "bike_image.jpg" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards

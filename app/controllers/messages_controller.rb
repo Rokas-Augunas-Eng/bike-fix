@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
         @chatroom,
         render_to_string(partial: "message", locals: { message: @message })
 )
-        redirect_to chatroom_path(@chatroom, anchor: "message-#{@message.id - 5}")
+        redirect_to chatroom_path(@chatroom, anchor: "message-#{@message.id}")
     else
       render "chatrooms/show"
     end
@@ -20,8 +20,6 @@ class MessagesController < ApplicationController
   def destroy
     @chatroom.destroy
     redirect_to user_path(current_user)
-  end
-  
   end
 
   def message_params
