@@ -36,7 +36,7 @@ user_2 = User.create!(
   mechanic: true,
   location: "4 Ebor St, London E1 6AW",
   company_name: "Bike Bros",
-  mechanic_name: "Jnne de Aoly ",
+  mechanic_name: "Jnne de Aoly",
   insta_availability: true,
 )
 
