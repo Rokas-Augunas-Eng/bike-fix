@@ -34,7 +34,7 @@
             <% order = Order.find_by(service: booking.service_id) %>
             <%= link_to order_path(order) do %>
             <div class="card">
-              <div class="card_content">
+              <div class="card-content-booking">
                 <h2 class="card_title"><%= booking.service.user.company_name %></h2>
                 
                 <p class="card_text"><%= icon('fas', 'wrench', style: 'color: white') %> <%= booking.service.repair_name %></p>
