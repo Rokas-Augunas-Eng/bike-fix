@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  mount StripeEvent::Engine, at: '/stripe-webhooks'
   devise_for :users
   root to: 'pages#home'
   get 'profile', to: 'pages#profile'
   get 'bookings', to: 'pages#bookings'
   get 'confirmation', to: 'pages#confirmation'
+
 
   resources :users do
     resources :bookings, only:[:new, :create, :update, :edit, :index] do
@@ -34,7 +36,5 @@ Rails.application.routes.draw do
   end
   
   resources :services, only:[:new, :create, :update, :edit, :index]
-  
-  mount StripeEvent::Engine, at: '/stripe-webhooks'
   
 end

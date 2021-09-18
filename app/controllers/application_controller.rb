@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   def default_url_options
-  { host: ENV["www.my_product.com"] || "localhost:3000" }
+  { host: ENV["www.bikefix.site"] || "localhost:3000" }
   end
 
 end
