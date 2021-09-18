@@ -34,9 +34,9 @@ user_2 = User.create!(
   email: "user2@test.com",
   password: "123456",
   mechanic: true,
-  location: "334 Walworth Rd, London",
+  location: "4 Ebor St, London E1 6AW",
   company_name: "Bike Bros",
-  mechanic_name: "Ervis Lapi",
+  mechanic_name: "Jnne de Aoly ",
   insta_availability: true,
 )
 

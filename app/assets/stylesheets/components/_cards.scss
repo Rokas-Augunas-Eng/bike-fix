@@ -165,9 +165,14 @@ img {
   overflow: hidden;
 }
 
+
 .card_content_show {
   padding: 1rem;
   background: $primary-colour;
+}
+
+  .card_content_show:hover {
+  background-color: #568a7a;
 }
 
 .btn_show {
