@@ -20,7 +20,7 @@
     </div>
       <ul class="cards">
       <h5 class="near_me">Nearby Bike Shops</h5>
-        <% @mechanics[0..5].each do |mechanic| %>
+        <% @mechanics.each do |mechanic| %>
         <%= link_to user_path(mechanic) do %>
         <li class="cards_item">
           <div class="card">
