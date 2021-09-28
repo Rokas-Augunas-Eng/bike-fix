@@ -27,7 +27,7 @@
 
 <p>A mobile web app that allows cyclists to find bike shops near them and book a repair service wherever they are.</p>
 
-<img src="app/assets/images/bike.PNG" width="" height="400">
+![bikefixgif](https://media3.giphy.com/media/kbsJuUhnt2Ki4kJEcN/giphy.gif?cid=790b7611855a21c0d16aa7744082051e4f087a9f8fb187ab&rid=giphy.gif&ct=g)
 
 ### Built With
 
