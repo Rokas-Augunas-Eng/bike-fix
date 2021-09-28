@@ -2,7 +2,7 @@
 
 <p align="center"> A mobile web app that allows cyclists to find bike shops near them and book a repair service wherever they are.
   <br />
-  <a href="https://github.com/augunasr/Bike-fix">View Demo</a>
+  <a href="http://www.bikefix.site">Website</a>
   ·
   <a href="https://github.com/augunasr/Bike-fix/issues">Report Bug</a>
   ·
@@ -106,7 +106,7 @@ git push heroku
 [![Linkedin Badge](https://img.shields.io/badge/-Rokas-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rokasaugunas/)](https://www.linkedin.com//in/rokasaugunas/)
 [![Gmail Badge](https://img.shields.io/badge/-augunasr@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:augunasr@gmail.com)](mailto:augunasr@gmail.com)
 
-Project Link: [https://github.com/augunasr/Bike-fix](https://github.com/augunasr/Bike-fix)
+Project Link: [Git hub repository](https://github.com/augunasr/Bike-fix)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
