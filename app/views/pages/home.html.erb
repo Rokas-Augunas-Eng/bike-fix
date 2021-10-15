@@ -28,8 +28,8 @@
         <ul class="h-cards">
           <% @mechanics.each do |mechanic| %>
           <%= link_to user_path(mechanic) do %>
-          <li class="cards_item">
-            <div class="card">
+          <li class="h-cards-item">
+            <div class="h-card">
               <div class="card_image">
                 <% if mechanic.photo.attached? %>
                   <%= cl_image_tag mechanic.photo.key, height: 240, width: 360, crop: :fill %>
@@ -37,9 +37,9 @@
                   <img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png">
                 <% end %>
               </div>
-              <div class="card_content">
-                <h2 class="card_title"><%= mechanic.company_name %></h2>
-                <p class="card_text"><i class="fas fa-map-marker-alt"></i> <%= mechanic.location %></p>
+              <div class="h-card-content">
+                <h2 class="h-card-title"><%= mechanic.company_name %></h2>
+                <p class="h-card-text"><i class="fas fa-map-marker-alt"></i> <%= mechanic.location %></p>
 
                 <%= icon('fas', 'star', style: 'color: white')  * mechanic.average_rating.to_i %><%= icon('far', 'star', style: 'color: white') * (5 - mechanic.average_rating.to_i) %>
 
