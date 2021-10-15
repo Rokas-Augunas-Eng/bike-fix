@@ -1,47 +1,54 @@
-<h1 class="title-2"> Bike problems? </h1>
-  <div class="new_footer_top_homepage">
-    <div class="footer_bg_homepage">
-      <div class="footer_bg_one"></div>
-      <div class="footer_bg_two"></div>
-      <div class="footer_bg_three"></div>
-      <div class="footer_bg_four"></div>
-    </div>
+<div class="h-container">
+  <div class="h-cycle-wrapper">
+    <h1 class="h-main-title"> Bike problems? </h1>
+      <div class="h-animation">
+        <div class="footer_bg_homepage">
+          <div class="footer_bg_one"></div>
+          <div class="footer_bg_two"></div>
+          <div class="footer_bg_three"></div>
+          <div class="footer_bg_four"></div>
+        </div>
+      </div>
   </div>
 
-  <div class="main">
-    <div class="searchbar">
-      <%= form_tag users_path, method: "GET" do %>  
-      <%= text_field_tag :search_by_service, params[:search_by_service],
-      placeholder: "Tyre Puncture...",
-      class: "searchbox" %>
-      <%= submit_tag "Search",
-      class: "search_button" %>
-      <% end %>
-    </div>
-      <ul class="cards">
-      <h5 class="near_me">Nearby Bike Shops</h5>
-        <% @mechanics.each do |mechanic| %>
-        <%= link_to user_path(mechanic) do %>
-        <li class="cards_item">
-          <div class="card">
-            <div class="card_image">
-              <% if mechanic.photo.attached? %>
-                <%= cl_image_tag mechanic.photo.key, height: 240, width: 360, crop: :fill %>
-              <% else %>
-                <img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png">
-              <% end %>
-            </div>
-            <div class="card_content">
-              <h2 class="card_title"><%= mechanic.company_name %></h2>
-              <p class="card_text"><i class="fas fa-map-marker-alt"></i> <%= mechanic.location %></p>
+    <div class="h-main-wrapper">
 
-              <%= icon('fas', 'star', style: 'color: white')  * mechanic.average_rating.to_i %><%= icon('far', 'star', style: 'color: white') * (5 - mechanic.average_rating.to_i) %>
+      <div class="searchbar">
+        <%= form_tag users_path, method: "GET" do %>  
+        <%= text_field_tag :search_by_service, params[:search_by_service],
+        placeholder: "Tyre Puncture...",
+        class: "searchbox" %>
+        <%= submit_tag "Search",
+        class: "search-button" %>
+        <% end %>
+      </div>
 
+      <div class="h-cards-wrapper">
+        <h5 class="h-secondary-title">Nearby Bike Shops</h5>
+        <ul class="h-cards">
+          <% @mechanics.each do |mechanic| %>
+          <%= link_to user_path(mechanic) do %>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image">
+                <% if mechanic.photo.attached? %>
+                  <%= cl_image_tag mechanic.photo.key, height: 240, width: 360, crop: :fill %>
+                <% else %>
+                  <img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png">
+                <% end %>
+              </div>
+              <div class="card_content">
+                <h2 class="card_title"><%= mechanic.company_name %></h2>
+                <p class="card_text"><i class="fas fa-map-marker-alt"></i> <%= mechanic.location %></p>
+
+                <%= icon('fas', 'star', style: 'color: white')  * mechanic.average_rating.to_i %><%= icon('far', 'star', style: 'color: white') * (5 - mechanic.average_rating.to_i) %>
+
+              </div>
             </div>
-          </div>
-        <% end %>
-        </li>
-        <% end %>
-      </ul>
+          <% end %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   </div>

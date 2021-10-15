@@ -1,9 +1,9 @@
 /* Index Page */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+// *,
+// *::before,
+// *::after {
+//   box-sizing: border-box;
+// }
 
 .main{
   max-width: 1200px;
@@ -64,7 +64,7 @@ img {
 }
 
 .card_content:hover {
-  background-color: #87DBDD;
+  background-color: #568a7a;
 }
 
 .title_index {
@@ -171,7 +171,7 @@ img {
   background: $primary-colour;
 }
 
-  .card_content_show:hover {
+.card_content_show:hover {
   background-color: #568a7a;
 }
 

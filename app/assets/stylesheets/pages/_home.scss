@@ -1,114 +1,130 @@
-.title {
-  text-align: left;
-  padding-top: 70px;
-}
-.searchbar {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
+.h-container {
   margin: 0 auto;
-  width: 0px;
-  padding: 8px;
-}
 
-.searchbox {
-  margin: 0 auto;
-  width: 90vw;
-  height: 50px;
-  border-radius: 0.5rem;
-  padding:10px;
-  
-}
+  .h-cycle-wrapper {
+    .h-main-title {
+      z-index:2;
+      font-size: 54px;
+      text-align: left;
+      position: absolute;
+      padding: 8px;
+    }
 
-.search_button {
-  z-index: 2;
-  color: #ffffff;
-  padding: 0.8rem;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  font-weight: 400;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: #33A8A1;;
-  border-radius: 0.5rem;
-  margin-top: 10px;
-}
+    .h-animation {
+      margin-top: 60px;
+      opacity:0.4;
+      z-index:1;
+      bottom: 0;
+      background: url("http://droitthemes.com/html/saasland/img/seo/footer_bg.png") no-repeat scroll center 0;
+      width: 100%;
+      height: 266px;
+      position:relative;
+      overflow-x: hidden;
 
-.search_button:hover {
-  background-color: rgba(255, 255, 255, 0.12);
-}
+    }
+    .h-animation .footer_bg_homepage .footer_bg_one {
+      background: url("https://c.tenor.com/bRRZqY6NOpcAAAAi/lets-go-outside-saying-hello.gif") no-repeat center center;
+      width: 88px;
+      height: 100px;
+      background-size:100%;
+      position: absolute;
+      bottom: 0;
+      left: 30%;
+      -webkit-animation: myfirst 30s linear infinite;
+      animation: myfirst 30s linear infinite;
+    }
 
-.near_me {
-  padding-left: 15px;
-}
+    .h-animation .footer_bg_homepage .footer_bg_two {
+      background: url("https://1.bp.blogspot.com/-hjgfxUW1o1g/Xck--XOdlxI/AAAAAAAAT_4/JWYFJl83usgRFMvRfoKkSDGd--_Sv04UQCLcBGAsYHQ/s1600/cyclist.gif") no-repeat center center;
+      width: 88px;
+      height: 100px;
+      background-size:100%;
+      bottom: 0;
+      left: 38%;
+      position: absolute;
+      -webkit-animation: myfirst 35s linear infinite;
+      animation: myfirst 35s linear infinite;
+    }
 
-.title-2 {
-  z-index:2;
-  font-size: 54px;
-  text-align: left;
-  padding-top: 10px;
-  position: absolute;
-  padding: 8px;
-}
-.new_footer_top_homepage {
-  margin-top: 60px;
-  opacity:0.4;
-  z-index:1;
-  bottom: 0;
-  background: url("http://droitthemes.com/html/saasland/img/seo/footer_bg.png") no-repeat scroll center 0;
-  width: 100%;
-  height: 266px;
-  position:relative;
-  overflow-x: hidden;
+    .h-animation .footer_bg_homepage .footer_bg_three {
+      background: url("https://c.tenor.com/eAWUMLOkGigAAAAi/bike-biking.gif") no-repeat center center;
+      width: 88px;
+      height: 100px;
+      background-size:100%;
+      position: absolute;
+      bottom: 0;
+      left: 30%;
+      -webkit-animation: myfirst 22s linear infinite;
+      animation: myfirst 22s linear infinite;
+    }
 
-}
-.new_footer_top_homepage .footer_bg_homepage .footer_bg_one {
-  background: url("https://c.tenor.com/bRRZqY6NOpcAAAAi/lets-go-outside-saying-hello.gif") no-repeat center center;
-  width: 88px;
-  height: 100px;
-  background-size:100%;
-  position: absolute;
-  bottom: 0;
-  left: 30%;
-  -webkit-animation: myfirst 30s linear infinite;
-  animation: myfirst 30s linear infinite;
-}
+    .h-animation .footer_bg_homepage .footer_bg_four {
+      background: url("https://c.tenor.com/vOtcZhD5vhkAAAAi/bike-bicycle.gif") no-repeat center center;
+      width: 88px;
+      height: 100px;
+      background-size:100%;
+      position: absolute;
+      bottom: 0;
+      left: 30%;
+      -webkit-animation: myfirst 27s linear infinite;
+      animation: myfirst 27s linear infinite;
+    }
+  }
 
-.new_footer_top_homepage .footer_bg_homepage .footer_bg_two {
-  background: url("https://1.bp.blogspot.com/-hjgfxUW1o1g/Xck--XOdlxI/AAAAAAAAT_4/JWYFJl83usgRFMvRfoKkSDGd--_Sv04UQCLcBGAsYHQ/s1600/cyclist.gif") no-repeat center center;
-  width: 88px;
-  height: 100px;
-  background-size:100%;
-  bottom: 0;
-  left: 38%;
-  position: absolute;
-  -webkit-animation: myfirst 35s linear infinite;
-  animation: myfirst 35s linear infinite;
-}
+  .h-main-wrapper {
+    margin: 0 auto;
 
-.new_footer_top_homepage .footer_bg_homepage .footer_bg_three {
-  background: url("https://c.tenor.com/eAWUMLOkGigAAAAi/bike-biking.gif") no-repeat center center;
-  width: 88px;
-  height: 100px;
-  background-size:100%;
-  position: absolute;
-  bottom: 0;
-  left: 30%;
-  -webkit-animation: myfirst 22s linear infinite;
-  animation: myfirst 22s linear infinite;
-}
+    .searchbar {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 8px;
+     
+      .searchbox {
+        display: flex;
+        width: 90vw;
+        height: 50px;
+        padding:10px;
+        font-weight: 500;
+        border-style: none;
+        border-radius: 5px;
+       }
 
-.new_footer_top_homepage .footer_bg_homepage .footer_bg_four {
-  background: url("https://c.tenor.com/vOtcZhD5vhkAAAAi/bike-bicycle.gif") no-repeat center center;
-  width: 88px;
-  height: 100px;
-  background-size:100%;
-  position: absolute;
-  bottom: 0;
-  left: 30%;
-  -webkit-animation: myfirst 27s linear infinite;
-  animation: myfirst 27s linear infinite;
+      .search-button {
+        border-radius: 5px;
+        color: white;
+        padding: 0.8rem;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 400;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: #33A8A1;;
+        margin-top: 10px;
+        }
+     
+       .search-button:hover {
+        background-color: $primary-colour;
+      }
+    }
+
+    .h-cards-wrapper {
+
+      .h-secondary-title {
+        padding-left: 15px;
+        font-weight: 600;
+      }
+
+      .h-cards {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 8px;
+        padding: 0;
+      }
+    }
+  }
 }
