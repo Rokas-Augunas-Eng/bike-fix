@@ -72,7 +72,6 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             background: #33A8A1;
             border-radius: 0.5rem;
-            margin: 20px 0px;
             text-align: center;
 
             .btn-show:hover {
@@ -83,9 +82,9 @@
 
         }
 
-        .s-mapbox {
-          flex: 2;
-        }
+      .s-mapbox {
+        flex: 2;
+      }
     }
   }
 }
@@ -101,26 +100,36 @@
         height: 240px;
       }
 
-      .card-content-show {
-        background: $primary-colour;
-      }
+      .s-text-map-container {
+        display: contents;
 
-      .s-card-title {
-        font-size: 2rem;
-        color: #ffffff;
-      }
+        .s-text-wrapper {
+          margin-right: 0;
 
-      .s-card-text {
-        color: #ffffff;
-        font-size: 1rem;
-      }
+          .card-content-show {
+            padding: 1rem;
+            background: $primary-colour;
+          
+            .s-card-title {
+              font-size: 2rem;
+              color: #ffffff;
+            }
 
-      .star {
-        color: white;
-      }
+            .s-card-text {
+              color: #ffffff;
+              font-size: 1rem;
+            }
 
-      .btn-show {
-        width: 100%;
+            .star {
+              color: white;
+            }
+          }
+
+          .btn-show {
+            width: 100%;
+            margin: 20px 0px;
+          }
+        }
       }
     }
   }
