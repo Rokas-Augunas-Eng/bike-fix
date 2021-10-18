@@ -145,7 +145,7 @@
 
         li {
           display: flex;
-          padding: 8px;
+          margin: 8px auto;
         }
       }
 
@@ -157,12 +157,8 @@
         flex-direction: column;
         overflow: hidden;
         height: 100%;
+        width: 360px;
       }
-      // .h-image-container {
-      //   img {
-      //     height: 240px
-      //   }
-      // }
 
       .h-card-content {
         padding: 1rem;
