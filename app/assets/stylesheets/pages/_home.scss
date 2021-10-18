@@ -145,7 +145,7 @@
 
         li {
           display: flex;
-          margin: 8px auto;
+          margin: 8px;
         }
       }
 
@@ -174,7 +174,6 @@
         color: #ffffff;
         font-size: 2rem;
         font-weight: 700;
-        letter-spacing: 1px;
         text-transform: capitalize;
         margin: 0px;
         margin-bottom: 1.25rem;
@@ -182,10 +181,10 @@
 
       .h-card-text {
         color: #ffffff;
-        font-size: 1rem;
-        line-height: 1;
+        font-size: 18px;
         margin-bottom: 1.25rem;
         font-weight: 400;
+        height:50px
       }
     }
   }

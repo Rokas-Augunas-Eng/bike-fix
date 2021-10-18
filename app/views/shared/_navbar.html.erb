@@ -22,26 +22,22 @@
 
     <!-- Navbar Links -->
     <ul id="menu">
-      <li><a href="#home">Home</a></li><!--
-   --><li><a href="#services">Profile</a></li><!--
-   --><li><a href="#about">Mechanics</a></li><!--
- --><li><a href="#contact">Contact</a></li>
-</ul>
-</div>
+      <li><%= link_to "Home", root_path  %></li>
+      <li><%= link_to "Profile", profile_path %></li>
+      <li><%= link_to "Bookings", bookings_path %></li>
+    </ul>
+  </div>
 </nav>
-
 
 <!-- Menu Icon -->
 <div class="menuIcon">
   <span class="icon icon-bars"></span>
 </div>
 
-
 <div class="overlay-menu">
   <ul id="menu">
     <li><%= link_to "Home", root_path  %></li>
     <li><%= link_to "Profile", profile_path %></li>
     <li><%= link_to "Bookings", bookings_path %></li>
-    <li><a href="">Contact</a></li>
   </ul>
 </div>
