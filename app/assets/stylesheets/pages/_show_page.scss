@@ -14,67 +14,79 @@
   .card-show {
     display: flex;
     margin-top: 70px;
-    background-color: white;
     border-radius: 0.5rem;
-    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
     flex-direction: column;
     overflow: hidden;
 
     .s-image {
-    height: 500px;
-    width: 100%;
-    vertical-align: middle;
+      height: 500px;
+      width: 100%;
+      vertical-align: middle;
+      border-radius: 10px;
     }
 
-    .card-content-show {
-      padding: 1rem;
-      background: $primary-colour;
+    .s-text-map-container {
+      display: flex;
+      flex-direction: row;
+      margin: 20px 0;
+
+      .s-text-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-right: 40px;
+
+        .card-content-show {
+          padding: 1rem 0;
+          
+          .s-card-title {
+            color: black;
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            margin: 0px;
+            margin-bottom: 1.25rem;
+          }
+      
+          .s-card-text {
+            color: black;
+            font-size: 1.5rem;
+            line-height: 1;
+            margin-bottom: 1.25rem;
+            font-weight: 400;
+          }
+        }
+
+          .btn-show {
+            display: flex;
+            color: #ffffff;
+            padding: 0.8rem;
+            font-size: 14px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            font-weight: 400;
+            display: block;
+            width: 100%;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: #33A8A1;
+            border-radius: 0.5rem;
+            margin: 20px 0px;
+            text-align: center;
+
+            .btn-show:hover {
+              background: #276965;
+              color:#fff;
+            }
+          }
+
+        }
+
+        .s-mapbox {
+          flex: 2;
+        }
     }
-
-    .s-card-title {
-      color: #ffffff;
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: capitalize;
-      margin: 0px;
-      margin-bottom: 1.25rem;
-    }
-
-    .s-card-text {
-      color: #ffffff;
-      font-size: 1rem;
-      line-height: 1;
-      margin-bottom: 1.25rem;
-      font-weight: 400;
-    }
-  }
-
-  .btn-show {
-    display: flex;
-    color: #ffffff;
-    padding: 0.8rem;
-    font-size: 14px;
-    text-transform: uppercase;
-    border-radius: 4px;
-    font-weight: 400;
-    display: block;
-    width: 100%;
-    cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: #33A8A1;
-    border-radius: 0.5rem;
-    margin: 20px 0px;
-    text-align: center;
-  }
-
-  .btn_show:hover {
-    background: #276965;
-    color:#fff;
-  }
-
-  .s-mapbox {
-
   }
 }
 
@@ -82,8 +94,34 @@
   .s-container {
     margin: 10px;
 
+    .card-show {
+      box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+
       .s-image {
         height: 240px;
       }
+
+      .card-content-show {
+        background: $primary-colour;
+      }
+
+      .s-card-title {
+        font-size: 2rem;
+        color: #ffffff;
+      }
+
+      .s-card-text {
+        color: #ffffff;
+        font-size: 1rem;
+      }
+
+      .star {
+        color: white;
+      }
+
+      .btn-show {
+        width: 100%;
+      }
+    }
   }
 }
