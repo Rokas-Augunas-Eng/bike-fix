@@ -1,88 +1,104 @@
 .h-container {
-  margin: 0 auto;
+  margin: 60px auto;
 
-  .h-cycle-wrapper {
-    .h-main-title {
+  .h-title-container {
+    display: flex;
+    justify-content: center;
+
+    h1 {
       z-index:2;
       font-size: 54px;
-      text-align: left;
       position: absolute;
       padding: 8px;
+      margin-top: 25px;
+      display: flex;
     }
+  }
+
+  .h-cycle-wrapper {
 
     .h-animation {
-      margin-top: 60px;
+      // margin-top: 60px;
       opacity:0.4;
       z-index:1;
-      bottom: 0;
-      background: url("http://droitthemes.com/html/saasland/img/seo/footer_bg.png") no-repeat scroll center 0;
+      // bottom: 0;
+      background: url("http://droitthemes.com/html/saasland/img/seo/footer_bg.png") scroll center 0; //no-repeat
       width: 100%;
       height: 266px;
       position:relative;
       overflow-x: hidden;
 
-    }
-    .h-animation .footer_bg_homepage .footer_bg_one {
-      background: url("https://c.tenor.com/bRRZqY6NOpcAAAAi/lets-go-outside-saying-hello.gif") no-repeat center center;
-      width: 88px;
-      height: 100px;
-      background-size:100%;
-      position: absolute;
-      bottom: 0;
-      left: 30%;
-      -webkit-animation: myfirst 30s linear infinite;
-      animation: myfirst 30s linear infinite;
-    }
+   
+      .footer_bg_homepage {
 
-    .h-animation .footer_bg_homepage .footer_bg_two {
-      background: url("https://1.bp.blogspot.com/-hjgfxUW1o1g/Xck--XOdlxI/AAAAAAAAT_4/JWYFJl83usgRFMvRfoKkSDGd--_Sv04UQCLcBGAsYHQ/s1600/cyclist.gif") no-repeat center center;
-      width: 88px;
-      height: 100px;
-      background-size:100%;
-      bottom: 0;
-      left: 38%;
-      position: absolute;
-      -webkit-animation: myfirst 35s linear infinite;
-      animation: myfirst 35s linear infinite;
-    }
+        .footer_bg_one {
+          background: url("https://c.tenor.com/bRRZqY6NOpcAAAAi/lets-go-outside-saying-hello.gif") no-repeat center center;
+          width: 88px;
+          height: 100px;
+          background-size:100%;
+          position: absolute;
+          bottom: 0;
+          // left: 30%;
+          -webkit-animation: myfirst 30s linear infinite;
+          animation: myfirst 30s linear infinite;
+        }
 
-    .h-animation .footer_bg_homepage .footer_bg_three {
-      background: url("https://c.tenor.com/eAWUMLOkGigAAAAi/bike-biking.gif") no-repeat center center;
-      width: 88px;
-      height: 100px;
-      background-size:100%;
-      position: absolute;
-      bottom: 0;
-      left: 30%;
-      -webkit-animation: myfirst 22s linear infinite;
-      animation: myfirst 22s linear infinite;
-    }
+        .footer_bg_two {
+          background: url("https://1.bp.blogspot.com/-hjgfxUW1o1g/Xck--XOdlxI/AAAAAAAAT_4/JWYFJl83usgRFMvRfoKkSDGd--_Sv04UQCLcBGAsYHQ/s1600/cyclist.gif") no-repeat center center;
+          width: 88px;
+          height: 100px;
+          background-size:100%;
+          bottom: 0;
+          // left: 38%;
+          position: absolute;
+          -webkit-animation: myfirst 35s linear infinite;
+          animation: myfirst 35s linear infinite;
+        }
 
-    .h-animation .footer_bg_homepage .footer_bg_four {
-      background: url("https://c.tenor.com/vOtcZhD5vhkAAAAi/bike-bicycle.gif") no-repeat center center;
-      width: 88px;
-      height: 100px;
-      background-size:100%;
-      position: absolute;
-      bottom: 0;
-      left: 30%;
-      -webkit-animation: myfirst 27s linear infinite;
-      animation: myfirst 27s linear infinite;
+        .footer_bg_three {
+          background: url("https://c.tenor.com/eAWUMLOkGigAAAAi/bike-biking.gif") no-repeat center center;
+          width: 88px;
+          height: 100px;
+          background-size:100%;
+          position: absolute;
+          bottom: 0;
+          // left: 30%;
+          -webkit-animation: myfirst 22s linear infinite;
+          animation: myfirst 22s linear infinite;
+        }
+
+        .footer_bg_four {
+          background: url("https://c.tenor.com/vOtcZhD5vhkAAAAi/bike-bicycle.gif") no-repeat center center;
+          width: 88px;
+          height: 100px;
+          background-size:100%;
+          position: absolute;
+          bottom: 0;
+          // left: 30%;
+          -webkit-animation: myfirst 27s linear infinite;
+          animation: myfirst 27s linear infinite;
+        }
+      }
     }
   }
 
   .h-main-wrapper {
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 
     .searchbar {
       display: flex;
       justify-content: center;
       width: 100%;
       padding: 8px;
+      position: absolute;
+      margin-top: -170px;
+      z-index: 2;
      
       .searchbox {
         display: flex;
-        width: 90vw;
+        width: 20vw;
         height: 50px;
         padding:10px;
         font-weight: 500;
@@ -114,8 +130,9 @@
     .h-cards-wrapper {
 
       .h-secondary-title {
-        padding-left: 15px;
+        display: flex;
         font-weight: 600;
+        justify-content: space-evenly;
       }
 
       .h-cards {
@@ -125,11 +142,11 @@
         margin: 8px;
         padding: 0;
         justify-content: center;
-      }
 
-      .h-cards-item {
-        display: flex;
-        padding: 8px;
+        li {
+          display: flex;
+          padding: 8px;
+        }
       }
 
       .h-card {
@@ -139,11 +156,18 @@
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        height: 100%;
       }
+      // .h-image-container {
+      //   img {
+      //     height: 240px
+      //   }
+      // }
 
       .h-card-content {
         padding: 1rem;
         background: $primary-colour;
+        height: 100%;
       }
 
       .h-card-content:hover {
@@ -166,6 +190,21 @@
         line-height: 1;
         margin-bottom: 1.25rem;
         font-weight: 400;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .h-container {
+    .h-main-wrapper {
+      .searchbar {
+        margin-top: -10px;
+        position: relative;
+
+        .searchbox {
+          width: 90vw;  
+        }
       }
     }
   }
