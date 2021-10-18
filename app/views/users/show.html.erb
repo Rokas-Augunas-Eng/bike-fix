@@ -1,7 +1,7 @@
 <div class="s-container">
   <div class="card-show">
     <% if @user.photo.attached? %>
-      <%= cl_image_tag @user.photo.key, height: 240, width: 360, crop: :fill, :class => "s-image" %>
+      <%= cl_image_tag @user.photo.key, height: 240, width: 360, :class => "s-image" %>
     <% else %>
       <img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png">
     <% end %>
@@ -19,7 +19,7 @@
       </div>
       <div class="s-mapbox">
         <div id="map"
-          style="width:100%; height: 400px;"
+          style="width:100%; height: 100%;"
           data-marker="<%= @markers.to_json %>"
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>

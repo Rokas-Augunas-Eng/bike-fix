@@ -6,7 +6,7 @@
     justify-content: center;
 
     h1 {
-      z-index:2;
+      z-index: 2;
       font-size: 54px;
       position: absolute;
       padding: 8px;
@@ -16,24 +16,23 @@
   }
 
   .h-cycle-wrapper {
-
     .h-animation {
-      opacity:0.4;
-      z-index:1;
-      background: url("http://droitthemes.com/html/saasland/img/seo/footer_bg.png") scroll center 0;
+      opacity: 0.4;
+      z-index: 1;
+      background: url("http://droitthemes.com/html/saasland/img/seo/footer_bg.png")
+        scroll center 0;
       width: 100%;
       height: 266px;
-      position:relative;
+      position: relative;
       overflow-x: hidden;
 
-   
       .footer_bg_homepage {
-
         .footer_bg_one {
-          background: url("https://c.tenor.com/bRRZqY6NOpcAAAAi/lets-go-outside-saying-hello.gif") no-repeat center center;
+          background: url("https://c.tenor.com/bRRZqY6NOpcAAAAi/lets-go-outside-saying-hello.gif")
+            no-repeat center center;
           width: 88px;
           height: 100px;
-          background-size:100%;
+          background-size: 100%;
           position: absolute;
           bottom: 0;
           -webkit-animation: myfirst 30s linear infinite;
@@ -41,10 +40,11 @@
         }
 
         .footer_bg_two {
-          background: url("https://1.bp.blogspot.com/-hjgfxUW1o1g/Xck--XOdlxI/AAAAAAAAT_4/JWYFJl83usgRFMvRfoKkSDGd--_Sv04UQCLcBGAsYHQ/s1600/cyclist.gif") no-repeat center center;
+          background: url("https://1.bp.blogspot.com/-hjgfxUW1o1g/Xck--XOdlxI/AAAAAAAAT_4/JWYFJl83usgRFMvRfoKkSDGd--_Sv04UQCLcBGAsYHQ/s1600/cyclist.gif")
+            no-repeat center center;
           width: 88px;
           height: 100px;
-          background-size:100%;
+          background-size: 100%;
           bottom: 0;
           position: absolute;
           -webkit-animation: myfirst 35s linear infinite;
@@ -52,10 +52,11 @@
         }
 
         .footer_bg_three {
-          background: url("https://c.tenor.com/eAWUMLOkGigAAAAi/bike-biking.gif") no-repeat center center;
+          background: url("https://c.tenor.com/eAWUMLOkGigAAAAi/bike-biking.gif")
+            no-repeat center center;
           width: 88px;
           height: 100px;
-          background-size:100%;
+          background-size: 100%;
           position: absolute;
           bottom: 0;
           -webkit-animation: myfirst 22s linear infinite;
@@ -63,10 +64,11 @@
         }
 
         .footer_bg_four {
-          background: url("https://c.tenor.com/vOtcZhD5vhkAAAAi/bike-bicycle.gif") no-repeat center center;
+          background: url("https://c.tenor.com/vOtcZhD5vhkAAAAi/bike-bicycle.gif")
+            no-repeat center center;
           width: 88px;
           height: 100px;
-          background-size:100%;
+          background-size: 100%;
           position: absolute;
           bottom: 0;
           -webkit-animation: myfirst 27s linear infinite;
@@ -89,16 +91,16 @@
       position: absolute;
       margin-top: -170px;
       z-index: 2;
-     
+
       .searchbox {
         display: flex;
         width: 20vw;
         height: 50px;
-        padding:10px;
+        padding: 10px;
         font-weight: 500;
         border-style: none;
         border-radius: 5px;
-       }
+      }
 
       .search-button {
         border-radius: 5px;
@@ -112,17 +114,16 @@
         width: 100%;
         cursor: pointer;
         border: 1px solid rgba(255, 255, 255, 0.2);
-        background: #33A8A1;;
+        background: #33a8a1;
         margin-top: 10px;
-        }
-     
-       .search-button:hover {
+      }
+
+      .search-button:hover {
         background-color: $primary-colour;
       }
     }
 
     .h-cards-wrapper {
-
       .h-secondary-title {
         display: flex;
         font-weight: 600;
@@ -164,11 +165,11 @@
           background: $primary-colour;
           height: 100%;
         }
-  
+
         .h-card-content:hover {
-          background-color: #568a7a;
+          background-color: $hover;
         }
-  
+
         .h-card-title {
           color: #ffffff;
           font-size: 2rem;
@@ -177,13 +178,13 @@
           margin: 0px;
           margin-bottom: 1.25rem;
         }
-  
+
         .h-card-text {
           color: #ffffff;
           font-size: 18px;
           margin-bottom: 1.25rem;
           font-weight: 400;
-          height:50px
+          height: 50px;
         }
       }
     }
@@ -198,7 +199,7 @@
         position: relative;
 
         .searchbox {
-          width: 90vw;  
+          width: 90vw;
         }
       }
     }
