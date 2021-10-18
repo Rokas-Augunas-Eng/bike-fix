@@ -18,11 +18,9 @@
   .h-cycle-wrapper {
 
     .h-animation {
-      // margin-top: 60px;
       opacity:0.4;
       z-index:1;
-      // bottom: 0;
-      background: url("http://droitthemes.com/html/saasland/img/seo/footer_bg.png") scroll center 0; //no-repeat
+      background: url("http://droitthemes.com/html/saasland/img/seo/footer_bg.png") scroll center 0;
       width: 100%;
       height: 266px;
       position:relative;
@@ -38,7 +36,6 @@
           background-size:100%;
           position: absolute;
           bottom: 0;
-          // left: 30%;
           -webkit-animation: myfirst 30s linear infinite;
           animation: myfirst 30s linear infinite;
         }
@@ -49,7 +46,6 @@
           height: 100px;
           background-size:100%;
           bottom: 0;
-          // left: 38%;
           position: absolute;
           -webkit-animation: myfirst 35s linear infinite;
           animation: myfirst 35s linear infinite;
@@ -62,7 +58,6 @@
           background-size:100%;
           position: absolute;
           bottom: 0;
-          // left: 30%;
           -webkit-animation: myfirst 22s linear infinite;
           animation: myfirst 22s linear infinite;
         }
@@ -74,7 +69,6 @@
           background-size:100%;
           position: absolute;
           bottom: 0;
-          // left: 30%;
           -webkit-animation: myfirst 27s linear infinite;
           animation: myfirst 27s linear infinite;
         }
@@ -158,33 +152,39 @@
         overflow: hidden;
         height: 100%;
         width: 360px;
-      }
 
-      .h-card-content {
-        padding: 1rem;
-        background: $primary-colour;
-        height: 100%;
-      }
+        .h-image {
+          height: 100%;
+          width: 100%;
+          vertical-align: middle;
+        }
 
-      .h-card-content:hover {
-        background-color: #568a7a;
-      }
-
-      .h-card-title {
-        color: #ffffff;
-        font-size: 2rem;
-        font-weight: 700;
-        text-transform: capitalize;
-        margin: 0px;
-        margin-bottom: 1.25rem;
-      }
-
-      .h-card-text {
-        color: #ffffff;
-        font-size: 18px;
-        margin-bottom: 1.25rem;
-        font-weight: 400;
-        height:50px
+        .h-card-content {
+          padding: 1rem;
+          background: $primary-colour;
+          height: 100%;
+        }
+  
+        .h-card-content:hover {
+          background-color: #568a7a;
+        }
+  
+        .h-card-title {
+          color: #ffffff;
+          font-size: 2rem;
+          font-weight: 700;
+          text-transform: capitalize;
+          margin: 0px;
+          margin-bottom: 1.25rem;
+        }
+  
+        .h-card-text {
+          color: #ffffff;
+          font-size: 18px;
+          margin-bottom: 1.25rem;
+          font-weight: 400;
+          height:50px
+        }
       }
     }
   }
