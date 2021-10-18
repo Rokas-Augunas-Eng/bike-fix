@@ -32,13 +32,11 @@
         <%= link_to user_path(mechanic) do %>
         <li>
           <div class="h-card">
-            <div class="h-image-container">
               <% if mechanic.photo.attached? %>
-                <%= cl_image_tag mechanic.photo.key, height: 240, width: 360, crop: :fill %>
+                <%= cl_image_tag mechanic.photo.key, height: 240, width: 360, crop: :fill, :class => "h-image" %>
               <% else %>
                 <img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png">
               <% end %>
-            </div>
             <div class="h-card-content">
               <h2 class="h-card-title"><%= mechanic.company_name %></h2>
               <p class="h-card-text"><i class="fas fa-map-marker-alt"></i> <%= mechanic.location %></p>

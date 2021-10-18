@@ -1,34 +1,28 @@
-<div class="main">
-  <div class="cards_show">
-    <div class="cards_item_show">
-      <div class="card_show">
-        <div class="card_image">
-          <% if @user.photo.attached? %>
-            <%= cl_image_tag @user.photo.key, height: 240, width: 360, crop: :fill %>
-          <% else %>
-            <img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png">
-          <% end %>
-        </div>
-        <div class="card_content_show">  
-          <h2 class="card_title"><%= @user.company_name %> </h2> 
-          <p class="card_text"><i class="fas fa-map-marker-alt"></i> <%= @user.location %></p>
-          <% @user.services.each do |service| %>
-            <p class="card_text"><%= icon('fas', 'bicycle') %> <%= service.repair_name %> <%= icon('fas', 'money-bill-wave') %> <%= humanized_money_with_symbol(service.price) %></p>
-          <% end %>
-          <%= icon('fas', 'star', style: 'color: white')  * @average_rating.to_i %><%= icon('far', 'star', style: 'color: white') * (5 - @average_rating.to_i) %>
-        </div>
-      </div>
-      <%= link_to "Book Now", new_user_booking_path(@user), class: "btn" %>
+<div class="s-container">
+  <div class="card-show">
+      <% if @user.photo.attached? %>
+        <%= cl_image_tag @user.photo.key, height: 240, width: 360, crop: :fill, :class => "s-image" %>
+      <% else %>
+        <img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png">
+      <% end %>
+    <div class="card-content-show">  
+      <h2 class="s-card-title"><%= @user.company_name %> </h2> 
+      <p class="s-card-text"><i class="fas fa-map-marker-alt"></i> <%= @user.location %></p>
+      <% @user.services.each do |service| %>
+        <p class="s-card-text"><%= icon('fas', 'bicycle') %> <%= service.repair_name %> <%= icon('fas', 'money-bill-wave') %> <%= humanized_money_with_symbol(service.price) %></p>
+      <% end %>
+      <%= icon('fas', 'star', style: 'color: white')  * @average_rating.to_i %><%= icon('far', 'star', style: 'color: white') * (5 - @average_rating.to_i) %>
     </div>
   </div>
+  <%= link_to "Book Now", new_user_booking_path(@user), class: "btn-show" %>
 
-    <div class="card_image">
-      <div id="map"
-        style="width:100%; height: 400px;"
-        data-marker="<%= @markers.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
+  <div class="s-mapbox">
+    <div id="map"
+      style="width:100%; height: 400px;"
+      data-marker="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
+  </div>
 
     <div class="review-container">
       <h2>Reviews</h2>
