@@ -193,6 +193,9 @@
 
 @media screen and (max-width: 480px) {
   .h-container {
+    h1 {
+      text-align: left;
+    }
     .h-main-wrapper {
       .searchbar {
         margin-top: -10px;
