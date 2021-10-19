@@ -1,194 +1,200 @@
-.map_confirmation {
-  height: 400px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin-top: 60px;
-}
+.summary-container {
+  margin: 70px auto;
+  max-width: 1200px;
 
-.cards-confirmation {
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 8px;
-  background-color: $primary-colour;
-}
-
-.card-confirmation {
-  background-color: $primary-colour;
-  border-radius: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  padding: 1rem;
-}
-
-.card-confirmation-text {
-  color: #ffffff;
-  font-size: 1rem;
-  line-height: 1;
-  margin-bottom: 1.25rem;
-  margin-top: 1.25rem;
-  font-weight: 400;
-  text-align: center;
-}
-
-/* Progress Bar */
-
-// PADDING
-$padding-width--heavy: 0px 70px;
-$padding-width--mobile: 0px 16px;
-
-// COLORS
-$light-gray: #f4f4f4;
-$primary-red: #ed1e28;
-$primary-red--20: rgba(237, 30, 40, 0.2);
-$secondary-red: #fe6d62;
-$secondary-blue: #91b3fa;
-$secondary-blue--40: rgba(145, 179, 250, 0.4);
-$accent-gray: #eeeaeb;
-$canvas: #ffffff;
-
-.progress-container {
-  margin-top: 2rem;
-  padding: $padding-width--heavy;
-}
-
-.progress-decoration {
-  position: relative;
-  height: 16vh;
-  svg {
-    position: absolute;
-    fill: $primary-red--20;
+  .map_confirmation {
+    height: 400px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin-top: 60px;
   }
-  .icon-cloud {
-    fill: $secondary-blue--40;
-  }
-  #cloud-one {
-    right: 6vw;
-    top: -12vh;
-  }
-  #cloud-two {
-    right: 32vw;
-    top: -8vh;
-  }
-  #cloud-three {
-    right: 72vw;
-    top: -12vh;
-  }
-  #tree-one {
-    bottom: 0;
-    right: 80vw;
-  }
-  #tree-two {
-    bottom: 0;
-    right: 20vw;
-  }
-  #lamp-one {
-    bottom: 0;
-    right: 54vw;
-  }
-  #lamp-two {
-    bottom: 0;
-    right: 0;
-  }
-}
 
-.progress-bar {
-  background-color: transparent;
-  border: 3px $light-gray solid;
-  border-radius: 20px;
-  position: relative;
-  margin: 4px 0 16px 0;
-  height: 30px;
-  width: 100%;
+  .cards-confirmation {
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 8px;
+    background-color: $primary-colour;
+  }
 
-  .completed-bar {
-    background: white;
-    border-radius: 20px;
-    color: $light-gray;
+  .card-confirmation {
+    background-color: $primary-colour;
+    border-radius: 0.5rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 0;
-    opacity: 0;
-    transition: width 2s ease 0.4s;
-    padding: 0 8px;
-    &__dashed {
-      width: 96%;
-      border: 2px dashed $canvas;
-    }
-    &__truck {
-      font-size: 1.5rem;
-      margin-left: 4px;
-    }
-  }
-}
-
-.progress-information {
-  display: none;
-  justify-content: space-between;
-  padding: 0 4px;
-}
-
-.icon {
-  &-cloud {
-    height: 50px;
-    width: 50px;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 10px;
   }
 
-  &-lamp {
-    height: 70px;
-    width: 60px;
+  .card-confirmation-text {
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1;
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
+    font-weight: 400;
+    text-align: center;
   }
 
-  &-tree--one {
-    height: 60px;
-    width: 60px;
-  }
+  /* Progress Bar */
 
-  &-tree--two {
-    height: 70px;
-    width: 60px;
-  }
-}
+  // PADDING
+  $padding-width--heavy: 0px 70px;
+  $padding-width--mobile: 0px 16px;
 
-.text-colour {
-  letter-spacing: 1px;
-  line-height: 1.5;
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-weight: 300;
-  font-size: 1rem;
-  color: white
-}
+  // COLORS
+  $light-gray: #f4f4f4;
+  $primary-red: #ed1e28;
+  $primary-red--20: rgba(237, 30, 40, 0.2);
+  $secondary-red: #fe6d62;
+  $secondary-blue: #91b3fa;
+  $secondary-blue--40: rgba(145, 179, 250, 0.4);
+  $accent-gray: #eeeaeb;
+  $canvas: #ffffff;
 
-@media only screen and (max-width: 576px) {
   .progress-container {
-    padding: $padding-width--mobile;
+    margin-top: 2rem;
+    padding: $padding-width--heavy;
   }
+
   .progress-decoration {
-    display: none;
-  }
-  .progress-information {
-    display: flex;
+    position: relative;
+    // height: 16vh;
+    svg {
+      position: absolute;
+      fill: $primary-red--20;
+    }
+    .icon-cloud {
+      fill: $secondary-blue--40;
+    }
+    #cloud-one {
+      right: 6vw;
+      top: -12vh;
+    }
+    #cloud-two {
+      right: 32vw;
+      top: -8vh;
+    }
+    #cloud-three {
+      right: 72vw;
+      top: -12vh;
+    }
+    #tree-one {
+      bottom: 0;
+      right: 80vw;
+    }
+    #tree-two {
+      bottom: 0;
+      right: 20vw;
+    }
+    #lamp-one {
+      bottom: 0;
+      right: 54vw;
+    }
+    #lamp-two {
+      bottom: 0;
+      right: 0;
+    }
   }
 
   .progress-bar {
-    margin-bottom: 4px;
+    background-color: transparent;
+    border: 3px $light-gray solid;
+    border-radius: 20px;
+    position: relative;
+    margin: 4px 0 16px 0;
+    height: 30px;
+    width: 100%;
+
     .completed-bar {
+      background: white;
+      border-radius: 20px;
+      color: $light-gray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 0;
+      opacity: 0;
+      transition: width 2s ease 0.4s;
+      padding: 0 8px;
       &__dashed {
         width: 96%;
-        border: 1px dashed $primary-colour;
+        border: 2px dashed $canvas;
       }
       &__truck {
-        font-size: 1rem;
-        margin-left: 0;
+        font-size: 1.5rem;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .progress-information {
+    display: none;
+    justify-content: space-between;
+    padding: 0 4px;
+  }
+
+  .icon {
+    &-cloud {
+      height: 50px;
+      width: 50px;
+    }
+
+    &-lamp {
+      height: 70px;
+      width: 60px;
+    }
+
+    &-tree--one {
+      height: 60px;
+      width: 60px;
+    }
+
+    &-tree--two {
+      height: 70px;
+      width: 60px;
+    }
+  }
+
+  .text-colour {
+    letter-spacing: 1px;
+    line-height: 1.5;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    font-size: 1rem;
+    color: white
+  }
+
+  @media only screen and (max-width: 576px) {
+    .progress-container {
+      padding: $padding-width--mobile;
+    }
+    .progress-decoration {
+      display: none;
+    }
+    .progress-information {
+      display: flex;
+    }
+
+    .progress-bar {
+      margin-bottom: 4px;
+      .completed-bar {
+        &__dashed {
+          width: 96%;
+          border: 1px dashed $primary-colour;
+        }
+        &__truck {
+          font-size: 1rem;
+          margin-left: 0;
+        }
       }
     }
   }
 }
-

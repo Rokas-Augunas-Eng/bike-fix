@@ -1,4 +1,4 @@
-	.mobile-bottom-nav{
+	.mobile-bottom-nav {
 		display: none;
 	}
 
@@ -10,7 +10,6 @@
 			right:0;
 			z-index:1000;
 			
-			//give nav it's own compsite layer
 			will-change:transform;
 			transform: translateZ(0);
 			display:flex;	

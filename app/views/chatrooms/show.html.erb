@@ -1,4 +1,4 @@
-<div class="main">
+<div class="message-container">
   <div class="cards_message">
     <div class="cards_item_message">
       <div class="card_message">
@@ -7,14 +7,13 @@
           <% @chatroom.messages.each do |message| %>
             <div class="message-container" id="message-<%= message.id %>">
               <%= render "messages/message", message: message %>
-
-          <% end %>
+              <% end %>
+            </div>
+            <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
+            <%= f.input :content, label: false, placeholder: "Type message..." %>
+            <%= f.submit "Send", class: "btn_message" %>
+            <% end %>
         </div>
-
-        <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
-          <%= f.input :content, label: false, placeholder: "Type message..." %>
-          <%= f.submit "Send", class: "btn_message" %>
-        <% end %>
       </div>
     </div>
   </div>

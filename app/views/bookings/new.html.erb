@@ -1,4 +1,4 @@
-<div class="main">
+<div class="universal-container">
   <h1 class="title_booking">Your booking</h1>
   <div class="cards_booking">
     <%= simple_form_for [@mechanic, @booking], :html => { :class => 'booking_form' }, url: "/orders", method:"post" do |f| %>
@@ -7,7 +7,7 @@
     <%= f.input :datetime, as: :datetime, html5: true, input_html: { :class => "mx-0"} %>
     <%= f.input :booking_location, html5: true %>
     <%= f.input :comment, html5: true %>
-    <%= f.submit class: "btn_show" %>
+    <%= f.submit class: "booking-btn" %>
     <% end %>
     </div>
 </div>
