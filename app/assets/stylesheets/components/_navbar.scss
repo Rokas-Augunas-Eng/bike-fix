@@ -27,9 +27,9 @@ a {
 }
 
 .nav-wrapper {
-  margin: auto;
+  margin: auto 10%;
   text-align: center;
-  width: 70%;
+  // width: 70%;
 } @media(max-width: 768px) {
     .nav-wrapper {
       width: 90%;

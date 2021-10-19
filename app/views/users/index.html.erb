@@ -1,32 +1,35 @@
 <!-- Mechanic cards -->
-<div class="main">
-  <h1 class="title_index">Here are services <br> matching '<%= params["search_by_service"] %>'</h1>
-    <ul class="cards">
+<div class="i-container">
+  <h1 class="i-title">Here are services <br> matching '<%= params["search_by_service"] %>'</h1>
+  <div class="i-main-wrapper">
+    <ul class="i-cards">
       <% @services.each do |service| %>
-        <li class="cards_item">
+        <li>
         <%= link_to user_path(service.user) do %>
-        <div class="card">
-          <div class="card_image">
-            <% if service.user.photo.attached? %>
-              <%= cl_image_tag service.user.photo.key, height: 240, width: 360, crop: :fill %>
-            <% else %>
-              <img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png">
-            <% end %>
-          </div>
-            <div class="card_content">
-              <h2 class="card_title"><%= service.user.company_name %><% if service.user.insta_availability == true %>
+        <div class="i-card">
+          <% if service.user.photo.attached? %>
+            <%= cl_image_tag service.user.photo.key, height: 240, width: 360, crop: :fill, :class => "i-image" %>
+          <% else %>
+            <img src="https://www.guildford-dragon.com/wp-content/uploads/2020/08/Bike-Bros-logo.png">
+          <% end %>
+          <div class="i-card-content">
+            <h2 class="i-card-title"><%= service.user.company_name %>
+              <% if service.user.insta_availability == true %>
                 <i class="fas fa-bolt"></i>
               <% end %></h2> 
-              <p class="card_text"><%= icon('fas', 'map-marker-alt') %></i> <%= service.user.location  %></p>
-              <p class="card_text"><%= icon('fas', 'bicycle') %> <%= service.repair_name %> </p>
-              <p class="card_text"><%= icon('fas', 'money-bill-wave') %> <%= humanized_money_with_symbol(service.price) %></p> 
-              <%= icon('fas', 'star', style: 'color: white')  * service.user.average_rating.to_i %><%= icon('far', 'star', style: 'color: white') * (5 - service.user.average_rating.to_i) %>
-            </div>
+              <p class="i-card-text"><%= icon('fas', 'map-marker-alt') %></i> <%= service.user.location  %></p>
+              <p class="i-card-text"><%= icon('fas', 'bicycle') %> <%= service.repair_name %> </p>
+              <p class="i-card-text"><%= icon('fas', 'money-bill-wave') %> <%= humanized_money_with_symbol(service.price) %></p> 
+              <div class="stars">
+                <%= icon('fas', 'star', style: 'color: white')  * service.user.average_rating.to_i %><%= icon('far', 'star', style: 'color: white') * (5 - service.user.average_rating.to_i) %>
+              </div>
           </div>
+        </div>
         <% end %>
         </li>
       <% end %>
     </ul>
+  </div>
 </div>
 
 
