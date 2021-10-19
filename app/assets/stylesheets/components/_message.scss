@@ -1,95 +1,106 @@
-.container_message {
-  border: 2px solid #dedede;
-  background: #33A8A1;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px 0;
+.message-container {
+  margin: 30px auto;
+  max-width: 1200px;
+  width: 400px;
+
+  .container_message {
+    border: 2px solid #dedede;
+    background: #33A8A1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .container_message_user {
+    border: 2px solid #dedede;
+    background: #8f9e9d;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .darker {
+    border-color: #ccc;
+    background-color: #ddd;
+  }
+
+  .container_message::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .container_message img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+
+  .container_message img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+  }
+
+  .time-right {
+    float: right;
+    color: #aaa;
+  }
+
+  .time-left {
+    float: left;
+    color: #999;
+  }
+
+  .btn_message {
+    color: #ffffff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: #33A8A1;;
+    border-radius: 0.5rem;
+    margin: 20px 0px;
+  }
+
+  .btn_message:hover {
+    background: #276965;
+    color:#fff;
+  }
+
+  .cards_message {
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 8px;
+    padding: 0;
+    justify-content: flex-end;
+    overflow: hidden;
+
+  }
+
+  .card_message {
+    border-radius: 0.5rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .card_content_message {
+    padding: 1rem;
+    background: #33A8A1;
+  }
 }
 
-.container_message_user {
-  border: 2px solid #dedede;
-  background: #8f9e9d;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px 0;
-}
-
-.darker {
-  border-color: #ccc;
-  background-color: #ddd;
-}
-
-.container_message::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.container_message img {
-  float: left;
-  max-width: 60px;
-  width: 100%;
-  margin-right: 20px;
-  border-radius: 50%;
-}
-
-.container_message img.right {
-  float: right;
-  margin-left: 20px;
-  margin-right:0;
-}
-
-.time-right {
-  float: right;
-  color: #aaa;
-}
-
-.time-left {
-  float: left;
-  color: #999;
-}
-
-.btn_message {
-  color: #ffffff;
-  padding: 0.8rem;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  font-weight: 400;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: #33A8A1;;
-  border-radius: 0.5rem;
-  margin: 20px 0px;
-}
-
-.btn_message:hover {
-  background: #276965;
-  color:#fff;
-}
-
-.cards_message {
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 8px;
-  padding: 0;
-  justify-content: flex-end;
-  overflow: hidden;
-
-}
-
-.card_message {
-  margin-top: 70px;
-  border-radius: 0.5rem;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.card_content_message {
-  padding: 1rem;
-  background: #33A8A1;
+@media screen and (max-width: 480px) {
+  .message-container {
+    width: 100%;
+  }
 }

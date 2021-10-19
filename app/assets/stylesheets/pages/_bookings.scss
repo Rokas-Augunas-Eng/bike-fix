@@ -1,9 +1,65 @@
-.card-content-booking {
-  padding: 1rem;
-  background: $primary-colour;
+.b-container {
+  margin: 70px auto;
 
-}
+  .booking-title {
+    text-align:center;
+  }
 
-.card-content-booking:hover {
-  background-color: #568a7a;
+  .b-main-wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    .profile-cards {
+      display:flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 8px;
+      padding: 0;
+      justify-content: center;
+
+      li {
+        display: flex;
+        margin: 8px;
+        padding: 8px;
+        }
+
+      .profile-card {
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        height: 100%;
+        width: 360px;
+
+        .profile-card-content {
+          padding: 1rem;
+          background: $primary-colour;
+          height: 100%;
+        }
+
+        .profile-card-title {
+          color: #ffffff;
+          font-size: 2rem;
+          font-weight: 700;
+          text-transform: capitalize;
+          margin: 0px;
+          margin-bottom: 1.25rem;
+        }
+
+        .profile-card-text {
+          color: #ffffff;
+          font-size: 18px;
+          margin-bottom: 1.25rem;
+          font-weight: 400;
+
+          a:hover {
+            color: $hover;
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,11 @@
+.universal-container {
+  margin: 70px auto;
+  max-width: 1200px;
+  width: 400px;
+}
+
+@media screen and (max-width: 480px) {
+  .universal-container {
+    width: 95%;
+  }
+}

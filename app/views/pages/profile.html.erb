@@ -1,8 +1,5 @@
-<br>
-<br>
-<br>
-<br>
-<%= link_to 'edit your profile', edit_user_registration_path(current_user) %>
-
-<%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-
+<div class="universal-container">
+  <div class="edit-profile">
+    <h1><%= link_to 'Edit your profile', edit_user_registration_path(current_user) %></h1>
+  </div>
+</div>
