@@ -1,0 +1,21 @@
+.log-container {
+  display:flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 70px;
+  align-items: center;
+
+  .log-form {
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .log-container {
+    margin-top: 100px;
+
+    .log-form {
+      width: 70%;
+    }
+  }
+ }
